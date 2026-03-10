@@ -1,0 +1,87 @@
+import Link from 'next/link';
+
+export default function Footer() {
+  return (
+    <footer>
+      <div className="container">
+        <div className="foot-grid">
+          {/* Brand */}
+          <div className="foot-brand">
+            <Link href="/" className="logo" style={{ marginBottom: '12px', display: 'inline-flex' }}>
+              <div className="logo-icon">
+                <svg viewBox="0 0 16 16">
+                  <path d="M8 1L1 5v6l7 4 7-4V5L8 1zm0 1.5l5.5 3.15v5.7L8 14.5l-5.5-3.15V5.65L8 2.5z" opacity=".7" fill="#fff" />
+                  <path d="M8 4L3.5 6.5v3L8 12l4.5-2.5v-3L8 4z" fill="#fff" />
+                </svg>
+              </div>
+              Thynk<span className="or">wise</span>
+            </Link>
+            <p>Cloud. Security. GPU. Managed. Your single technology partner for the full infrastructure stack.</p>
+            <div style={{ display: 'flex', gap: '8px' }}>
+              <a href="#" className="foot-social">in</a>
+              <a href="#" className="foot-social">tw</a>
+              <a href="#" className="foot-social">yt</a>
+            </div>
+          </div>
+
+          {/* Cloud Platforms */}
+          <div className="foot-col">
+            <h4>Cloud Platforms</h4>
+            <ul>
+              <li><Link href="/aws">Amazon Web Services</Link></li>
+              <li><Link href="/azure">Microsoft Azure</Link></li>
+              <li><Link href="/gcp">Google Cloud</Link></li>
+              <li><Link href="/indian-csps">Indian Sovereign Cloud</Link></li>
+              <li><Link href="/compare">Compare Clouds</Link></li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div className="foot-col">
+            <h4>Services</h4>
+            <ul>
+              <li><Link href="/managed-services">Managed Services</Link></li>
+              <li><Link href="/cloud-migration">Cloud Migration</Link></li>
+              <li><Link href="/cybersecurity">Cybersecurity</Link></li>
+              <li><Link href="/gpuaas">GPU as a Service</Link></li>
+              <li><Link href="/cost-optimization">Cost Optimisation</Link></li>
+              <li><Link href="/bfsi-cloud">BFSI Cloud</Link></li>
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div className="foot-col">
+            <h4>Solutions</h4>
+            <ul>
+              <li><Link href="/end-to-end-solutions">End-to-End Solutions</Link></li>
+              <li><Link href="/bfsi-cloud">BFSI &amp; Compliance</Link></li>
+              <li><Link href="/cost-optimization">FinOps &amp; Cost Control</Link></li>
+              <li><Link href="/cloud-migration">Data Centre Exit</Link></li>
+              <li><Link href="/gpuaas">AI &amp; ML Infrastructure</Link></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div className="foot-col">
+            <h4>Company</h4>
+            <ul>
+              <li><Link href="/about">About Thynkwise</Link></li>
+              <li><Link href="/get-assessment">Free Assessment</Link></li>
+              <li><Link href="/book-demo">Book a Demo</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
+            </ul>
+          </div>
+        </div>
+
+        <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '10px', marginTop: '40px' }}>
+          <p style={{ fontSize: '0.74rem', color: 'rgba(255,255,255,0.25)' }}>© 2025 Thynkwise Technologies Pvt. Ltd. All rights reserved.</p>
+          <div style={{ display: 'flex', gap: '7px' }}>
+            {['AWS Partner', 'Azure CSP', 'GCP Partner', 'ISO 27001'].map(cert => (
+              <span key={cert} className="foot-cert">{cert}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
