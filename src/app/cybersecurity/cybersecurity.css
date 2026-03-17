@@ -1,3 +1,155 @@
+.cy-page {
+  --blue: #3a59a8;
+  --blue2: #4a6fc0;
+  --blue-d: #1e3070;
+  --blue-pale: #eef2ff;
+  --orange: #f6881f;
+  --orange2: #f89c44;
+  --orange-pale: #fff4e6;
+  --orange-dark: #d96c00;
+  --red: #dc2626;
+  --red-dark: #b91c1c;
+  --red-light: #f87171;
+  --red-pale: #fef2f2;
+  --green: #059669;
+  --green-light: #10b981;
+  --green-pale: #ecfdf5;
+  --purple: #7c3aed;
+  --purple-light: #a78bfa;
+  --purple-pale: #f5f3ff;
+  --teal: #00b4a0;
+  --teal-dark: #008c7a;
+  --teal-pale: #e8faf8;
+  --amber: #d97706;
+  --amber-light: #fbbf24;
+  --amber-pale: #fffbeb;
+  --cream: #ffebc7;
+  --cream-light: #fff8ee;
+  --dark: #1a1f35;
+  --dark2: #252b45;
+  --navy: #0b1520;
+  --navy2: #0e1c2f;
+  --gray: #6b7280;
+  --gray2: #9ca3af;
+  --white: #fff;
+  --sh-red: 0 8px 28px rgba(220, 38, 38, 0.25);
+  --sh-orange: 0 8px 28px rgba(246, 136, 31, 0.28);
+  --sh-blue: 0 8px 28px rgba(58, 89, 168, 0.25);
+}
+
+.cy-page .container {
+  max-width: 1160px;
+  padding: 0 28px;
+}
+
+.cy-page h1 {
+  font-family: var(--font);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.07;
+  letter-spacing: -0.03em;
+}
+
+.cy-page h2 {
+  font-family: var(--font);
+  font-size: clamp(1.5rem, 3.5vw, 2.3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.018em;
+}
+
+.cy-page h3 {
+  font-family: var(--font);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.cy-page p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.cy-page .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-family: var(--font);
+  font-size: 0.87rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+
+.cy-page .btn-red {
+  background: var(--red);
+  color: #fff;
+  border-color: var(--red);
+}
+
+.cy-page .btn-red:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--sh-red);
+}
+
+.cy-page .btn-ghost-w {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.cy-page .btn-ghost-w:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+.cy-page .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  font-family: var(--mono);
+  text-transform: uppercase;
+}
+
+.cy-page .br {
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--red);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.cy-page .bb {
+  background: var(--blue-pale);
+  color: var(--blue);
+  border: 1px solid rgba(58, 89, 168, 0.2);
+}
+
+.cy-page .bw {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgba(248, 113, 113, 0.08);
+  }
+}
 .cy-hero {
   background: var(--navy);
   padding: 120px 0 80px;
@@ -1202,3 +1354,5 @@
     font-size: 0.74rem;
   }
 }
+
+

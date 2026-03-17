@@ -4,7 +4,9 @@ export default function FinalCtaSection() {
   return (
     <section className="cy-final-cta">
       <div className="container">
-        <span className="badge bw rv cy-final-badge">No Obligation Assessment</span>
+        <div className="rv" style={{ textAlign: 'center', marginBottom: '20px' }}>
+          <span className="badge bw">No Obligation Assessment</span>
+        </div>
         <h2 className="cy-final-title rv">
           Know Where You&apos;re Exposed.
           <br />

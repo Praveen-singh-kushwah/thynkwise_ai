@@ -30,7 +30,7 @@ export default function CybersecurityPage() {
   }, []);
 
   return (
-    <>
+    <div className="cy-page">
       <HeroSection />
       <ThreeDomainsSection />
       <ServiceCatalogueSection />
@@ -44,6 +44,6 @@ export default function CybersecurityPage() {
       <AeoFaqSection />
       <StickyBar show={showSticky} />
       <WhatsAppFloat />
-    </>
+    </div>
   );
 }

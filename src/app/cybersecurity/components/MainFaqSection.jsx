@@ -15,6 +15,7 @@ export default function MainFaqSection() {
           badgeClassName="badge bb"
           title="Common Questions"
           description="Everything a CISO, CTO, or IT Head typically asks before engaging Thynkwise for managed security."
+          descriptionStyle={{ textAlign: 'center', margin: '0 auto 40px' }}
           centered
         />
         <div className="cy-faq-wrap rv">
