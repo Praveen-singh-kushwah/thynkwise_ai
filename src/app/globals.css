@@ -446,7 +446,7 @@ footer { background: var(--dark); padding: 56px 0 24px; border-top: 1px solid rg
    ═══════════════════════════════════════════ */
 :root {
   --blue-dark: #2a4285;
-  --blue-light: #5577cc;
+  --blue-light: #5577cc;  
   --blue-pale: #eef2ff;
   --orange-dark: #d96c00;
   --orange-light: #ffa94d;
