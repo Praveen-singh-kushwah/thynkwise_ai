@@ -18,6 +18,10 @@ const REVALIDATION_MAP = {
     paths: ['/cybersecurity'],
     tags: ['cybersecurity-page'],
   },
+  'gpuaas-page': {
+    paths: ['/gpuaas'],
+    tags: ['gpuaas-page'],
+  },
 };
 
 function isAuthorized(request) {
@@ -65,4 +69,3 @@ export async function POST(request) {
     tags: config.tags,
   });
 }
-
