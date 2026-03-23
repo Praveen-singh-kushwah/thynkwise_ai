@@ -1,11 +1,12 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import SectionHeader from './SectionHeader';
 import { mainFaqs } from './data';
 
-export default function MainFaqSection() {
+export default function MainFaqSection({ section }) {
   const [openFaq, setOpenFaq] = useState(null);
+  const faqs = section?.faq_item?.length ? section.faq_item : mainFaqs;
 
   return (
     <section className="cy-faq-sec">
@@ -19,9 +20,9 @@ export default function MainFaqSection() {
           centered
         />
         <div className="cy-faq-wrap rv">
-          {mainFaqs.map((faq, index) => (
+          {faqs.map((faq, index) => (
             <div
-              key={faq.question}
+              key={faq.id || `${faq.question}-${index}`}
               className={`cy-faq-item${openFaq === index ? ' open' : ''}`}
             >
               <button
@@ -43,3 +44,4 @@ export default function MainFaqSection() {
     </section>
   );
 }
+

@@ -1,24 +1,35 @@
+﻿import SectionHeader from './SectionHeader';
 import { complianceFrameworks } from './data';
 
-export default function ComplianceFrameworksSection() {
+export default function ComplianceFrameworksSection({ section }) {
+  const frameworks = section?.framework?.length
+    ? section.framework.map((item, index) => ({
+        ...complianceFrameworks[index % complianceFrameworks.length],
+        id: item.id,
+        name: item.name || complianceFrameworks[index % complianceFrameworks.length].name,
+        description:
+          item.description || complianceFrameworks[index % complianceFrameworks.length].description,
+      }))
+    : complianceFrameworks;
+
   return (
     <section className="cy-compliance-sec">
       <div className="container">
-        <div className="cy-sec-ey rv cy-sec-center">
-          <span className="badge bw">Compliance Coverage</span>
-        </div>
-        <h2 className="cy-sec-title rv cy-sec-center cy-text-white">
-          Frameworks We Operate Within
-        </h2>
-        <p className="cy-sec-sub rv cy-sec-center cy-compliance-copy">
-          Thynkwise&apos;s managed security services are built to evidence
-          regulatory compliance continuously {'\u2014'} not assembled under audit
-          pressure.
-        </p>
+        <SectionHeader
+          badge="Compliance Coverage"
+          badgeClassName="badge bw"
+          title="Frameworks We Operate Within"
+          description={
+            "Thynkwise's managed security services are built to evidence regulatory compliance continuously — not assembled under audit pressure."
+          }
+          centered
+          titleStyle={{ color: '#fff' }}
+          descriptionStyle={{ color: 'rgba(226, 232, 240, 0.8)', maxWidth: 760, margin: '0 auto' }}
+        />
         <div className="cy-framework-grid">
-          {complianceFrameworks.map((framework, index) => (
+          {frameworks.map((framework, index) => (
             <div
-              key={framework.name}
+              key={framework.id || `${framework.name}-${index}`}
               className={`cy-framework-card rv d${(index % 4) + 1}`}
             >
               <div className="cy-framework-icon">{framework.icon}</div>
@@ -31,3 +42,4 @@ export default function ComplianceFrameworksSection() {
     </section>
   );
 }
+

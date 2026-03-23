@@ -1,23 +1,29 @@
-'use client';
+﻿'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import SectionHeader from './SectionHeader';
+import CmsImage from '../../components/CmsImage';
+import { getStrapiMediaUrl } from '@/lib/strapi/media';
 import { servicePanels, serviceTabs } from './data';
 
 function ServicesPanel({ cards }) {
   return (
     <div className="cy-service-grid">
-      {cards.map((card) => (
-        <div key={card.title} className="cy-service-card" style={card.cardStyle}>
+      {cards.map((card, index) => (
+        <div key={card.id || `${card.title}-${index}`} className="cy-service-card" style={card.cardStyle}>
           <div className="cy-service-head">
             <div className="cy-service-icon" style={card.iconStyle}>
-              {card.icon}
+              {card.iconUrl ? (
+                <CmsImage src={card.iconUrl} alt={card.title} style={{ width: 24, height: 24, objectFit: 'contain' }} />
+              ) : (
+                card.icon
+              )}
             </div>
             <div className="cy-service-title">{card.title}</div>
           </div>
           <ul className="cy-service-list">
-            {card.items.map((item) => (
-              <li key={item}>{item}</li>
+            {card.items.map((item, itemIndex) => (
+              <li key={`${card.id || card.title}-${itemIndex}`}>{item}</li>
             ))}
           </ul>
           <span className="cy-service-tag" style={card.tagStyle}>
@@ -32,17 +38,21 @@ function ServicesPanel({ cards }) {
 function ConsultPanel({ cards }) {
   return (
     <div className="cy-consult-grid">
-      {cards.map((card) => (
-        <div key={card.title} className="cy-consult-card">
+      {cards.map((card, index) => (
+        <div key={card.id || `${card.title}-${index}`} className="cy-consult-card">
           <div className="cy-consult-icon" style={card.iconStyle}>
-            {card.icon}
+            {card.iconUrl ? (
+              <CmsImage src={card.iconUrl} alt={card.title} style={{ width: 24, height: 24, objectFit: 'contain' }} />
+            ) : (
+              card.icon
+            )}
           </div>
           <div className="cy-consult-body">
             <h3>{card.title}</h3>
             <p>{card.description}</p>
             <div className="cy-consult-tags">
-              {card.tags.map((tag) => (
-                <span key={tag} className="cy-consult-tag">
+              {card.tags.map((tag, tagIndex) => (
+                <span key={`${card.id || card.title}-${tagIndex}`} className="cy-consult-tag">
                   {tag}
                 </span>
               ))}
@@ -54,9 +64,49 @@ function ConsultPanel({ cards }) {
   );
 }
 
-export default function ServiceCatalogueSection() {
-  const [activeTab, setActiveTab] = useState('detect');
-  const activePanel = servicePanels[activeTab];
+const CATEGORY_STYLES = [
+  { accent: 'var(--red)', iconBg: 'var(--red-pale)' },
+  { accent: 'var(--orange)', iconBg: 'var(--orange-pale)' },
+  { accent: 'var(--blue)', iconBg: 'var(--blue-pale)' },
+  { accent: 'var(--green)', iconBg: 'var(--green-pale)' },
+];
+
+export default function ServiceCatalogueSection({ section }) {
+  const cmsTabs = useMemo(() => {
+    if (!section?.service_category?.length) {
+      return null;
+    }
+
+    return section.service_category.map((category, index) => ({
+      id: category.id?.toString() || `tab-${index}`,
+      label: category.category_name,
+      cards: category.services?.map((service, serviceIndex) => {
+        const style = CATEGORY_STYLES[index % CATEGORY_STYLES.length];
+        return {
+          id: service.id,
+          title: service.title,
+          iconUrl: getStrapiMediaUrl(service.icon),
+          iconStyle: { background: style.iconBg },
+          cardStyle: { '--cy-acc': style.accent },
+          items: service.description_points?.map((item) => item.point).filter(Boolean) || [],
+          tag: service.tag,
+          tagStyle: {
+            background: style.iconBg,
+            color: style.accent,
+            borderColor: 'rgba(0,0,0,.08)',
+          },
+          icon: servicePanels.detect.cards[serviceIndex % servicePanels.detect.cards.length].icon,
+        };
+      }) || [],
+    }));
+  }, [section]);
+
+  const tabs = cmsTabs?.length ? cmsTabs : serviceTabs;
+  const defaultTab = tabs[0]?.id || 'detect';
+  const [activeTab, setActiveTab] = useState(defaultTab);
+  const activePanel = cmsTabs?.length
+    ? { type: 'services', cards: tabs.find((tab) => tab.id === activeTab)?.cards || tabs[0]?.cards || [] }
+    : servicePanels[activeTab];
 
   return (
     <section className="cy-services-sec">
@@ -64,12 +114,12 @@ export default function ServiceCatalogueSection() {
         <SectionHeader
           badge="Service Catalogue"
           badgeClassName="badge bb"
-          title="Every Service. In Detail."
-          description={"Click a category tab to explore services in depth \u2014 from reactive SOC operations to proactive governance and consulting builds."}
+          title={section?.heading || 'Every Service. In Detail.'}
+          description={section?.description || "Click a category tab to explore services in depth — from reactive SOC operations to proactive governance and consulting builds."}
         />
 
         <div className="cy-tab-row" role="tablist" aria-label="Cybersecurity service categories">
-          {serviceTabs.map((tab) => (
+          {tabs.map((tab) => (
             <button
               key={tab.id}
               type="button"
@@ -101,3 +151,4 @@ export default function ServiceCatalogueSection() {
     </section>
   );
 }
+

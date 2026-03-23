@@ -1,4 +1,4 @@
-import { revalidatePath, revalidateTag } from 'next/cache';
+﻿import { revalidatePath, revalidateTag } from 'next/cache';
 import { NextResponse } from 'next/server';
 
 const REVALIDATION_MAP = {
@@ -13,6 +13,10 @@ const REVALIDATION_MAP = {
   'cloud-migration-page': {
     paths: ['/cloud-migration'],
     tags: ['cloud-migration-page'],
+  },
+  'cybersecurity-page': {
+    paths: ['/cybersecurity'],
+    tags: ['cybersecurity-page'],
   },
 };
 
@@ -61,3 +65,4 @@ export async function POST(request) {
     tags: config.tags,
   });
 }
+

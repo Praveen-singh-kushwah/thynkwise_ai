@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useState } from 'react';
 import useScrollReveal from '../../components/useScrollReveal';
@@ -16,7 +16,7 @@ import AeoFaqSection from './AeoFaqSection';
 import StickyBar from './StickyBar';
 import WhatsAppFloat from './WhatsAppFloat';
 
-export default function CybersecurityPage() {
+export default function CybersecurityPage({ data }) {
   useScrollReveal();
 
   const [showSticky, setShowSticky] = useState(false);
@@ -31,19 +31,20 @@ export default function CybersecurityPage() {
 
   return (
     <div className="cy-page">
-      <HeroSection />
-      <ThreeDomainsSection />
-      <ServiceCatalogueSection />
-      <ComplianceFrameworksSection />
-      <WhyThynkwiseSection />
-      <StatsBandSection />
-      <CaseStudiesSection />
-      <TechnologyPartnersSection />
-      <MainFaqSection />
-      <FinalCtaSection />
+      <HeroSection hero={data?.cybersecurity_hero} events={data?.security_event} />
+      <ThreeDomainsSection section={data?.security_domains} />
+      <ServiceCatalogueSection section={data?.security_service_catalogue} />
+      <ComplianceFrameworksSection section={data?.security_compliance_frameworks} />
+      <WhyThynkwiseSection section={data?.why_thynkwise_security} />
+      <StatsBandSection section={data?.security_stats_band} />
+      <CaseStudiesSection section={data?.security_case_studies} />
+      <TechnologyPartnersSection section={data?.security_partner} />
+      <MainFaqSection section={data?.faq} />
+      <FinalCtaSection cta={data?.cta} />
       <AeoFaqSection />
       <StickyBar show={showSticky} />
       <WhatsAppFloat />
     </div>
   );
 }
+

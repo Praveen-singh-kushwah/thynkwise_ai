@@ -1,6 +1,10 @@
-import './cybersecurity.css';
+﻿import './cybersecurity.css';
 import CybersecurityPage from './components';
+import { getCybersecurityPage } from '@/lib/strapi/cybersecurity-page';
 
-export default function Page() {
-  return <CybersecurityPage />;
+export default async function Page() {
+  const cybersecurityData = await getCybersecurityPage();
+
+  return <CybersecurityPage data={cybersecurityData} />;
 }
+
