@@ -1,7 +1,44 @@
 import Link from 'next/link';
 import { heroPills, heroStats, liveMetrics, slaBars } from './data';
 
-export default function HeroSection() {
+function unwrapRichText(html, tags) {
+  if (!html) {
+    return html;
+  }
+
+  const trimmedHtml = html.trim();
+
+  for (const tag of tags) {
+    const pattern = new RegExp(`^<${tag}\\b[^>]*>([\\s\\S]*)</${tag}>$`, 'i');
+    const match = trimmedHtml.match(pattern);
+
+    if (match) {
+      return match[1];
+    }
+  }
+
+  return trimmedHtml;
+}
+
+const defaultTitle = `
+  Your Infrastructure.<br />
+  <span>Fully Managed.</span><br />
+  Zero Surprises.
+`;
+
+const defaultDescription = `
+  Infrastructure, applications, databases, network, security - all managed under one SLA.
+  Thynkwise handles the entire stack across AWS, Azure, GCP, and Indian CSPs, locally billed
+  with a named account manager for every client.
+`;
+
+export default function HeroSection({ hero }) {
+  const pills = [hero?.badge_1, hero?.badge_2, hero?.badge_3]
+    .filter(Boolean)
+    .map((label) => ({ label }));
+  const titleHtml = unwrapRichText(hero?.title || defaultTitle, ['h1', 'h2', 'p']);
+  const descriptionHtml = unwrapRichText(hero?.description || defaultDescription, ['p', 'div']);
+
   return (
     <section className="hero-ms">
       <div className="ms-glow ms-glow1" />
@@ -11,41 +48,39 @@ export default function HeroSection() {
           <div className="hero-ms-grid">
             <div>
               <div className="sla-row rv">
-                {heroPills.map((pill) => (
-                  <div key={pill.label} className="sla-pill">
+                {(pills.length ? pills : heroPills).map((pill, index) => (
+                  <div key={`${pill.label}-${index}`} className="sla-pill">
                     <div className="sla-dot-anim" />
                     <span className="sla-txt">{pill.label}</span>
                   </div>
                 ))}
               </div>
 
-              <h1 className="rv d1">
-                Your Infrastructure.
-                <br />
-                <span>Fully Managed.</span>
-                <br />
-                Zero Surprises.
-              </h1>
+              <h1 className="rv d1" dangerouslySetInnerHTML={{ __html: titleHtml }} />
 
-              <p className="hero-ms-sub rv d2">
-                Infrastructure, applications, databases, network, security - all
-                managed under one SLA. Thynkwise handles the entire stack across
-                AWS, Azure, GCP, and Indian CSPs, locally billed with a named
-                account manager for every client.
-              </p>
+              <div
+                className="hero-ms-sub rv d2"
+                dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+              />
 
               <div className="hero-ms-acts rv d3">
-                <Link href="/get-assessment" className="btn btn-primary-ms">
-                  Get Managed Services Assessment {'\u2192'}
+                <Link
+                  href={hero?.cta_primary_link || '/get-assessment'}
+                  className="btn btn-primary-ms"
+                >
+                  {hero?.cta_primary_text || 'Get Managed Services Assessment'} {'\u2192'}
                 </Link>
-                <Link href="/book-demo" className="btn btn-ghost-w">
-                  Talk to an Expert
+                <Link
+                  href={hero?.cta_secondary_link || '/book-demo'}
+                  className="btn btn-ghost-w"
+                >
+                  {hero?.cta_secondary_text || 'Talk to an Expert'}
                 </Link>
               </div>
 
               <div className="hero-ms-stats rv d4">
-                {heroStats.map((stat) => (
-                  <div key={stat.label} className="hs-item">
+                {heroStats.map((stat, index) => (
+                  <div key={`${stat.label}-${index}`} className="hs-item">
                     <span className="n">{stat.value}</span>
                     <span className="l">{stat.label}</span>
                   </div>
@@ -64,8 +99,8 @@ export default function HeroSection() {
                 </div>
 
                 <div className="met-grid">
-                  {liveMetrics.slice(0, 2).map((metric) => (
-                    <div key={metric.label} className={`met ${metric.className}`}>
+                  {liveMetrics.slice(0, 2).map((metric, index) => (
+                    <div key={`${metric.label}-${index}`} className={`met ${metric.className}`}>
                       <span className="met-val">{metric.value}</span>
                       <div className="met-lbl">{metric.label}</div>
                     </div>
@@ -73,8 +108,8 @@ export default function HeroSection() {
                 </div>
 
                 <div className="met-grid">
-                  {liveMetrics.slice(2).map((metric) => (
-                    <div key={metric.label} className={`met ${metric.className}`}>
+                  {liveMetrics.slice(2).map((metric, index) => (
+                    <div key={`${metric.label}-${index}`} className={`met ${metric.className}`}>
                       <span className="met-val">{metric.value}</span>
                       <div className="met-lbl">{metric.label}</div>
                     </div>
@@ -82,8 +117,8 @@ export default function HeroSection() {
                 </div>
 
                 <div className="sla-bars">
-                  {slaBars.map((bar) => (
-                    <div key={bar.name} className="sla-bar-row">
+                  {slaBars.map((bar, index) => (
+                    <div key={`${bar.name}-${index}`} className="sla-bar-row">
                       <div className="sla-bar-top">
                         <span className="sla-bar-name">{bar.name}</span>
                         <span className="sla-bar-pct">{bar.percent}</span>
@@ -95,8 +130,8 @@ export default function HeroSection() {
                   ))}
                 </div>
 
-                <Link href="/get-assessment" className="hp-cta">
-                  Get Managed Services Assessment {'\u2192'}
+                <Link href={hero?.cta_primary_link || '/get-assessment'} className="hp-cta">
+                  {hero?.cta_primary_text || 'Get Managed Services Assessment'} {'\u2192'}
                 </Link>
               </div>
             </div>

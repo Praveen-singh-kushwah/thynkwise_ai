@@ -6,6 +6,10 @@ const REVALIDATION_MAP = {
     paths: ['/'],
     tags: ['home-page'],
   },
+  'managed-services-page': {
+    paths: ['/managed-services'],
+    tags: ['managed-services-page'],
+  },
 };
 
 function isAuthorized(request) {

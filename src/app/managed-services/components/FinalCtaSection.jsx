@@ -5,7 +5,7 @@ const trustItems = [
   { label: '\u2713 Transparent billing / SLA-backed' },
 ];
 
-export default function FinalCtaSection() {
+export default function FinalCtaSection({ cta }) {
   return (
     <section className="final-cta-ms">
       <div className="container">
@@ -18,23 +18,28 @@ export default function FinalCtaSection() {
           </span>
 
           <h2>
-            Stop managing infrastructure.
-            <br />
-            Start building your business.
+            {cta?.title ? (
+              cta.title
+            ) : (
+              <>
+                Stop managing infrastructure.
+                <br />
+                Start building your business.
+              </>
+            )}
           </h2>
 
           <p>
-            Tell us what you&apos;re running. We&apos;ll tell you how we&apos;d
-            manage it - with a scoped proposal, SLA commitments in writing, and
-            a FinOps savings estimate before you sign anything.
+            {cta?.description ||
+              "Tell us what you're running. We'll tell you how we'd manage it - with a scoped proposal, SLA commitments in writing, and a FinOps savings estimate before you sign anything."}
           </p>
 
           <div className="fci-acts">
-            <Link href="/get-assessment" className="btn btn-primary-ms">
-              Get Free Assessment {'\u2192'}
+            <Link href={cta?.primary_cta_link || '/get-assessment'} className="btn btn-primary-ms">
+              {cta?.primary_cta_text || 'Get Free Assessment'} {'\u2192'}
             </Link>
-            <Link href="/book-demo" className="btn btn-ghost-w">
-              Talk to an Expert
+            <Link href={cta?.secondary_cta_link || '/book-demo'} className="btn btn-ghost-w">
+              {cta?.secondary_cta_text || 'Talk to an Expert'}
             </Link>
           </div>
 
@@ -48,9 +53,9 @@ export default function FinalCtaSection() {
               flexWrap: 'wrap',
             }}
           >
-            {trustItems.map((item) => (
+            {trustItems.map((item, index) => (
               <span
-                key={item.label}
+                key={`${item.label}-${index}`}
                 style={{ fontSize: '0.77rem', color: 'rgba(255,255,255,0.45)' }}
               >
                 {item.label}

@@ -4,8 +4,9 @@ import { useState } from 'react';
 import SectionHeader from './SectionHeader';
 import { mainFaqs } from './data';
 
-export default function MainFaqSection() {
+export default function MainFaqSection({ section }) {
   const [openFaq, setOpenFaq] = useState(null);
+  const faqs = section?.faq_item?.length ? section.faq_item : mainFaqs;
 
   return (
     <section className="ps ps-w">
@@ -18,9 +19,9 @@ export default function MainFaqSection() {
         />
 
         <div className="faq-list-ms">
-          {mainFaqs.map((faq, index) => (
+          {faqs.map((faq, index) => (
             <div
-              key={faq.question}
+              key={faq.id || `${faq.question}-${index}`}
               className={`faq-item-ms rv d${(index % 5) + 1}${openFaq === index ? ' open' : ''}`}
             >
               <div

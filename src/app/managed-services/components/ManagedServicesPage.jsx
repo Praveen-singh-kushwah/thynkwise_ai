@@ -16,7 +16,7 @@ import AeoFaqSection from './AeoFaqSection';
 import StickyBar from './StickyBar';
 import WhatsAppFloat from './WhatsAppFloat';
 
-export default function ManagedServicesPage() {
+export default function ManagedServicesPage({ data }) {
   useScrollReveal();
 
   const [showSticky, setShowSticky] = useState(false);
@@ -31,16 +31,16 @@ export default function ManagedServicesPage() {
 
   return (
     <>
-      <HeroSection />
-      <ThreePillarsSection />
-      <ServiceCatalogueSection />
-      <WhyThynkwiseSection />
-      <HowItWorksSection />
-      <IndustryUseCasesSection />
-      <StatsBandSection />
-      <CaseStudiesSection />
-      <MainFaqSection />
-      <FinalCtaSection />
+      <HeroSection hero={data?.hero} />
+      <ThreePillarsSection section={data?.managed_service_pillars} />
+      <ServiceCatalogueSection section={data?.service_catalogue} />
+      <WhyThynkwiseSection section={data?.why_thynkwise} />
+      <HowItWorksSection section={data?.process_steps} />
+      <IndustryUseCasesSection section={data?.industry_usecases} />
+      <StatsBandSection section={data?.stats_band} />
+      <CaseStudiesSection section={data?.case_studies} />
+      <MainFaqSection section={data?.faq} />
+      <FinalCtaSection cta={data?.final_cta} />
       <AeoFaqSection />
       <StickyBar show={showSticky} />
       <WhatsAppFloat />

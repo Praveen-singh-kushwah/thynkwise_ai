@@ -74,6 +74,10 @@ export async function fetchStrapiDocument(path, { tags = [] } = {}) {
       next: { tags },
     });
 
+    if (response.status === 404) {
+      return null;
+    }
+
     if (!response.ok) {
       throw new Error(`Strapi request failed with status ${response.status}`);
     }

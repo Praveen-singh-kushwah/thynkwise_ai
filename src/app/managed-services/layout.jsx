@@ -1,5 +1,3 @@
-import ManagedServicesPage from './page';
-
 export const metadata = {
   title: 'Managed IT & Cloud Services — 24/7 Infrastructure Management | Thynkwise',
   description:
@@ -22,6 +20,6 @@ export const metadata = {
   },
 };
 
-export default function Layout() {
-  return <ManagedServicesPage />;
+export default function Layout({ children }) {
+  return children;
 }
