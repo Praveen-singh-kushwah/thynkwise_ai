@@ -30,8 +30,9 @@ const faqs = [
   },
 ];
 
-export default function FaqSection() {
+export default function FaqSection({ faqs: cmsFaqs }) {
   const [openFaq, setOpenFaq] = useState(null);
+  const items = cmsFaqs?.length ? cmsFaqs : faqs;
 
   return (
     <section className="faq-section" aria-label="Frequently Asked Questions">
@@ -41,7 +42,7 @@ export default function FaqSection() {
         <p className="section-sub">Everything you need to know - answered clearly.</p>
 
         <div className="faq-list">
-          {faqs.map((faq, index) => (
+          {items.map((faq, index) => (
             <div
               key={faq.question}
               className={`faq-item${openFaq === index ? ' open' : ''}`}

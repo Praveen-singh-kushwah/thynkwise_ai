@@ -13,22 +13,22 @@ import CtaBannerSection from './CtaBannerSection';
 import FaqSection from './FaqSection';
 import useScrollReveal from '../useScrollReveal';
 
-export default function HomePage() {
+export default function HomePage({ data }) {
   useScrollReveal();
 
   return (
     <>
-      <HeroSection />
-      <ValueStrip />
-      <ServicesSection />
-      <CloudProvidersSection />
-      <StatsSection />
-      <WhyThynkwiseSection />
-      <IndustriesSection />
-      <CaseStudiesSection />
-      <TestimonialsSection />
-      <CtaBannerSection />
-      <FaqSection />
+      <HeroSection hero={data?.hero} />
+      <ValueStrip items={data?.valueItem} />
+      <ServicesSection section={data?.service} />
+      <CloudProvidersSection section={data?.cloudProvider} />
+      <StatsSection stats={data?.stat} />
+      <WhyThynkwiseSection section={data?.WhyThynkwise} />
+      <IndustriesSection section={data?.industry} />
+      <CaseStudiesSection section={data?.ClientOutcomes} />
+      <TestimonialsSection testimonials={data?.testimonial} />
+      <CtaBannerSection cta={data?.cta} />
+      <FaqSection faqs={data?.faq} />
     </>
   );
 }

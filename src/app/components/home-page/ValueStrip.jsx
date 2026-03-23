@@ -1,3 +1,6 @@
+import CmsImage from '../CmsImage';
+import { getStrapiMediaUrl } from '@/lib/strapi/media';
+
 const valueItems = [
   {
     icon: '\u{1F501}',
@@ -29,15 +32,33 @@ const valueItems = [
   },
 ];
 
-export default function ValueStrip() {
+export default function ValueStrip({ items }) {
+  const contentItems = items?.length
+    ? items.map((item, index) => ({
+        ...valueItems[index % valueItems.length],
+        id: item.id,
+        title: item.title || valueItems[index % valueItems.length].title,
+        description: item.description || valueItems[index % valueItems.length].description,
+        imageUrl: getStrapiMediaUrl(item.image),
+      }))
+    : valueItems;
+
   return (
     <div className="val-strip">
       <div className="container" style={{ padding: 0 }}>
         <div className="val-grid">
-          {valueItems.map((item) => (
-            <div key={item.title} className="val-item">
+          {contentItems.map((item, index) => (
+            <div key={item.id || `${item.title}-${index}`} className="val-item">
               <div className="val-ico" style={{ background: item.iconBg }}>
-                {item.icon}
+                {item.imageUrl ? (
+                  <CmsImage
+                    src={item.imageUrl}
+                    alt={item.title}
+                    style={{ width: 28, height: 28, objectFit: 'contain' }}
+                  />
+                ) : (
+                  item.icon
+                )}
               </div>
               <div>
                 <h3>{item.title}</h3>

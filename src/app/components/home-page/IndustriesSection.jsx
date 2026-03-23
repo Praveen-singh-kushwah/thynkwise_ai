@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import SectionHeader from './SectionHeader';
+import CmsImage from '../CmsImage';
+import { getStrapiMediaUrl } from '@/lib/strapi/media';
 
 const industries = [
   {
@@ -72,7 +74,15 @@ function IndustryCard({ industry }) {
   const content = (
     <>
       <div className="ind-ico" style={{ background: industry.iconBg }}>
-        {industry.icon}
+        {industry.iconUrl ? (
+          <CmsImage
+            src={industry.iconUrl}
+            alt={industry.title}
+            style={{ width: 28, height: 28, objectFit: 'contain' }}
+          />
+        ) : (
+          industry.icon
+        )}
       </div>
       <div>
         <h3>{industry.title}</h3>
@@ -92,19 +102,32 @@ function IndustryCard({ industry }) {
   return <div className={`ind-card rv ${industry.delay}`}>{content}</div>;
 }
 
-export default function IndustriesSection() {
+export default function IndustriesSection({ section }) {
+  const industryCards = section?.industryCard?.length
+    ? section.industryCard.map((item, index) => ({
+        ...industries[index % industries.length],
+        title: item.title || industries[index % industries.length].title,
+        subtitle: item.description || industries[index % industries.length].subtitle,
+        href: item.link || industries[index % industries.length].href,
+        iconUrl: getStrapiMediaUrl(item.icon),
+      }))
+    : industries;
+
   return (
     <section className="sec sec-lt">
       <div className="container">
         <SectionHeader
           badge="Industries We Serve"
           badgeClassName="badge badge-blue"
-          title="Built for Complex, Regulated Environments"
-          subtitle="Cloud deployments in regulated industries are not the same as general IT projects. Thynkwise brings sector-specific experience to every engagement."
+          title={section?.heading || 'Built for Complex, Regulated Environments'}
+          subtitle={
+            section?.subHeading ||
+            'Cloud deployments in regulated industries are not the same as general IT projects. Thynkwise brings sector-specific experience to every engagement.'
+          }
         />
 
         <div className="ind-grid">
-          {industries.map((industry) => (
+          {industryCards.map((industry) => (
             <IndustryCard key={industry.title} industry={industry} />
           ))}
         </div>

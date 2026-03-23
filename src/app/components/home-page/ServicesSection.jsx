@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import SectionHeader from './SectionHeader';
+import CmsImage from '../CmsImage';
+import { getStrapiMediaUrl } from '@/lib/strapi/media';
 
 const services = [
   {
@@ -112,26 +114,53 @@ const services = [
   },
 ];
 
-export default function ServicesSection() {
+export default function ServicesSection({ section }) {
+  const serviceCards = section?.serviceCard?.length
+    ? section.serviceCard.map((card, index) => ({
+        ...services[index % services.length],
+        id: card.id,
+        title: card.title || services[index % services.length].title,
+        description: card.description || services[index % services.length].description,
+        tag: card.tag || services[index % services.length].tag,
+        href: card.link || services[index % services.length].href,
+        cta: card.link_text || services[index % services.length].cta,
+        iconUrl: getStrapiMediaUrl(card.icon),
+        items: card.points?.length
+          ? card.points.map((point) => point.point).filter(Boolean)
+          : services[index % services.length].items,
+      }))
+    : services;
+
   return (
     <section className="sec sec-lt">
       <div className="container">
         <SectionHeader
           badge="Core Services"
           badgeClassName="badge badge-blue"
-          title="Everything You Need. One Partner."
-          subtitle="From first cloud migration to GPU-accelerated AI workloads - Thynkwise covers the complete technology stack with managed services at every layer."
+          title={section?.heading || 'Everything You Need. One Partner.'}
+          subtitle={
+            section?.description ||
+            'From first cloud migration to GPU-accelerated AI workloads - Thynkwise covers the complete technology stack with managed services at every layer.'
+          }
         />
 
         <div className="svc-grid">
-          {services.map((service) => (
+          {serviceCards.map((service, serviceIndex) => (
             <div
-              key={service.title}
+              key={service.id || `${service.title}-${serviceIndex}`}
               className={`svc-card rv ${service.delay}`}
               style={{ '--svc-accent': service.accent }}
             >
               <div className="svc-ico" style={{ background: service.iconBg }}>
-                {service.icon}
+                {service.iconUrl ? (
+                  <CmsImage
+                    src={service.iconUrl}
+                    alt={service.title}
+                    style={{ width: 28, height: 28, objectFit: 'contain' }}
+                  />
+                ) : (
+                  service.icon
+                )}
               </div>
               <span className="svc-tag" style={{ color: service.accent }}>
                 {service.tag}
@@ -139,11 +168,11 @@ export default function ServicesSection() {
               <h3>{service.title}</h3>
               <p>{service.description}</p>
               <ul className="svc-list">
-                {service.items.map((item) => (
-                  <li key={item}>{item}</li>
+                {service.items.map((item, itemIndex) => (
+                  <li key={`${service.id || service.title}-${itemIndex}`}>{item}</li>
                 ))}
               </ul>
-              <Link href={service.href} className="svc-link">
+              <Link href={service.href || '#'} className="svc-link">
                 {service.cta} {'\u2192'}
               </Link>
             </div>

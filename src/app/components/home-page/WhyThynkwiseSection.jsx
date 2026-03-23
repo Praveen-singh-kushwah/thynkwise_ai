@@ -1,4 +1,6 @@
 import SectionHeader from './SectionHeader';
+import CmsImage from '../CmsImage';
+import { getStrapiMediaUrl } from '@/lib/strapi/media';
 
 const whyItems = [
   {
@@ -39,22 +41,44 @@ const whyItems = [
   },
 ];
 
-export default function WhyThynkwiseSection() {
+export default function WhyThynkwiseSection({ section }) {
+  const contentItems = section?.why_card?.length
+    ? section.why_card.map((item, index) => ({
+        ...whyItems[index % whyItems.length],
+        title: item.title || whyItems[index % whyItems.length].title,
+        text: item.description || whyItems[index % whyItems.length].text,
+        iconUrl: getStrapiMediaUrl(item.icon),
+      }))
+    : whyItems;
+
   return (
     <section className="sec sec-dk">
       <div className="container">
         <SectionHeader
           badge="Why Thynkwise"
           badgeClassName="badge badge-orange"
-          title="The Difference a Managed Partner Makes"
-          subtitle="Cloud providers give you infrastructure. Thynkwise gives you infrastructure, operations, security, and a team that treats your cloud like they own it."
+          title={section?.title || 'The Difference a Managed Partner Makes'}
+          subtitle={
+            section?.subtitle ||
+            'Cloud providers give you infrastructure. Thynkwise gives you infrastructure, operations, security, and a team that treats your cloud like they own it.'
+          }
           titleStyle={{ color: '#fff' }}
         />
 
         <div className="why-grid">
-          {whyItems.map((item) => (
+          {contentItems.map((item) => (
             <div key={item.title} className={`why-card rv ${item.delay}`}>
-              <span className="why-ico">{item.icon}</span>
+              <span className="why-ico">
+                {item.iconUrl ? (
+                  <CmsImage
+                    src={item.iconUrl}
+                    alt={item.title}
+                    style={{ width: 28, height: 28, objectFit: 'contain' }}
+                  />
+                ) : (
+                  item.icon
+                )}
+              </span>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </div>

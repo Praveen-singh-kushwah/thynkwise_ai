@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import SectionHeader from './SectionHeader';
+import CmsImage from '../CmsImage';
+import { getStrapiMediaUrl } from '@/lib/strapi/media';
 
 const providers = [
   {
@@ -162,19 +164,36 @@ function CloudProviderLogo({ id }) {
   );
 }
 
-export default function CloudProvidersSection() {
+export default function CloudProvidersSection({ section }) {
+  const providerCards = section?.cards?.length
+    ? section.cards.map((card, index) => ({
+        ...providers[index % providers.length],
+        name: card.title || providers[index % providers.length].name,
+        tier: card.subtitle || providers[index % providers.length].tier,
+        href: card.link || providers[index % providers.length].href,
+        cta: card.link_text || providers[index % providers.length].cta,
+        logoUrl: getStrapiMediaUrl(card.logo),
+        services: card.services?.length
+          ? card.services.map((service) => service.point).filter(Boolean)
+          : providers[index % providers.length].services,
+      }))
+    : providers;
+
   return (
     <section className="sec sec-cream">
       <div className="container">
         <SectionHeader
           badge="Partner Ecosystem"
           badgeClassName="badge badge-orange"
-          title="Every Major Cloud Platform. One Expert Team."
-          subtitle="Thynkwise is an authorised reseller and managed services partner across all major cloud providers. We architect without bias - the right cloud for the right workload, every time."
+          title={section?.heading || 'Every Major Cloud Platform. One Expert Team.'}
+          subtitle={
+            section?.description ||
+            'Thynkwise is an authorised reseller and managed services partner across all major cloud providers. We architect without bias - the right cloud for the right workload, every time.'
+          }
         />
 
         <div className="cloud-grid">
-          {providers.map((provider) => (
+          {providerCards.map((provider) => (
             <div
               key={provider.name}
               className={`cloud-card rv ${provider.delay}`}
@@ -185,7 +204,15 @@ export default function CloudProvidersSection() {
               }}
             >
               <div className="cc-logo">
-                <CloudProviderLogo id={provider.id} />
+                {provider.logoUrl ? (
+                  <CmsImage
+                    src={provider.logoUrl}
+                    alt={provider.name}
+                    style={{ maxWidth: '100%', maxHeight: 32, objectFit: 'contain' }}
+                  />
+                ) : (
+                  <CloudProviderLogo id={provider.id} />
+                )}
               </div>
               <div className="cc-name">{provider.name}</div>
               <div className="cc-tier" style={{ color: provider.accent }}>

@@ -13,7 +13,42 @@ const partners = [
   { href: '/indian-csps', label: 'Sovereign Cloud', dotColor: '#00968A' },
 ];
 
-export default function HeroSection() {
+const defaultTitle = `
+  Cloud, Security &amp;<br />
+  <span class="c-blue">GPU Infrastructure.</span><br />
+  <span class="c-orange">Managed.</span>
+`;
+
+const defaultSubtitle = `
+  Thynkwise is your single technology partner for <strong>cloud migration</strong>,
+  <strong>managed services</strong>, <strong>cybersecurity</strong>, and
+  <strong>GPU compute</strong> across AWS, Azure, Google Cloud, and sovereign
+  cloud providers. One team. One accountability model.
+`;
+
+function unwrapRichText(html, tags) {
+  if (!html) {
+    return html;
+  }
+
+  const trimmedHtml = html.trim();
+
+  for (const tag of tags) {
+    const pattern = new RegExp(`^<${tag}\\b[^>]*>([\\s\\S]*)</${tag}>$`, 'i');
+    const match = trimmedHtml.match(pattern);
+
+    if (match) {
+      return match[1];
+    }
+  }
+
+  return trimmedHtml;
+}
+
+export default function HeroSection({ hero }) {
+  const titleHtml = unwrapRichText(hero?.title || defaultTitle, ['h1', 'h2', 'p']);
+  const subtitleHtml = unwrapRichText(hero?.subtitle || defaultSubtitle, ['p', 'div']);
+
   return (
     <section className="hero">
       <div className="hero-grid-bg" />
@@ -33,28 +68,25 @@ export default function HeroSection() {
               ))}
             </div>
 
-            <h1 className="rv d1">
-              Cloud, Security &amp;
-              <br />
-              <span className="c-blue">GPU Infrastructure.</span>
-              <br />
-              <span className="c-orange">Managed.</span>
-            </h1>
+            <h1 className="rv d1" dangerouslySetInnerHTML={{ __html: titleHtml }} />
 
-            <p className="hero-sub rv d2">
-              Thynkwise is your single technology partner for{' '}
-              <strong>cloud migration</strong>, <strong>managed services</strong>,{' '}
-              <strong>cybersecurity</strong>, and <strong>GPU compute</strong>{' '}
-              across AWS, Azure, Google Cloud, and sovereign cloud providers. One
-              team. One accountability model.
-            </p>
+            <div
+              className="hero-sub rv d2"
+              dangerouslySetInnerHTML={{ __html: subtitleHtml }}
+            />
 
             <div className="hero-acts rv d3">
-              <Link href="/get-assessment" className="btn btn-orange">
-                Get Free Cloud Assessment {'\u2192'}
+              <Link
+                href={hero?.primary_cta_link || '/get-assessment'}
+                className="btn btn-orange"
+              >
+                {hero?.primary_cta_text || 'Get Free Cloud Assessment'} {'\u2192'}
               </Link>
-              <Link href="/book-demo" className="btn btn-ghost-w">
-                Talk to a Cloud Expert
+              <Link
+                href={hero?.secondary_cta_link || '/book-demo'}
+                className="btn btn-ghost-w"
+              >
+                {hero?.secondary_cta_text || 'Talk to a Cloud Expert'}
               </Link>
             </div>
 
@@ -63,10 +95,7 @@ export default function HeroSection() {
               <div className="partner-strip">
                 {partners.map((partner) => (
                   <Link key={partner.label} href={partner.href} className="ps-badge">
-                    <div
-                      className="ps-dot"
-                      style={{ background: partner.dotColor }}
-                    />
+                    <div className="ps-dot" style={{ background: partner.dotColor }} />
                     {partner.label}
                   </Link>
                 ))}

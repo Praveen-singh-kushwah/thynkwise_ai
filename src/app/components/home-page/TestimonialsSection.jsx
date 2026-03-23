@@ -1,4 +1,6 @@
 import SectionHeader from './SectionHeader';
+import CmsImage from '../CmsImage';
+import { getStrapiMediaUrl } from '@/lib/strapi/media';
 
 const testimonials = [
   {
@@ -30,7 +32,27 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialsSection() {
+function getInitials(name) {
+  return name
+    ?.split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase())
+    .join('');
+}
+
+export default function TestimonialsSection({ testimonials: cmsTestimonials }) {
+  const contentTestimonials = cmsTestimonials?.length
+    ? cmsTestimonials.map((item, index) => ({
+        ...testimonials[index % testimonials.length],
+        text: item.text || testimonials[index % testimonials.length].text,
+        name: item.name || testimonials[index % testimonials.length].name,
+        role: item.role || testimonials[index % testimonials.length].role,
+        initials: getInitials(item.name) || testimonials[index % testimonials.length].initials,
+        imageUrl: getStrapiMediaUrl(item.image),
+      }))
+    : testimonials;
+
   return (
     <section className="sec sec-dk">
       <div className="container">
@@ -42,7 +64,7 @@ export default function TestimonialsSection() {
         />
 
         <div className="test-grid">
-          {testimonials.map((testimonial) => (
+          {contentTestimonials.map((testimonial) => (
             <div key={testimonial.name} className={`test-card rv ${testimonial.delay}`}>
               <p className="test-text">{testimonial.text}</p>
               <div className="test-author">
@@ -53,7 +75,20 @@ export default function TestimonialsSection() {
                     color: testimonial.avatarColor,
                   }}
                 >
-                  {testimonial.initials}
+                  {testimonial.imageUrl ? (
+                    <CmsImage
+                      src={testimonial.imageUrl}
+                      alt={testimonial.name}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        borderRadius: '999px',
+                      }}
+                    />
+                  ) : (
+                    testimonial.initials
+                  )}
                 </div>
                 <div>
                   <div className="test-name">{testimonial.name}</div>

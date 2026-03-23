@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import SectionHeader from './SectionHeader';
+import CmsImage from '../CmsImage';
+import { getStrapiMediaUrl } from '@/lib/strapi/media';
 
 const caseStudies = [
   {
@@ -46,23 +48,55 @@ const caseStudies = [
   },
 ];
 
-export default function CaseStudiesSection() {
+export default function CaseStudiesSection({ section }) {
+  const outcomeCards = section?.outcomesCard?.length
+    ? section.outcomesCard.map((item, index) => ({
+        ...caseStudies[index % caseStudies.length],
+        industry: item.industry || caseStudies[index % caseStudies.length].industry,
+        company: item.company || caseStudies[index % caseStudies.length].company,
+        challenge: item.challenge || caseStudies[index % caseStudies.length].challenge,
+        service: item.service || caseStudies[index % caseStudies.length].service,
+        iconUrl: getStrapiMediaUrl(item.icon),
+        kpis: [
+          {
+            value: item.kpi_1_value || caseStudies[index % caseStudies.length].kpis[0].value,
+            label: item.kpi_1_label || caseStudies[index % caseStudies.length].kpis[0].label,
+          },
+          {
+            value: item.kpi_2_value || caseStudies[index % caseStudies.length].kpis[1].value,
+            label: item.kpi_2_label || caseStudies[index % caseStudies.length].kpis[1].label,
+          },
+        ],
+      }))
+    : caseStudies;
+
   return (
     <section className="sec sec-cream">
       <div className="container">
         <SectionHeader
           badge="Client Outcomes"
           badgeClassName="badge badge-blue"
-          title="Results That Matter"
-          subtitle="Not anecdotes - documented outcomes with specific numbers, from real client engagements across industries."
+          title={section?.heading || 'Results That Matter'}
+          subtitle={
+            section?.subHeading ||
+            'Not anecdotes - documented outcomes with specific numbers, from real client engagements across industries.'
+          }
         />
 
         <div className="cs-grid">
-          {caseStudies.map((study) => (
+          {outcomeCards.map((study) => (
             <div key={study.company} className={`cs-card rv ${study.delay}`}>
               <div className="cs-hd">
                 <div className="cs-ico" style={{ background: study.iconBg }}>
-                  {study.icon}
+                  {study.iconUrl ? (
+                    <CmsImage
+                      src={study.iconUrl}
+                      alt={study.company}
+                      style={{ width: 28, height: 28, objectFit: 'contain' }}
+                    />
+                  ) : (
+                    study.icon
+                  )}
                 </div>
                 <div>
                   <div className="cs-ind">{study.industry}</div>
