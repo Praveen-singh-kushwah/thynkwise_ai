@@ -10,6 +10,10 @@ const REVALIDATION_MAP = {
     paths: ['/managed-services'],
     tags: ['managed-services-page'],
   },
+  'cloud-migration-page': {
+    paths: ['/cloud-migration'],
+    tags: ['cloud-migration-page'],
+  },
 };
 
 function isAuthorized(request) {

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function FinalCtaSection() {
+export default function FinalCtaSection({ cta }) {
   return (
     <section className="final-cta-cm">
       <div className="container">
@@ -13,23 +13,28 @@ export default function FinalCtaSection() {
           </span>
 
           <h2>
-            Your Migration Starts with a
-            <br />
-            Free Assessment. No Obligation.
+            {cta?.title ? (
+              cta.title
+            ) : (
+              <>
+                Your Migration Starts with a
+                <br />
+                Free Assessment. No Obligation.
+              </>
+            )}
           </h2>
 
           <p>
-            Tell us about your current infrastructure. We&apos;ll map the right
-            cloud, the right strategy, and the right sequence. In writing.
-            Before any commitment.
+            {cta?.description ||
+              "Tell us about your current infrastructure. We'll map the right cloud, the right strategy, and the right sequence. In writing. Before any commitment."}
           </p>
 
           <div className="final-acts">
-            <Link href="/get-assessment" className="btn btn-white-cta">
-              Get Free Migration Assessment {'\u2192'}
+            <Link href={cta?.primary_cta_link || '/get-assessment'} className="btn btn-white-cta">
+              {cta?.primary_cta_text || 'Get Free Migration Assessment'} {'\u2192'}
             </Link>
-            <Link href="/book-demo" className="btn btn-ghost-w">
-              Talk to Migration Architect
+            <Link href={cta?.secondary_cta_link || '/book-demo'} className="btn btn-ghost-w">
+              {cta?.secondary_cta_text || 'Talk to Migration Architect'}
             </Link>
           </div>
 
@@ -43,11 +48,8 @@ export default function FinalCtaSection() {
               flexWrap: 'wrap',
             }}
           >
-            <span
-              style={{ fontSize: '.78rem', color: 'rgba(255,255,255,.72)' }}
-            >
-              {'\u{1F512}'} Transparent scope / local-currency billing / 30-day
-              hypercare included
+            <span style={{ fontSize: '.78rem', color: 'rgba(255,255,255,.72)' }}>
+              {'\u{1F512}'} Transparent scope / local-currency billing / 30-day hypercare included
             </span>
             <span style={{ color: 'rgba(255,255,255,.25)' }}>|</span>
             <a

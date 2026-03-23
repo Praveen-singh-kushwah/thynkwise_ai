@@ -16,7 +16,7 @@ import AeoFaqSection from './AeoFaqSection';
 import StickyBar from './StickyBar';
 import WhatsAppFloat from './WhatsAppFloat';
 
-export default function CloudMigrationPage() {
+export default function CloudMigrationPage({ data }) {
   useScrollReveal();
 
   const [showSticky, setShowSticky] = useState(false);
@@ -31,16 +31,19 @@ export default function CloudMigrationPage() {
 
   return (
     <>
-      <HeroSection />
-      <QuickAnswerSection />
-      <MigrationProcessSection />
-      <MigrationServiceTypesSection />
-      <SixRsSection />
-      <IndustryMigrationsSection />
-      <TrustBandSection />
-      <CaseStudiesSection />
-      <MainFaqSection />
-      <FinalCtaSection />
+      <HeroSection hero={data?.cloud_migration_hero} />
+      <QuickAnswerSection answers={data?.quick_answer} />
+      <MigrationProcessSection
+        section={data?.migration_process}
+        riskSection={data?.migration_risk_management}
+      />
+      <MigrationServiceTypesSection section={data?.migration_service_types} />
+      <SixRsSection section={data?.six_r_framework} />
+      <IndustryMigrationsSection section={data?.industry_migration} />
+      <TrustBandSection stats={data?.trust_stats} />
+      <CaseStudiesSection section={data?.case_study} />
+      <MainFaqSection section={data?.faq} />
+      <FinalCtaSection cta={data?.cta_section} />
       <AeoFaqSection />
       <StickyBar show={showSticky} />
       <WhatsAppFloat />

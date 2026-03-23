@@ -5,8 +5,9 @@ import Link from 'next/link';
 import SectionHeader from './SectionHeader';
 import { mainFaqs } from './data';
 
-export default function MainFaqSection() {
+export default function MainFaqSection({ section }) {
   const [openFaq, setOpenFaq] = useState(null);
+  const faqs = section?.faq_item?.length ? section.faq_item : mainFaqs;
 
   return (
     <section className="ps ps-w">
@@ -19,9 +20,9 @@ export default function MainFaqSection() {
         />
 
         <div className="faq-list-cm rv d1">
-          {mainFaqs.map((faq, index) => (
+          {faqs.map((faq, index) => (
             <div
-              key={faq.question}
+              key={faq.id || `${faq.question}-${index}`}
               className={`faq-item-cm${openFaq === index ? ' open' : ''}`}
             >
               <div
@@ -37,10 +38,7 @@ export default function MainFaqSection() {
                   {faq.linkHref ? (
                     <>
                       <br />
-                      <Link
-                        href={faq.linkHref}
-                        style={{ color: 'var(--orange)', fontWeight: 600 }}
-                      >
+                      <Link href={faq.linkHref} style={{ color: 'var(--orange)', fontWeight: 600 }}>
                         {faq.linkText} {'\u2192'}
                       </Link>
                     </>
