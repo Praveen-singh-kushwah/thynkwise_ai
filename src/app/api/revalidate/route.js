@@ -22,6 +22,10 @@ const REVALIDATION_MAP = {
     paths: ['/gpuaas'],
     tags: ['gpuaas-page'],
   },
+  'about-page': {
+    paths: ['/about'],
+    tags: ['about-page'],
+  },
 };
 
 function isAuthorized(request) {
@@ -69,3 +73,4 @@ export async function POST(request) {
     tags: config.tags,
   });
 }
+
