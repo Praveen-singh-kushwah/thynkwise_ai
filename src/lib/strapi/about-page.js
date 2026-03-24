@@ -9,6 +9,10 @@ const ABOUT_PAGE_QUERY = `
     &populate[by_the_numbers][populate][card][populate][stat][populate]=*
     &populate[our_values][populate][heading][populate]=*
     &populate[our_values][populate][card][populate]=*
+    &populate[the_team][populate][heading][populate]=*
+    &populate[the_team][populate][team_card][populate]=*
+    &populate[technology_partners][populate][heading][populate]=*
+    &populate[technology_partners][populate][partner_card][populate]=*
 `.replace(/\s/g, '');
 
 export async function getAboutPage() {
