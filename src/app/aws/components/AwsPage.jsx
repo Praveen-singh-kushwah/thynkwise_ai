@@ -6,6 +6,9 @@ import ComparisonSection from './ComparisonSection';
 import WhyThynkwiseSection from './WhyThynkwiseSection';
 import AwsServicesSection from './AwsServicesSection';
 import CertifiedExpertiseSection from './CertifiedExpertiseSection';
+import RealWorldAwsSection from './RealWorldAwsSection';
+import ClientOutcomesSection from './ClientOutcomesSection';
+import AwsByTheNumbersSection from './AwsByTheNumbersSection';
 
 export default function AwsPage({ data }) {
   useScrollReveal();
@@ -17,6 +20,9 @@ export default function AwsPage({ data }) {
       <WhyThynkwiseSection section={data?.why_thynkwise} />
       <AwsServicesSection section={data?.aws_services} />
       <CertifiedExpertiseSection section={data?.certified_expertise} />
+      <RealWorldAwsSection section={data?.real_world_aws} />
+      <ClientOutcomesSection section={data?.client_outcomes} />
+      <AwsByTheNumbersSection section={data?.by_the_numbers} />
     </div>
   );
 }

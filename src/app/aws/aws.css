@@ -639,6 +639,214 @@
   color: var(--gray);
 }
 
+.aws-page .uc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 0;
+}
+
+.aws-page .uc-card {
+  background: #fff;
+  border: 1.5px solid var(--gray-light);
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  gap: 18px;
+  transition: all 0.3s;
+}
+
+.aws-page .uc-card:hover {
+  border-color: var(--aws);
+  box-shadow: 0 8px 28px rgba(255, 153, 0, 0.1);
+}
+
+.aws-page .uc-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.aws-page .uc-icon-img {
+  display: block;
+}
+
+.aws-page .uc-body h3 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.aws-page .uc-body p {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.aws-page .uc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.aws-page .uc-tag {
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--aws-pale);
+  color: #9a5c00;
+  border: 1px solid rgba(255, 153, 0, 0.18);
+  font-family: var(--mono);
+}
+
+.aws-page .uc-result {
+  font-size: 0.78rem;
+  font-family: var(--mono);
+  color: var(--aws-dark);
+  font-weight: 600;
+  background: var(--aws-pale);
+  border: 1px solid rgba(255, 153, 0, 0.22);
+  border-radius: 6px;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.aws-page .case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 0;
+}
+
+.aws-page .case-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px solid var(--gray-light);
+  transition: all 0.3s;
+}
+
+.aws-page .case-card:hover {
+  border-color: var(--aws);
+  box-shadow: var(--sh-aws);
+  transform: translateY(-5px);
+}
+
+.aws-page .case-header {
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.aws-page .case-header.fin {
+  background: var(--aws-pale);
+}
+
+.aws-page .case-header.saas {
+  background: #f0fdf4;
+}
+
+.aws-page .case-header.ecom {
+  background: #fef3c7;
+}
+
+.aws-page .case-icon {
+  font-size: 1.6rem;
+}
+
+.aws-page .case-icon-img {
+  display: block;
+}
+
+.aws-page .case-industry {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+}
+
+.aws-page .case-org {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.aws-page .case-body {
+  padding: 20px 24px;
+}
+
+.aws-page .case-challenge {
+  font-size: 0.82rem;
+  color: var(--gray);
+  font-style: italic;
+  margin-bottom: 14px;
+  padding-left: 12px;
+  border-left: 2px solid rgba(255, 153, 0, 0.4);
+}
+
+.aws-page .case-metric {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--aws);
+  font-family: var(--mono);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.aws-page .case-result {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.aws-page .case-body p {
+  font-size: 0.83rem;
+  color: var(--gray);
+}
+
+.aws-page .stat-band {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 44px;
+}
+
+.aws-page .stat-item {
+  padding: 36px 24px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+.aws-page .stat-item:last-child {
+  border-right: none;
+}
+
+.aws-page .stat-num {
+  font-size: 2.4rem;
+  font-weight: 800;
+  font-family: var(--mono);
+  color: var(--aws);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.aws-page .stat-lbl {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.5;
+}
+
 @media (max-width: 1024px) {
   .aws-page .hgrid {
     grid-template-columns: 1fr;
@@ -649,7 +857,12 @@
   }
 
   .aws-page .why-grid,
-  .aws-page .cert-grid {
+  .aws-page .cert-grid,
+  .aws-page .case-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aws-page .stat-band {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -658,7 +871,10 @@
   .aws-page .aws-compare,
   .aws-page .why-grid,
   .aws-page .svc-grid,
-  .aws-page .cert-grid {
+  .aws-page .cert-grid,
+  .aws-page .uc-grid,
+  .aws-page .case-grid,
+  .aws-page .stat-band {
     grid-template-columns: 1fr;
   }
 }
