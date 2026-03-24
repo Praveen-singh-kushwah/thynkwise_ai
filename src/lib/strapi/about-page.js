@@ -13,6 +13,10 @@ const ABOUT_PAGE_QUERY = `
     &populate[the_team][populate][team_card][populate]=*
     &populate[technology_partners][populate][heading][populate]=*
     &populate[technology_partners][populate][partner_card][populate]=*
+    &populate[where_we_are][populate][heading][populate]=*
+    &populate[where_we_are][populate][card][populate]=*
+    &populate[stats_band][populate][stat][populate]=*
+    &populate[cta_section][populate]=*
 `.replace(/\s/g, '');
 
 export async function getAboutPage() {
