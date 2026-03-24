@@ -17,6 +17,7 @@ const ABOUT_PAGE_QUERY = `
     &populate[where_we_are][populate][card][populate]=*
     &populate[stats_band][populate][stat][populate]=*
     &populate[cta_section][populate]=*
+    &populate[faq][populate][q_a][populate]=*
 `.replace(/\s/g, '');
 
 export async function getAboutPage() {

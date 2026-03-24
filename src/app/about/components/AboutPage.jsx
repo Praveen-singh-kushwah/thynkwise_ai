@@ -10,6 +10,7 @@ import TechnologyPartnersSection from './TechnologyPartnersSection';
 import WhereWeAreSection from './WhereWeAreSection';
 import StatsBandSection from './StatsBandSection';
 import FinalCtaSection from './FinalCtaSection';
+import FaqSection from './FaqSection';
 
 export default function AboutPage({ data }) {
   useScrollReveal();
@@ -25,6 +26,7 @@ export default function AboutPage({ data }) {
       <WhereWeAreSection section={data?.where_we_are} />
       <StatsBandSection section={data?.stats_band} />
       <FinalCtaSection section={data?.cta_section} />
+      <FaqSection section={data?.faq} />
     </div>
   );
 }
