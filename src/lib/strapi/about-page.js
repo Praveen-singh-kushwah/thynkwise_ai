@@ -7,6 +7,8 @@ const ABOUT_PAGE_QUERY = `
     &populate[our_mission][populate][right][populate][stat][populate]=*
     &populate[by_the_numbers][populate][heading][populate]=*
     &populate[by_the_numbers][populate][card][populate][stat][populate]=*
+    &populate[our_values][populate][heading][populate]=*
+    &populate[our_values][populate][card][populate]=*
 `.replace(/\s/g, '');
 
 export async function getAboutPage() {
