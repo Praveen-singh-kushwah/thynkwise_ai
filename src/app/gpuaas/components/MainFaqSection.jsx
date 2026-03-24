@@ -14,11 +14,11 @@ export default function MainFaqSection({ section }) {
           <span className="badge bc">FAQ</span>
         </div>
         <h2 className="sec-ti rv">Common Questions from GPU Engineers</h2>
-        <div className="faq-list">
+        <div className="faq-list rv">
           {items.map((item, index) => (
             <div
               key={item.id || `${item.question}-${index}`}
-              className={`faq-item rv d${(index % 5) + 1}${openIndex === index ? ' open' : ''}`}
+              className={`faq-item${openIndex === index ? ' open' : ''}`}
             >
               <button
                 type="button"
