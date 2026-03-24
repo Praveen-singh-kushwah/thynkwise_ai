@@ -362,6 +362,10 @@
   background: var(--dark);
 }
 
+.aws-page .ps-hero {
+  background: linear-gradient(160deg, #1a0d00 0%, #3d2400 50%, var(--dark) 100%);
+}
+
 .aws-page .sec-eyebrow {
   text-align: center;
   margin-bottom: 10px;
@@ -845,6 +849,139 @@
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.45);
   line-height: 1.5;
+}
+
+.aws-page .aws-common-faq .faq-list {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aws-page .aws-common-faq .faq-item {
+  background: #fff;
+  border: 1.5px solid var(--gray-light);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.aws-page .aws-common-faq .faq-item.open {
+  border-color: var(--aws);
+}
+
+.aws-page .aws-common-faq .faq-q {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+  user-select: none;
+  text-align: left;
+}
+
+.aws-page .aws-common-faq .faq-arrow {
+  color: var(--aws);
+  font-size: 0.8rem;
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+
+.aws-page .aws-common-faq .faq-item.open .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.aws-page .aws-common-faq .faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.25s;
+}
+
+.aws-page .aws-common-faq .faq-item.open .faq-a {
+  max-height: 300px;
+  padding: 0 22px 18px;
+}
+
+.aws-page .aws-common-faq .faq-a p {
+  font-size: 0.86rem;
+  color: var(--gray);
+  line-height: 1.75;
+}
+
+.aws-page .final-cta {
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.aws-page .final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 153, 0, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.aws-page .final-cta-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.aws-page .aws-final-badge {
+  margin-bottom: 18px;
+}
+
+.aws-page .final-cta h2 {
+  color: #fff;
+  margin-bottom: 14px;
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.aws-page .final-cta p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.02rem;
+  max-width: 500px;
+  margin: 0 auto 36px;
+}
+
+.aws-page .final-cta-acts {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.aws-page .aws-final-meta {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.aws-page .aws-final-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.aws-page .aws-final-meta-sep {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 1024px) {

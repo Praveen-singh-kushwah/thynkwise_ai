@@ -9,6 +9,9 @@ import CertifiedExpertiseSection from './CertifiedExpertiseSection';
 import RealWorldAwsSection from './RealWorldAwsSection';
 import ClientOutcomesSection from './ClientOutcomesSection';
 import AwsByTheNumbersSection from './AwsByTheNumbersSection';
+import CommonQuestionsSection from './CommonQuestionsSection';
+import FinalCtaSection from './FinalCtaSection';
+import AeoFaqSection from './AeoFaqSection';
 
 export default function AwsPage({ data }) {
   useScrollReveal();
@@ -23,6 +26,9 @@ export default function AwsPage({ data }) {
       <RealWorldAwsSection section={data?.real_world_aws} />
       <ClientOutcomesSection section={data?.client_outcomes} />
       <AwsByTheNumbersSection section={data?.by_the_numbers} />
+      <CommonQuestionsSection section={data?.common_questions} />
+      <FinalCtaSection section={data?.cta} />
+      <AeoFaqSection section={data?.faq} />
     </div>
   );
 }
