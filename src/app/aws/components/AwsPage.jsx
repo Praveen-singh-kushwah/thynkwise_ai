@@ -4,6 +4,8 @@ import useScrollReveal from '../../components/useScrollReveal';
 import HeroSection from './HeroSection';
 import ComparisonSection from './ComparisonSection';
 import WhyThynkwiseSection from './WhyThynkwiseSection';
+import AwsServicesSection from './AwsServicesSection';
+import CertifiedExpertiseSection from './CertifiedExpertiseSection';
 
 export default function AwsPage({ data }) {
   useScrollReveal();
@@ -13,6 +15,8 @@ export default function AwsPage({ data }) {
       <HeroSection hero={data?.hero} />
       <ComparisonSection section={data?.comparison} />
       <WhyThynkwiseSection section={data?.why_thynkwise} />
+      <AwsServicesSection section={data?.aws_services} />
+      <CertifiedExpertiseSection section={data?.certified_expertise} />
     </div>
   );
 }

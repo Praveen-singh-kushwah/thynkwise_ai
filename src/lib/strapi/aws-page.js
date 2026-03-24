@@ -8,6 +8,8 @@ const AWS_PAGE_QUERY = `
     &populate[comparison][populate][via_thynkwise][populate][points][populate]=*
     &populate[why_thynkwise][populate][heading][populate]=*
     &populate[why_thynkwise][populate][card][populate]=*
+    &populate[aws_services][populate][service_category][populate]=*
+    &populate[certified_expertise][populate][card][populate]=*
 `.replace(/\s/g, '');
 
 export async function getAwsPage() {
