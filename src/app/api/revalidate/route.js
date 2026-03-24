@@ -26,6 +26,10 @@ const REVALIDATION_MAP = {
     paths: ['/about'],
     tags: ['about-page'],
   },
+  'aws-page': {
+    paths: ['/aws'],
+    tags: ['aws-page'],
+  },
 };
 
 function isAuthorized(request) {
@@ -36,8 +40,7 @@ function isAuthorized(request) {
   }
 
   const url = new URL(request.url);
-  const providedSecret =
-    request.headers.get('x-strapi-secret') || url.searchParams.get('secret');
+  const providedSecret = request.headers.get('x-strapi-secret') || url.searchParams.get('secret');
 
   return providedSecret === expectedSecret;
 }
@@ -63,7 +66,7 @@ export async function POST(request) {
     );
   }
 
-  config.tags.forEach((tag) => revalidateTag(tag));
+  config.tags.forEach((tag) => revalidateTag(tag, 'max'));
   config.paths.forEach((path) => revalidatePath(path));
 
   return NextResponse.json({
@@ -73,4 +76,3 @@ export async function POST(request) {
     tags: config.tags,
   });
 }
-

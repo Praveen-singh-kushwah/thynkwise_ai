@@ -1,0 +1,341 @@
+﻿.aws-page {
+  --blue: #3a59a8;
+  --blue-dark: #2a4285;
+  --blue-light: #5577cc;
+  --orange: #f6881f;
+  --orange-dark: #d96c00;
+  --aws: #ff9900;
+  --aws-dark: #e68900;
+  --aws-pale: #fff8ed;
+  --cream: #ffebc7;
+  --cream-light: #fff8ee;
+  --black: #0a0a0a;
+  --dark: #1a1f35;
+  --dark2: #252b45;
+  --gray: #6b7280;
+  --gray-light: #e8eaef;
+  --white: #fff;
+  --font: 'Poppins', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --sh-md: 0 8px 32px rgba(58, 89, 168, 0.15);
+  --sh-orange: 0 8px 28px rgba(246, 136, 31, 0.32);
+  --sh-aws: 0 8px 32px rgba(255, 153, 0, 0.22);
+  background: var(--cream);
+  color: var(--black);
+}
+
+.aws-page .rv {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.aws-page .rv.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.aws-page .d1 { transition-delay: 0.08s; }
+.aws-page .d2 { transition-delay: 0.16s; }
+.aws-page .d3 { transition-delay: 0.24s; }
+.aws-page .d4 { transition-delay: 0.32s; }
+
+.aws-page .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 26px;
+  border-radius: 50px;
+  font-family: var(--font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+
+.aws-page .btn-aws {
+  background: var(--aws);
+  color: #fff;
+  box-shadow: var(--sh-aws);
+}
+
+.aws-page .btn-aws:hover {
+  background: var(--aws-dark);
+  transform: translateY(-2px);
+}
+
+.aws-page .btn-ghost-w {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.aws-page .btn-ghost-w:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+}
+
+.aws-page .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 13px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.aws-page .bw {
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.aws-page .hero {
+  padding: 115px 0 80px;
+  background: linear-gradient(148deg, #1a0d00 0%, #2d1800 40%, #3d2400 70%, #1a1f35 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+}
+
+.aws-page .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.aws-page .hero-glow {
+  position: absolute;
+  top: -80px;
+  right: -60px;
+  width: 540px;
+  height: 540px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 153, 0, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.aws-page .hero-glow2 {
+  position: absolute;
+  bottom: -60px;
+  left: -40px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 153, 0, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.aws-page .hcnt {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.aws-page .hgrid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 64px;
+  align-items: center;
+}
+
+.aws-page .h-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.aws-page .aws-cert {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 153, 0, 0.12);
+  border: 1px solid rgba(255, 153, 0, 0.28);
+  border-radius: 50px;
+  padding: 6px 14px;
+}
+
+.aws-page .aws-cert span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 200, 100, 0.9);
+}
+
+.aws-page h1 {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.aws-page h1 em {
+  font-style: normal;
+  color: var(--aws);
+}
+
+.aws-page .hero-lead {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 520px;
+  margin: 18px 0 32px;
+  line-height: 1.75;
+}
+
+.aws-page .hero-lead p {
+  color: inherit;
+}
+
+.aws-page .hero-acts {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.aws-page .hero-trust {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.aws-page .ht-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.aws-page .ht-item span {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.aws-page .ht-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--aws);
+}
+
+.aws-page .hero-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 153, 0, 0.18);
+  border-radius: 22px;
+  padding: 28px;
+  backdrop-filter: blur(12px);
+}
+
+.aws-page .hc-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.aws-page .hc-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 153, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+.aws-page .hc-icon-img {
+  display: block;
+}
+
+.aws-page .hc-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.aws-page .hc-sub {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: var(--mono);
+}
+
+.aws-page .hc-stat {
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.aws-page .hc-stat:last-of-type {
+  border-bottom: none;
+}
+
+.aws-page .hc-stat-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.aws-page .hc-stat-val {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--aws);
+  font-family: var(--mono);
+  text-align: right;
+}
+
+.aws-page .hc-stat-val.wh {
+  color: #fff;
+}
+
+.aws-page .hc-stat-val.gr {
+  color: #34d399;
+}
+
+.aws-page .hc-cta {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  padding: 12px;
+  border-radius: 50px;
+  background: var(--aws);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+
+.aws-page .hc-cta:hover {
+  background: var(--aws-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .aws-page .hgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .aws-page .hero-card {
+    display: none;
+  }
+}
