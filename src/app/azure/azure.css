@@ -86,6 +86,17 @@
   border-color: #fff;
 }
 
+.azure-page .btn-outline {
+  background: transparent;
+  color: var(--azure);
+  border-color: var(--azure);
+}
+
+.azure-page .btn-outline:hover {
+  background: var(--azure);
+  color: #fff;
+}
+
 .azure-page .badge {
   display: inline-flex;
   align-items: center;
@@ -598,15 +609,261 @@
   margin-top: 20px;
 }
 
+.azure-page .cert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.azure-page .cert-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1.5px solid var(--gray-light);
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.azure-page .cert-card:hover {
+  border-color: var(--azure);
+  box-shadow: 0 4px 18px rgba(0, 120, 212, 0.12);
+}
+
+.azure-page .cert-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--azure);
+}
+
+.azure-page .cert-icon-img {
+  display: block;
+}
+
+.azure-page .cert-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.azure-page .cert-count {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--azure);
+  font-family: var(--mono);
+  display: block;
+}
+
+.azure-page .cert-type {
+  font-size: 0.72rem;
+  color: var(--gray);
+}
+
+.azure-page .cert-foot {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.azure-page .cert-foot-note {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 16px;
+}
+
+.azure-page .case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.azure-page .case-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px solid var(--gray-light);
+  transition: all 0.3s;
+}
+
+.azure-page .case-card:hover {
+  border-color: var(--azure);
+  box-shadow: var(--sh-azure);
+  transform: translateY(-5px);
+}
+
+.azure-page .case-header {
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.azure-page .case-header.bfsi {
+  background: var(--azure-pale);
+}
+
+.azure-page .case-header.gov {
+  background: #f0fdf9;
+}
+
+.azure-page .case-header.mfg {
+  background: #faf5ff;
+}
+
+.azure-page .case-icon {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--azure-dark);
+}
+
+.azure-page .case-icon-img {
+  display: block;
+}
+
+.azure-page .case-industry {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+}
+
+.azure-page .case-org {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.azure-page .case-body {
+  padding: 20px 24px;
+}
+
+.azure-page .case-challenge {
+  font-size: 0.82rem;
+  color: var(--gray);
+  font-style: italic;
+  margin-bottom: 14px;
+  padding-left: 12px;
+  border-left: 2px solid var(--azure-light);
+}
+
+.azure-page .case-metric {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--azure);
+  font-family: var(--mono);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.azure-page .case-result {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.azure-page .case-body p {
+  font-size: 0.83rem;
+  color: var(--gray);
+}
+
+.azure-page .az-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.azure-page .azc-side {
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px;
+  border: 1.5px solid var(--gray-light);
+}
+
+.azure-page .azc-side.tb {
+  border-color: var(--orange);
+  box-shadow: 0 6px 28px rgba(246, 136, 31, 0.14);
+}
+
+.azure-page .azc-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.azure-page .azc-title .star {
+  color: var(--orange);
+}
+
+.azure-page .azc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.azure-page .azc-list li {
+  display: flex;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--dark);
+}
+
+.azure-page .azc-list li .chk {
+  color: var(--orange);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.azure-page .azc-list li .x {
+  color: #d1d5db;
+  flex-shrink: 0;
+}
+
+.azure-page .azc-list li.no {
+  color: var(--gray);
+}
+
+.azure-page .compare-cta {
+  text-align: center;
+  margin-top: 36px;
+}
+
 @media (max-width: 1024px) {
   .azure-page .hgrid,
   .azure-page .why-grid,
-  .azure-page .bfsi-grid {
+  .azure-page .bfsi-grid,
+  .azure-page .az-compare {
     grid-template-columns: 1fr;
   }
 
-  .azure-page .svc-grid {
+  .azure-page .svc-grid,
+  .azure-page .case-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .azure-page .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .azure-page .hero-card {
@@ -615,9 +872,11 @@
 }
 
 @media (max-width: 768px) {
-  .azure-page .why-grid,
-  .azure-page .svc-grid,
-  .azure-page .bfsi-stat-grid {
+.azure-page .why-grid,
+.azure-page .svc-grid,
+  .azure-page .bfsi-stat-grid,
+  .azure-page .case-grid,
+  .azure-page .cert-grid {
     grid-template-columns: 1fr;
   }
 }
