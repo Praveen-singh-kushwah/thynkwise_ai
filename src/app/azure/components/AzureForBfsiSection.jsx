@@ -35,7 +35,7 @@ const defaultSection = {
       { value: '45+', label: 'Banks & NBFCs on Azure India' },
       { value: '100%', label: 'Data within Indian jurisdiction' },
       { value: '8wks', label: 'Avg. RBI compliance setup time' },
-      { value: '?0', label: 'RBI non-compliance fines earned' },
+      { value: 'INR 0', label: 'RBI non-compliance fines earned' },
     ],
     message:
       '"Thynkwise\'s Azure BFSI team set up our RBI-compliant environment in 6 weeks. Our internal IT team estimated 6 months."',
@@ -55,7 +55,7 @@ export default function AzureForBfsiSection({ section }) {
       <div className="container">
         <div className="bfsi-grid">
           <div>
-            <span className="badge baz rv">{'??'} Azure for BFSI India</span>
+            <span className="badge baz rv">Azure for BFSI India</span>
             <h2 className="rv d1" style={{ marginTop: 12 }}>{left.heading}</h2>
             <p className="rv d2">{left.description}</p>
             <ul className="bfsi-list">

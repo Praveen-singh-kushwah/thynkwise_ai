@@ -1,4 +1,4 @@
-﻿.azure-page {
+.azure-page {
   --blue: #3a59a8;
   --blue-dark: #2a4285;
   --blue-light: #5577cc;
@@ -64,6 +64,17 @@
   transform: translateY(-2px);
 }
 
+.azure-page .btn-azure {
+  background: var(--azure);
+  color: #fff;
+  box-shadow: var(--sh-azure);
+}
+
+.azure-page .btn-azure:hover {
+  background: var(--azure-dark);
+  transform: translateY(-2px);
+}
+
 .azure-page .btn-ghost-w {
   background: transparent;
   color: #fff;
@@ -90,6 +101,12 @@
   background: rgba(246, 136, 31, 0.12);
   color: var(--orange-dark);
   border: 1px solid rgba(246, 136, 31, 0.28);
+}
+
+.azure-page .baz {
+  background: rgba(0, 120, 212, 0.1);
+  color: var(--azure);
+  border: 1px solid rgba(0, 120, 212, 0.2);
 }
 
 .azure-page .bw {
@@ -194,6 +211,14 @@
   max-width: 520px;
   margin: 18px 0 32px;
   line-height: 1.7;
+}
+
+.azure-page .hero-lead p,
+.azure-page .hero-lead span {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  background: transparent !important;
 }
 
 .azure-page .hero-acts {
@@ -325,6 +350,14 @@
   background: var(--cream);
 }
 
+.azure-page .ps-white {
+  background: #fff;
+}
+
+.azure-page .ps-azure {
+  background: linear-gradient(145deg, #001529 0%, var(--azure-dark) 40%, var(--azure) 100%);
+}
+
 .azure-page .sec-eyebrow {
   text-align: center;
   margin-bottom: 10px;
@@ -399,13 +432,192 @@
   color: var(--gray);
 }
 
+.azure-page .svc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.azure-page .svc-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  transition: all 0.3s;
+}
+
+.azure-page .svc-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.azure-page .svc-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.azure-page .svc-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.azure-page .svc-desc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+}
+
+.azure-page .svc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.azure-page .svc-tag {
+  font-size: 0.68rem;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(0, 120, 212, 0.25);
+  color: var(--azure-light);
+  border: 1px solid rgba(0, 120, 212, 0.3);
+}
+
+.azure-page .bfsi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.azure-page .bfsi-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.azure-page .bfsi-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.azure-page .bfsi-list li::before {
+  content: '\2022';
+  color: var(--azure);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.azure-page .li-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+  display: block;
+}
+
+.azure-page .li-sub {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.azure-page .bfsi-card {
+  background: var(--azure-pale);
+  border-radius: 20px;
+  padding: 32px;
+  border: 1.5px solid rgba(0, 120, 212, 0.15);
+}
+
+.azure-page .bfsi-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.azure-page .bfsi-stat {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+}
+
+.azure-page .bfsi-stat .val {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--azure);
+  font-family: var(--mono);
+  display: block;
+  line-height: 1;
+}
+
+.azure-page .bfsi-stat .key {
+  font-size: 0.74rem;
+  color: var(--gray);
+  margin-top: 5px;
+}
+
+.azure-page .bfsi-quote {
+  margin-top: 20px;
+  padding: 16px;
+  background: rgba(0, 120, 212, 0.07);
+  border-radius: 12px;
+  border-left: 3px solid var(--azure);
+}
+
+.azure-page .bfsi-quote-message {
+  font-size: 0.8rem;
+  color: var(--dark);
+  font-style: italic;
+}
+
+.azure-page .bfsi-quote-by {
+  font-size: 0.74rem;
+  color: var(--gray);
+  margin-top: 6px;
+}
+
+.azure-page .bfsi-cta {
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 @media (max-width: 1024px) {
   .azure-page .hgrid,
-  .azure-page .why-grid {
+  .azure-page .why-grid,
+  .azure-page .bfsi-grid {
     grid-template-columns: 1fr;
+  }
+
+  .azure-page .svc-grid {
+    grid-template-columns: 1fr 1fr;
   }
 
   .azure-page .hero-card {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .azure-page .why-grid,
+  .azure-page .svc-grid,
+  .azure-page .bfsi-stat-grid {
+    grid-template-columns: 1fr;
   }
 }
