@@ -13,6 +13,9 @@ const AZURE_PAGE_QUERY = `
     &populate[azure_success_stories][populate]=*
     &populate[comparison][populate][direct][populate][points][populate]=*
     &populate[comparison][populate][via_thynkwise][populate][points][populate]=*
+    &populate[common_questions][populate][q_a][populate]=*
+    &populate[cta][populate][points][populate]=*
+    &populate[faq][populate][q_a][populate]=*
 `.replace(/\s/g, '');
 
 export async function getAzurePage() {

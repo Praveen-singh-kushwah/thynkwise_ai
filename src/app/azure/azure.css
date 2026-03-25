@@ -849,6 +849,171 @@
   margin-top: 36px;
 }
 
+.azure-page .azure-common-faq .faq-list {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.azure-page .azure-common-faq .sec-eyebrow {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.azure-page .azure-common-faq .azure-faq-badge {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.azure-page .azure-common-faq .faq-item {
+  background: #fff;
+  border-radius: 14px;
+  border: 1.5px solid var(--gray-light);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.azure-page .azure-common-faq .faq-item.open {
+  border-color: var(--azure);
+}
+
+.azure-page .azure-common-faq .faq-q {
+  width: 100%;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--dark);
+  text-align: left;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.azure-page .azure-common-faq .faq-arrow {
+  color: var(--azure);
+  font-size: 0.8rem;
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+
+.azure-page .azure-common-faq .faq-item.open .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.azure-page .azure-common-faq .faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.25s;
+}
+
+.azure-page .azure-common-faq .faq-item.open .faq-a {
+  max-height: 320px;
+  padding: 0 22px 18px;
+}
+
+.azure-page .azure-common-faq .faq-a p {
+  font-size: 0.87rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+.azure-page .final-cta {
+  background: linear-gradient(135deg, #001529, var(--azure-dark), var(--azure));
+  padding: 88px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.azure-page .final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.azure-page .final-cta-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.azure-page .azure-final-badge {
+  display: inline-flex;
+  margin-bottom: 16px;
+}
+
+.azure-page .final-cta h2 {
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.azure-page .final-cta p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  max-width: 540px;
+  margin: 0 auto 36px;
+}
+
+.azure-page .final-cta-acts {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.azure-page .azure-final-meta {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.azure-page .azure-final-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.78rem;
+}
+
+.azure-page .azure-final-meta-sep {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.azure-page .azure-aeo-faq {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.azure-page .azure-aeo-faq .faq-q {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.azure-page .azure-aeo-faq .faq-arrow {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
 @media (max-width: 1024px) {
   .azure-page .hgrid,
   .azure-page .why-grid,
