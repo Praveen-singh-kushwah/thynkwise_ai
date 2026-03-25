@@ -30,6 +30,10 @@ const REVALIDATION_MAP = {
     paths: ['/aws'],
     tags: ['aws-page'],
   },
+  'azure-page': {
+    paths: ['/azure'],
+    tags: ['azure-page'],
+  },
 };
 
 function isAuthorized(request) {

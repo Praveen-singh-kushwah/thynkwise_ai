@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Azure Managed Services & Reseller Partner | Thynkwise</title>
+  <meta name="description" content="Thynkwise is a Microsoft Azure authorised reseller and managed services partner. Azure VMs, AKS, SQL, Sentinel, Defender, Azure OpenAI — full-stack Azure management and migrations."/>
+  <meta name="keywords" content="Azure managed services, Microsoft Azure reseller, Azure partner, Azure migration, AKS managed, Azure Sentinel SIEM, Azure cost optimisation, Azure DevOps managed, Azure OpenAI services, managed Azure infrastructure"/>
+  <meta name="author" content="Thynkwise Technologies"/>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
+  <link rel="canonical" href="https://www.thynkwise.ai/azure-managed-services"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Azure Managed Services & Reseller Partner | Thynkwise"/>
+  <meta property="og:description" content="Thynkwise is a Microsoft Azure authorised reseller and managed services partner. Azure VMs, AKS, SQL, Sentinel, Defender, Azure OpenAI — full-stack Azure management and migrations."/>
+  <meta property="og:url" content="https://www.thynkwise.ai/azure-managed-services"/>
+  <meta property="og:site_name" content="Thynkwise"/>
+  <meta property="og:image" content="https://www.thynkwise.ai/assets/og-azure.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@thynkwise"/>
+  <meta name="twitter:title" content="Azure Managed Services & Reseller Partner | Thynkwise"/>
+  <meta name="twitter:description" content="Thynkwise is a Microsoft Azure authorised reseller and managed services partner. Azure VMs, AKS, SQL, Sentinel, Defender, Azure OpenAI — full-stack Azure management and migrations."/>
+  <meta name="twitter:image" content="https://www.thynkwise.ai/assets/og-azure.jpg"/>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.thynkwise.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cloud Providers",
+      "item": "https://www.thynkwise.ai/cloud"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Azure",
+      "item": "https://www.thynkwise.ai/azure-managed-services"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What Azure services does Thynkwise manage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Thynkwise manages Azure Virtual Machines, AKS, Azure SQL, Cosmos DB, Azure Active Directory, Microsoft Sentinel, Defender for Cloud, Azure OpenAI, and the full Azure networking stack including VNets, NSGs, and ExpressRoute."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Thynkwise offer Azure Sentinel SIEM management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Thynkwise manages Microsoft Sentinel as part of its cybersecurity portfolio \u2014 including rule tuning, alert triage, SOAR playbook automation, and 24/7 SOC analyst coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Thynkwise help with Azure cost management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Thynkwise uses Azure Cost Management, Reserved Instances, Hybrid Benefit licensing, and automated rightsizing to reduce Azure spend \u2014 typically achieving 30\u201340% savings."
+      }
+    }
+  ]
+}
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <style>
+
+    /* ══ THYNKWISE SHARED SYSTEM ══ */
+    :root{--blue:#3a59a8;--blue2:#4a6fc0;--blue-d:#1e3070;--orange:#f6881f;--orange2:#f89c44;--cream:#ffebc7;--cream2:#fff8ee;--dark:#0a0a0a;--dark2:#111827;--dark3:#1c2333;--gray:#6b7280;--gray2:#9ca3af;--white:#fff;--font:'Poppins',sans-serif;--body:'DM Sans',sans-serif;--mono:'JetBrains Mono',monospace;--r8:8px;--r12:12px;--r16:16px;--r20:20px;--r24:24px;--sh-blue:0 8px 32px rgba(58,89,168,.25);--sh-orange:0 8px 32px rgba(246,136,31,.2)}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--body);background:#fff;color:var(--dark);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#f1f5f9}::-webkit-scrollbar-thumb{background:var(--blue);border-radius:2px}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px}
+    .btn{display:inline-flex;align-items:center;gap:7px;padding:12px 26px;border-radius:50px;font-family:var(--font);font-size:.86rem;font-weight:600;cursor:pointer;border:2px solid transparent;transition:all .25s;white-space:nowrap}
+    .btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}.btn-primary:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:var(--sh-blue)}
+    .btn-orange{background:var(--orange);color:#fff;border-color:var(--orange)}.btn-orange:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:var(--sh-orange)}
+    .btn-ghost{background:transparent;color:var(--blue);border-color:var(--blue)}.btn-ghost:hover{background:var(--blue);color:#fff}
+    .btn-ghost-w{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}.btn-ghost-w:hover{background:rgba(255,255,255,.1);border-color:#fff}
+    .btn-ghost-dark{background:transparent;color:var(--dark);border-color:#d1d5db}.btn-ghost-dark:hover{border-color:var(--blue);color:var(--blue)}
+    .badge{display:inline-flex;align-items:center;gap:5px;padding:4px 14px;border-radius:50px;font-size:.69rem;font-weight:600;letter-spacing:.06em;font-family:var(--mono);text-transform:uppercase}
+    .badge-blue{background:rgba(58,89,168,.1);color:var(--blue);border:1px solid rgba(58,89,168,.2)}
+    .badge-orange{background:rgba(246,136,31,.1);color:var(--orange);border:1px solid rgba(246,136,31,.2)}
+    .rv{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s cubic-bezier(.22,1,.36,1)}
+    .rv.on{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.06s}.d2{transition-delay:.12s}.d3{transition-delay:.18s}.d4{transition-delay:.24s}.d5{transition-delay:.30s}
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px 0;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid #f1f5f9;transition:all .3s}
+    .nav.sc{box-shadow:0 1px 20px rgba(0,0,0,.06)}
+    .nv{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:9px;font-family:var(--font);font-size:1.2rem;font-weight:800;color:var(--dark)}
+    .logo-icon{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--blue2));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .logo .or{color:var(--orange)}
+    .navlinks{display:flex;align-items:center;gap:2px;list-style:none}
+    .navlinks a{padding:6px 12px;border-radius:8px;font-size:.82rem;font-weight:500;color:var(--gray);transition:all .2s}
+    .navlinks a:hover,.navlinks a.active{color:var(--blue);background:rgba(58,89,168,.07)}
+    .nav-acts{display:flex;align-items:center;gap:8px;flex-shrink:0}
+    .nav-acts .btn{padding:8px 18px;font-size:.79rem}
+    /* FOOTER */
+    footer{background:var(--dark);padding:56px 0 24px;border-top:1px solid rgba(255,255,255,.06)}
+    .foot-grid{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:36px;margin-bottom:40px}
+    .foot-col h4{font-size:.65rem;font-family:var(--mono);font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.25);margin-bottom:14px}
+    .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .foot-col ul a{font-size:.8rem;color:rgba(255,255,255,.45);transition:color .2s}
+    .foot-col ul a:hover{color:rgba(255,255,255,.85)}
+    /* STICKY + WA */
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:998;background:var(--dark);border-top:1px solid rgba(58,89,168,.3);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;transform:translateY(100%);transition:transform .3s}
+    .sticky-cta.show{transform:translateY(0)}
+    .sticky-cta p{font-size:.8rem;color:rgba(255,255,255,.6);margin:0}
+    .wa-fab{position:fixed;bottom:72px;right:20px;z-index:997;width:48px;height:48px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .25s}
+    .wa-fab:hover{transform:scale(1.1)}
+    .wa-fab svg{width:25px;height:25px}
+    /* RESPONSIVE */
+    @media(max-width:768px){.navlinks{display:none}.nav-acts .btn:first-child{display:none}.foot-grid{grid-template-columns:1fr}}
+
+    :root {
+      --blue:#3a59a8; --blue-dark:#2a4285; --blue-light:#5577cc; --blue-pale:#eef2ff;
+      --orange:#f6881f; --orange-dark:#d96c00; --orange-light:#ffa94d;
+      --azure:#0078D4; --azure-dark:#005a9e; --azure-light:#50a9e2; --azure-pale:#eff6ff;
+      --cream:#ffebc7; --cream-light:#fff8ee;
+      --black:#0a0a0a; --dark:#1a1f35; --dark2:#252b45;
+      --gray:#6b7280; --gray-light:#e8eaef; --white:#ffffff;
+      --font:'Poppins',sans-serif; --mono:'JetBrains Mono',monospace;
+      --r:14px; --r-lg:24px;
+      --sh-md:0 8px 32px rgba(58,89,168,.15);
+      --sh-orange:0 8px 28px rgba(246,136,31,.32);
+      --sh-azure:0 8px 32px rgba(0,120,212,.2);
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font);background:var(--cream);color:var(--black);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--cream)}::-webkit-scrollbar-thumb{background:var(--azure);border-radius:3px}
+    h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.1;letter-spacing:-.025em}
+    h2{font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:700;line-height:1.2;letter-spacing:-.015em}
+    h3{font-size:1.1rem;font-weight:600;line-height:1.35}
+    p{font-size:.94rem;color:var(--gray)}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1160px;margin:0 auto;padding:0 28px}
+
+    .btn{display:inline-flex;align-items:center;gap:7px;padding:13px 26px;border-radius:50px;font-family:var(--font);font-size:.88rem;font-weight:600;cursor:pointer;border:2px solid transparent;transition:all .25s;white-space:nowrap}
+    .btn-azure{background:var(--azure);color:#fff;box-shadow:var(--sh-azure)}
+    .btn-azure:hover{background:var(--azure-dark);transform:translateY(-2px)}
+    .btn-primary{background:var(--orange);color:#fff;border-color:var(--orange);box-shadow:var(--sh-orange)}
+    .btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px)}
+    .btn-outline{background:transparent;color:var(--azure);border-color:var(--azure)}
+    .btn-outline:hover{background:var(--azure);color:#fff}
+    .btn-ghost-w{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+    .btn-ghost-w:hover{background:rgba(255,255,255,.12);border-color:#fff}
+
+    .badge{display:inline-flex;align-items:center;gap:5px;padding:4px 13px;border-radius:50px;font-size:.72rem;font-weight:600;letter-spacing:.03em}
+    .bo{background:rgba(246,136,31,.12);color:var(--orange-dark);border:1px solid rgba(246,136,31,.28)}
+    .baz{background:rgba(0,120,212,.1);color:var(--azure);border:1px solid rgba(0,120,212,.2)}
+    .bw{background:rgba(255,255,255,.13);color:#fff;border:1px solid rgba(255,255,255,.25)}
+    .bg{background:rgba(16,185,129,.1);color:#059669;border:1px solid rgba(16,185,129,.22)}
+
+    .rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1)}
+    .rv.on{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 0;background:rgba(255,235,199,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(58,89,168,.08);transition:all .3s}
+    .nav.sc{background:rgba(255,235,199,.98);box-shadow:0 4px 20px rgba(58,89,168,.1);padding:9px 0}
+    .nv{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{display:flex;align-items:center;gap:9px;font-size:1.22rem;font-weight:800;color:var(--blue);text-decoration:none}
+    .logo-box{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--blue-light));display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem}
+    .logo .or{color:var(--orange)}
+    .navlinks{display:flex;align-items:center;gap:2px;list-style:none}
+    .navlinks a{padding:7px 12px;border-radius:7px;font-size:.85rem;font-weight:500;color:var(--dark);transition:all .2s}
+    .navlinks a:hover{color:var(--blue);background:rgba(58,89,168,.07)}
+    .nav-acts{display:flex;align-items:center;gap:9px}
+    .nav-acts .btn{padding:8px 16px;font-size:.78rem}
+
+    /* HERO */
+    .hero{padding:115px 0 80px;background:linear-gradient(148deg,#001529 0%,var(--azure-dark) 45%,var(--azure) 100%);position:relative;overflow:hidden;min-height:82vh;display:flex;align-items:center}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.055) 1px,transparent 1px);background-size:28px 28px}
+    .hero-glow{position:absolute;bottom:-80px;right:-60px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(80,169,226,.18) 0%,transparent 70%);pointer-events:none}
+    .hero-glow2{position:absolute;top:-60px;left:-40px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(0,90,158,.22) 0%,transparent 70%);pointer-events:none}
+    .hcnt{position:relative;z-index:2;width:100%}
+    .hgrid{display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:center}
+    .h-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+    .h-eyebrow .az-cert{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50px;padding:6px 14px}
+    .h-eyebrow .az-cert span{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.85)}
+    h1{color:#fff}
+    h1 em{font-style:normal;color:var(--azure-light)}
+    .hero-lead{font-size:1.08rem;color:rgba(255,255,255,.72);max-width:520px;margin:18px 0 32px;line-height:1.7}
+    .hero-acts{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+    .hero-trust{display:flex;gap:22px;flex-wrap:wrap}
+    .ht-item{display:flex;align-items:center;gap:7px}
+    .ht-item span{font-size:.78rem;color:rgba(255,255,255,.55)}
+    .ht-dot{width:6px;height:6px;border-radius:50%;background:var(--azure-light)}
+
+    /* HERO CARD */
+    .hero-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:28px;backdrop-filter:blur(12px)}
+    .hc-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .hc-icon{width:44px;height:44px;border-radius:12px;background:var(--azure);display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+    .hc-title{font-size:.95rem;font-weight:700;color:#fff}
+    .hc-sub{font-size:.72rem;color:rgba(255,255,255,.5);font-family:var(--mono)}
+    .hc-stat{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between}
+    .hc-stat:last-of-type{border-bottom:none}
+    .hc-stat-label{font-size:.8rem;color:rgba(255,255,255,.55)}
+    .hc-stat-val{font-size:1.1rem;font-weight:700;color:var(--orange);font-family:var(--mono)}
+    .hc-cta{display:block;margin-top:20px;text-align:center;padding:12px;border-radius:50px;background:var(--azure);color:#fff;font-family:var(--font);font-size:.85rem;font-weight:600;border:none;cursor:pointer;width:100%;transition:all .25s;text-decoration:none}
+    .hc-cta:hover{background:var(--azure-dark);transform:translateY(-2px)}
+
+    /* WHY AZURE SECTION */
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .why-card{background:#fff;border-radius:18px;padding:28px;border:1.5px solid var(--gray-light);transition:all .3s}
+    .why-card:hover{border-color:var(--azure);box-shadow:var(--sh-azure);transform:translateY(-5px)}
+    .why-icon{width:50px;height:50px;border-radius:14px;background:var(--azure-pale);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px}
+    .why-card h3{margin-bottom:8px;color:var(--dark)}
+    .why-card p{font-size:.85rem}
+
+    /* SERVICES */
+    .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .svc-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px;display:flex;gap:16px;transition:all .3s}
+    .svc-item:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);transform:translateY(-3px)}
+    .svc-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+    .svc-name{font-size:.92rem;font-weight:700;color:#fff;margin-bottom:5px}
+    .svc-desc{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.6}
+    .svc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+    .svc-tag{font-size:.68rem;font-family:var(--mono);padding:2px 8px;border-radius:4px;background:rgba(0,120,212,.25);color:var(--azure-light);border:1px solid rgba(0,120,212,.3)}
+
+    /* BFSI */
+    .bfsi-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+    .bfsi-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:28px}
+    .bfsi-list li{display:flex;gap:12px;align-items:flex-start}
+    .bfsi-list li::before{content:'⬡';color:var(--azure);font-size:.9rem;flex-shrink:0;margin-top:2px}
+    .bfsi-list li .li-title{font-size:.9rem;font-weight:600;color:var(--dark);display:block}
+    .bfsi-list li .li-sub{font-size:.8rem;color:var(--gray)}
+    .bfsi-card{background:var(--azure-pale);border-radius:20px;padding:32px;border:1.5px solid rgba(0,120,212,.15)}
+    .bfsi-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+    .bfsi-stat{background:#fff;border-radius:12px;padding:18px;text-align:center}
+    .bfsi-stat .val{font-size:1.8rem;font-weight:800;color:var(--azure);font-family:var(--mono);display:block;line-height:1}
+    .bfsi-stat .key{font-size:.74rem;color:var(--gray);margin-top:5px}
+
+    /* CERTS */
+    .cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .cert-card{background:#fff;border-radius:14px;padding:20px;border:1.5px solid var(--gray-light);text-align:center;transition:all .25s}
+    .cert-card:hover{border-color:var(--azure);box-shadow:0 4px 18px rgba(0,120,212,.12)}
+    .cert-icon{font-size:2rem;margin-bottom:10px}
+    .cert-name{font-size:.82rem;font-weight:700;color:var(--dark);margin-bottom:4px}
+    .cert-count{font-size:1.4rem;font-weight:800;color:var(--azure);font-family:var(--mono);display:block}
+    .cert-type{font-size:.72rem;color:var(--gray)}
+
+    /* CASE STUDIES */
+    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .case-card{background:#fff;border-radius:18px;overflow:hidden;border:1.5px solid var(--gray-light);transition:all .3s}
+    .case-card:hover{border-color:var(--azure);box-shadow:var(--sh-azure);transform:translateY(-5px)}
+    .case-header{padding:22px 24px;display:flex;align-items:center;gap:12px}
+    .case-header.bfsi{background:var(--azure-pale)}
+    .case-header.gov{background:#f0fdf9}
+    .case-header.mfg{background:#faf5ff}
+    .case-icon{font-size:1.6rem}
+    .case-industry{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray)}
+    .case-org{font-size:.92rem;font-weight:700;color:var(--dark)}
+    .case-body{padding:20px 24px}
+    .case-challenge{font-size:.82rem;color:var(--gray);font-style:italic;margin-bottom:14px;padding-left:12px;border-left:2px solid var(--azure-light)}
+    .case-metric{font-size:2.2rem;font-weight:800;color:var(--azure);font-family:var(--mono);line-height:1;margin-bottom:4px}
+    .case-result{font-size:.78rem;font-weight:600;color:var(--dark);margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
+    .case-body p{font-size:.83rem;color:var(--gray)}
+
+    /* COMPARE AZURE */
+    .az-compare{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+    .azc-side{background:#fff;border-radius:18px;padding:30px;border:1.5px solid var(--gray-light)}
+    .azc-side.tb{border-color:var(--orange);box-shadow:0 6px 28px rgba(246,136,31,.14)}
+    .azc-title{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+    .azc-title .star{color:var(--orange)}
+    .azc-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+    .azc-list li{display:flex;gap:10px;font-size:.85rem;color:var(--dark)}
+    .azc-list li .chk{color:var(--orange);font-weight:700;flex-shrink:0}
+    .azc-list li .x{color:#d1d5db;flex-shrink:0}
+    .azc-list li.no{color:var(--gray)}
+
+    /* FAQ */
+    .faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+    .faq-item{background:#fff;border-radius:14px;border:1.5px solid var(--gray-light);overflow:hidden;transition:border-color .2s}
+    .faq-item.open{border-color:var(--azure)}
+    .faq-q{padding:18px 22px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:14px;font-size:.92rem;font-weight:600;color:var(--dark);user-select:none}
+    .faq-arrow{color:var(--azure);font-size:.8rem;transition:transform .25s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s}
+    .faq-item.open .faq-a{max-height:280px;padding:0 22px 18px}
+    .faq-a p{font-size:.87rem;color:var(--gray);line-height:1.7}
+
+    /* FINAL CTA */
+    .final-cta{background:linear-gradient(135deg,#001529,var(--azure-dark),var(--azure));padding:88px 0;text-align:center;position:relative;overflow:hidden}
+    .final-cta::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:26px 26px}
+    .final-cta-inner{position:relative;z-index:2}
+    .final-cta h2{color:#fff;margin-bottom:14px}
+    .final-cta p{color:rgba(255,255,255,.75);font-size:1.05rem;max-width:540px;margin:0 auto 36px}
+    .final-cta-acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+    /* FOOTER */
+    footer{background:var(--dark);padding:52px 0 28px}
+    .foot-inner{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:36px;margin-bottom:40px}
+    .foot-brand p{font-size:.82rem;color:rgba(255,255,255,.45);max-width:220px;margin:12px 0 18px}
+    .foot-badges{display:flex;flex-wrap:wrap;gap:7px}
+    .foot-badge{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:4px 10px;font-size:.68rem;font-weight:600;color:rgba(255,255,255,.6)}
+    .foot-col h4{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.38);margin-bottom:14px}
+    .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .foot-col ul a{font-size:.82rem;color:rgba(255,255,255,.52);transition:color .2s}
+    .foot-col ul a:hover{color:var(--orange)}
+    .foot-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.33)}
+
+    /* STICKY + WA */
+    .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--azure-dark);border-top:1px solid rgba(255,255,255,.1);padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;transform:translateY(100%);transition:transform .35s}
+    .sticky-bar.show{transform:translateY(0)}
+    .sticky-bar p{font-size:.82rem;color:rgba(255,255,255,.7)}
+    .sticky-bar .btn{padding:9px 18px;font-size:.8rem}
+    .wa-float{position:fixed;bottom:80px;right:24px;z-index:998;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.42);transition:transform .25s}
+    .wa-float:hover{transform:scale(1.1)}
+    .wa-float svg{width:26px;height:26px;fill:#fff}
+
+    .sec-eyebrow{text-align:center;margin-bottom:10px}
+    .sec-title{text-align:center;margin-bottom:12px}
+    .sec-sub{text-align:center;font-size:.96rem;color:var(--gray);max-width:620px;margin:0 auto 52px}
+    .ps{padding:80px 0}
+    .ps-cream{background:var(--cream-light)}
+    .ps-white{background:#fff}
+    .ps-dark{background:var(--dark)}
+    .ps-azure{background:linear-gradient(160deg,#001c3d 0%,var(--azure-dark) 50%,var(--azure) 100%)}
+
+    @media(max-width:1024px){.hgrid,.bfsi-grid,.az-compare{grid-template-columns:1fr}.hero-card{display:none}.why-grid,.svc-grid,.case-grid{grid-template-columns:1fr 1fr}.cert-grid{grid-template-columns:repeat(2,1fr)}.foot-inner{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){.why-grid,.svc-grid,.case-grid,.cert-grid{grid-template-columns:1fr}.navlinks,.nav-acts .btn:first-child{display:none}}
+  
+  /* ── FAQ / AEO Section ── */
+  .faq-section{padding:80px 0;background:#f8fafc}
+  .faq-section .section-label{text-align:center;font-family:var(--mono,'JetBrains Mono',monospace);font-size:.72rem;letter-spacing:.18em;color:var(--blue,#3a59a8);text-transform:uppercase;margin-bottom:12px}
+  .faq-section .section-title{text-align:center;font-family:var(--font,'Poppins',sans-serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#0a0a0a;margin-bottom:12px}
+  .faq-section .section-sub{text-align:center;color:#6b7280;font-size:1rem;margin-bottom:48px}
+  .faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+  .faq-item{background:#fff;border-radius:12px;border:1.5px solid #e5e7eb;overflow:hidden;transition:border-color .25s}
+  .faq-item:hover,.faq-item.open{border-color:var(--blue,#3a59a8)}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-family:var(--font,'Poppins',sans-serif);font-weight:600;font-size:.97rem;color:#1e293b;gap:12px;user-select:none}
+  .faq-arrow{flex-shrink:0;color:var(--blue,#3a59a8);transition:transform .3s}
+  .faq-item.open .faq-arrow{transform:rotate(180deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
+  .faq-item.open .faq-a{max-height:500px;padding:0 24px 20px}
+  .faq-a p{color:#475569;line-height:1.75;font-size:.95rem}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<!-- ═══ NAV ═══ -->
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <div class="nv">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 16 16"><path d="M8 1L1 5v6l7 4 7-4V5L8 1zm0 1.5l5.5 3.15v5.7L8 14.5l-5.5-3.15V5.65L8 2.5z" opacity=".7" fill="#fff"/><path d="M8 4L3.5 6.5v3L8 12l4.5-2.5v-3L8 4z" fill="#fff"/></svg>
+        </div>
+        Thynk<span class="or">wise</span>
+      </a>
+      <ul class="navlinks">
+        <li><a href="managed-services.html">Managed Services</a></li>
+        <li><a href="cloud-migration.html">Cloud Migration</a></li>
+        <li><a href="cybersecurity.html">Cybersecurity</a></li>
+        <li><a href="gpuaas.html">GPUaaS</a></li>
+        <li><a href="bfsi-cloud.html">BFSI</a></li>
+        <li><a href="cost-optimization.html">Cost Optimisation</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="nav-acts">
+        <a href="book-demo.html" class="btn btn-ghost-dark">Book Demo</a>
+        <a href="get-assessment.html" class="btn btn-orange">Free Assessment</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="container">
+    <div class="hcnt">
+      <div class="hgrid">
+        <div>
+          <div class="h-eyebrow rv">
+            <div class="az-cert">
+              <span>⬡</span>
+              <span>Microsoft Certified Solution Provider (CSP)</span>
+            </div>
+            <span class="badge bw">🇮🇳 Security-First Partner</span>
+          </div>
+          <h1 class="rv d1">India's Certified<br><em>Azure Reseller</em><br>with Local Currency Billing</h1>
+          <p class="hero-lead rv d2">Microsoft Azure is the enterprise cloud of choice for BFSI, manufacturing, and hybrid workloads. Thynkwise handles billing in local currency, DPDP and RBI compliance, and your team's entire Azure journey — 24/7 in IST.</p>
+          <div class="hero-acts rv d3">
+            <a href="get-assessment.html" class="btn btn-primary">Get Free Azure Assessment →</a>
+            <a href="book-demo.html" class="btn btn-ghost-w">Book Azure Consultation</a>
+          </div>
+          <div class="hero-trust rv d4">
+            <div class="ht-item"><div class="ht-dot"></div><span>60+ Active Azure Certifications</span></div>
+            <div class="ht-item"><div class="ht-dot"></div><span>150+ Azure Deployments in India</span></div>
+            <div class="ht-item"><div class="ht-dot"></div><span>BFSI Specialist Partner</span></div>
+          </div>
+        </div>
+        <div class="rv d2">
+          <div class="hero-card">
+            <div class="hc-header">
+              <div class="hc-icon">⬡</div>
+              <div>
+                <div class="hc-title">Azure India Partnership</div>
+                <div class="hc-sub">CSP TIER 1 · BFSI SPECIALIST</div>
+              </div>
+            </div>
+            <div class="hc-stat">
+              <span class="hc-stat-label">Avg. Azure Cost Saving</span>
+              <span class="hc-stat-val">34%</span>
+            </div>
+            <div class="hc-stat">
+              <span class="hc-stat-label">Azure Certifications</span>
+              <span class="hc-stat-val">60+</span>
+            </div>
+            <div class="hc-stat">
+              <span class="hc-stat-label">BFSI Deployments</span>
+              <span class="hc-stat-val">45+</span>
+            </div>
+            <div class="hc-stat">
+              <span class="hc-stat-label">Billing Currency</span>
+              <span class="hc-stat-val">Local-currency</span>
+            </div>
+            <a href="book-demo.html" class="hc-cta">Talk to Azure Expert →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY AZURE WITH TECHBRIDGE -->
+<section class="ps ps-cream">
+  <div class="container">
+    <span class="badge bo sec-eyebrow rv">Why Azure via Thynkwise</span>
+    <h2 class="sec-title rv">Azure's Power. India's Simplicity.</h2>
+    <p class="sec-sub rv">Going direct to Microsoft means USD billing, no compliance support, and enterprise support plans starting at $15K/year. Thynkwise solves all three — contact us for pricing.</p>
+
+    <div class="why-grid">
+      <div class="why-card rv d1">
+        <div class="why-icon">₹</div>
+        <h3>100% Local Currency Billing</h3>
+        <p>No USD exposure. No currency conversion anxiety. Fixed local currency rate on the 1st of each month. Full GST breakdown with HSN/SAC codes that integrate with Tally, Zoho Books, and SAP — automatically.</p>
+      </div>
+      <div class="why-card rv d2">
+        <div class="why-icon">🏦</div>
+        <h3>BFSI & DPDP Compliance Built In</h3>
+        <p>Azure India Central and India South data centres meet RBI storage localisation. Thynkwise configures Azure Policy, geo-restrictions, DPDP compliance guardrails, and PCI-DSS environments from Day 1 — not as an afterthought.</p>
+      </div>
+      <div class="why-card rv d3">
+        <div class="why-icon">📞</div>
+        <h3>Named Account Manager + 24/7 Support</h3>
+        <p>Direct Microsoft support requires a $15K Enterprise Agreement. With Thynkwise, you get a named Azure-certified account manager, WhatsApp escalation, and a 4-hour incident SLA — all in IST timezone.</p>
+      </div>
+      <div class="why-card rv d1">
+        <div class="why-icon">💰</div>
+        <h3>Azure Hybrid Benefit Optimisation</h3>
+        <p>If you have existing Windows Server or SQL Server licences, Azure Hybrid Benefit can save 40–80%. Most Indian enterprises don't know they qualify. Thynkwise runs a licence audit and activates these savings within 2 weeks.</p>
+      </div>
+      <div class="why-card rv d2">
+        <div class="why-icon">🔄</div>
+        <h3>Microsoft 365 + Azure Integration</h3>
+        <p>Most Indian enterprises already use Microsoft 365. Thynkwise creates seamless Azure Active Directory SSO integration, Teams-based alerting, and Intune MDM policies that unify your security posture across M365 and Azure.</p>
+      </div>
+      <div class="why-card rv d3">
+        <div class="why-icon">🤖</div>
+        <h3>Azure OpenAI & Copilot for India</h3>
+        <p>Thynkwise is one of the first Indian partners to deploy Azure OpenAI Service for enterprise use cases — document intelligence, customer service automation, and code generation — with full DPDP-compliant data handling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AZURE SERVICES -->
+<section class="ps ps-azure">
+  <div class="container">
+    <span class="badge bw sec-eyebrow rv">Azure Services Portfolio</span>
+    <h2 class="sec-title rv" style="color:#fff">What We Deliver on Azure</h2>
+    <p class="sec-sub rv" style="color:rgba(255,255,255,.6)">From infrastructure to AI — our certified Azure architects handle the full stack.</p>
+
+    <div class="svc-grid">
+      <div class="svc-item rv d1">
+        <div class="svc-icon">⚡</div>
+        <div>
+          <div class="svc-name">Azure Virtual Machines & Compute</div>
+          <p class="svc-desc">Right-sized VM deployments with Azure Reserved Instances, Spot VMs, and Auto Scaling. VMSS configurations for web-scale workloads.</p>
+          <div class="svc-tags"><span class="svc-tag">B-series</span><span class="svc-tag">D-series</span><span class="svc-tag">E-series</span><span class="svc-tag">VMSS</span><span class="svc-tag">Azure Spot</span></div>
+        </div>
+      </div>
+      <div class="svc-item rv d2">
+        <div class="svc-icon">🏛️</div>
+        <div>
+          <div class="svc-name">Azure Active Directory & Entra ID</div>
+          <p class="svc-desc">Enterprise identity management with Conditional Access, MFA, and Privileged Identity Management. Zero-trust architecture for BFSI environments.</p>
+          <div class="svc-tags"><span class="svc-tag">Entra ID</span><span class="svc-tag">SSO</span><span class="svc-tag">PIM</span><span class="svc-tag">Conditional Access</span></div>
+        </div>
+      </div>
+      <div class="svc-item rv d3">
+        <div class="svc-icon">⚙️</div>
+        <div>
+          <div class="svc-name">Azure DevOps & Pipelines</div>
+          <p class="svc-desc">End-to-end CI/CD on Azure DevOps with Terraform IaC, AKS deployments, and GitHub Actions integration. Shift-left security with Defender for DevOps.</p>
+          <div class="svc-tags"><span class="svc-tag">Azure DevOps</span><span class="svc-tag">AKS</span><span class="svc-tag">Terraform</span><span class="svc-tag">Bicep</span></div>
+        </div>
+      </div>
+      <div class="svc-item rv d4">
+        <div class="svc-icon">🤖</div>
+        <div>
+          <div class="svc-name">Azure AI & Machine Learning</div>
+          <p class="svc-desc">Azure OpenAI Service, Azure ML Studio, and Cognitive Services deployments with DPDP-compliant data pipelines. LLM fine-tuning for Indian language support.</p>
+          <div class="svc-tags"><span class="svc-tag">OpenAI</span><span class="svc-tag">Copilot</span><span class="svc-tag">ML Studio</span><span class="svc-tag">Cognitive</span></div>
+        </div>
+      </div>
+      <div class="svc-item rv d1">
+        <div class="svc-icon">💾</div>
+        <div>
+          <div class="svc-name">Azure SQL & Cosmos DB</div>
+          <p class="svc-desc">Fully managed Azure SQL, Cosmos DB, and PostgreSQL Flexible Server. Database migration from Oracle/MySQL/MSSQL with Azure Database Migration Service.</p>
+          <div class="svc-tags"><span class="svc-tag">Azure SQL</span><span class="svc-tag">Cosmos DB</span><span class="svc-tag">PostgreSQL</span><span class="svc-tag">DMS</span></div>
+        </div>
+      </div>
+      <div class="svc-item rv d2">
+        <div class="svc-icon">🔐</div>
+        <div>
+          <div class="svc-name">Azure Security & Defender</div>
+          <p class="svc-desc">Microsoft Defender for Cloud, Sentinel SIEM, Key Vault, and DDoS Protection. DPDP Act and CERT-In compliance posture management with real-time dashboards.</p>
+          <div class="svc-tags"><span class="svc-tag">Defender</span><span class="svc-tag">Sentinel</span><span class="svc-tag">Key Vault</span><span class="svc-tag">DDoS</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BFSI EXPERTISE -->
+<section class="ps ps-white">
+  <div class="container">
+    <div class="bfsi-grid">
+      <div>
+        <span class="badge baz rv">🏦 Azure for BFSI India</span>
+        <h2 class="rv d1" style="margin-top:12px">The Azure Platform Built for Indian Banking & Insurance</h2>
+        <p class="rv d2">Azure is the #1 cloud choice for Indian BFSI — and for good reason. Microsoft has invested more in RBI compliance documentation than any other hyperscaler. Thynkwise amplifies this with pre-built BFSI configurations that have passed 30+ bank audits.</p>
+        <ul class="bfsi-list">
+          <li class="rv d1">
+            <div>
+              <span class="li-title">RBI Storage Localisation</span>
+              <span class="li-sub">All payment data stored in Azure India Central (Pune) and India South (Chennai). Policy locks prevent any cross-border data movement without explicit approval.</span>
+            </div>
+          </li>
+          <li class="rv d2">
+            <div>
+              <span class="li-title">DPDP Act 2023 Compliance</span>
+              <span class="li-sub">Azure Purview for data cataloguing, Microsoft Priva for privacy management, and custom DPDP consent management workflows built by Thynkwise's legal-tech team.</span>
+            </div>
+          </li>
+          <li class="rv d3">
+            <div>
+              <span class="li-title">Core Banking on Azure</span>
+              <span class="li-sub">Thynkwise has deployed Finacle, Temenos, and Mphasis BaNCS on Azure. Our team includes ex-BFSI architects with RBI technology audit experience.</span>
+            </div>
+          </li>
+          <li class="rv d4">
+            <div>
+              <span class="li-title">PCI-DSS & ISO 27001 Ready</span>
+              <span class="li-sub">Pre-configured Azure Landing Zones with PCI-DSS controls. Azure Blueprint templates for ISO 27001 compliance. Typical certification timeline: 8–12 weeks.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="rv d2">
+        <div class="bfsi-card">
+          <h3 style="color:var(--azure);margin-bottom:8px">BFSI on Azure — By the Numbers</h3>
+          <p style="font-size:.83rem;margin-bottom:4px">Thynkwise Azure BFSI portfolio (India, 2024)</p>
+          <div class="bfsi-stat-grid">
+            <div class="bfsi-stat"><span class="val">45+</span><div class="key">Banks & NBFCs on Azure India</div></div>
+            <div class="bfsi-stat"><span class="val">100%</span><div class="key">Data within Indian jurisdiction</div></div>
+            <div class="bfsi-stat"><span class="val">8wks</span><div class="key">Avg. RBI compliance setup time</div></div>
+            <div class="bfsi-stat"><span class="val">₹0</span><div class="key">RBI non-compliance fines earned</div></div>
+          </div>
+          <div style="margin-top:20px;padding:16px;background:rgba(0,120,212,.07);border-radius:12px;border-left:3px solid var(--azure)">
+            <p style="font-size:.8rem;color:var(--dark);font-style:italic">"Thynkwise's Azure BFSI team set up our RBI-compliant environment in 6 weeks. Our internal IT team estimated 6 months."</p>
+            <p style="font-size:.74rem;color:var(--gray);margin-top:6px">— CISO, Private Sector Bank, Mumbai</p>
+          </div>
+          <a href="book-demo.html" class="btn btn-azure" style="width:100%;justify-content:center;margin-top:20px">Talk to BFSI Azure Expert →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="ps ps-cream">
+  <div class="container">
+    <span class="badge bo sec-eyebrow rv">Team Credentials</span>
+    <h2 class="sec-title rv">60+ Active Azure Certifications</h2>
+    <p class="sec-sub rv">Real credentials. Real expertise. Every Thynkwise Azure architect is certified and actively maintains their credentials with Microsoft's annual renewal requirements.</p>
+    <div class="cert-grid">
+      <div class="cert-card rv d1">
+        <div class="cert-icon">🏗️</div>
+        <div class="cert-name">Solutions Architect Expert</div>
+        <span class="cert-count">12</span>
+        <div class="cert-type">Active certifications</div>
+      </div>
+      <div class="cert-card rv d2">
+        <div class="cert-icon">🔐</div>
+        <div class="cert-name">Security Engineer Associate</div>
+        <span class="cert-count">10</span>
+        <div class="cert-type">Active certifications</div>
+      </div>
+      <div class="cert-card rv d3">
+        <div class="cert-icon">⚙️</div>
+        <div class="cert-name">DevOps Engineer Expert</div>
+        <span class="cert-count">9</span>
+        <div class="cert-type">Active certifications</div>
+      </div>
+      <div class="cert-card rv d4">
+        <div class="cert-icon">🤖</div>
+        <div class="cert-name">AI Engineer Associate</div>
+        <span class="cert-count">8</span>
+        <div class="cert-type">Active certifications</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;" class="rv">
+      <p style="font-size:.85rem;color:var(--gray);margin-bottom:16px">Plus: Azure Data Engineer, Azure Administrator, Azure Network Engineer, Power Platform, and Azure Virtual Desktop specialists</p>
+      <a href="book-demo.html" class="btn btn-outline">View Full Team Credentials →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="ps ps-white">
+  <div class="container">
+    <span class="badge baz sec-eyebrow rv">Azure Success Stories</span>
+    <h2 class="sec-title rv">Indian Enterprises Winning on Azure</h2>
+    <p class="sec-sub rv">Real results, real clients, real numbers. Azure migrations delivered by Thynkwise across BFSI, government, and manufacturing.</p>
+    <div class="case-grid">
+      <div class="case-card rv d1">
+        <div class="case-header bfsi">
+          <div class="case-icon">🏦</div>
+          <div>
+            <div class="case-industry">BFSI · Private Bank</div>
+            <div class="case-org">Mid-Tier Bank, Mumbai</div>
+          </div>
+        </div>
+        <div class="case-body">
+          <p class="case-challenge">"We had 48 hours to demonstrate RBI compliance or face a regulatory audit. Our Azure environment had zero governance controls."</p>
+          <div class="case-metric">6 weeks</div>
+          <div class="case-result">RBI Compliance Achieved</div>
+          <p>Thynkwise deployed Azure Policy guardrails, geo-restrictions, and Microsoft Defender for Cloud in 6 weeks. Audit passed with zero findings. 34% cost saving on top.</p>
+        </div>
+      </div>
+      <div class="case-card rv d2">
+        <div class="case-header gov">
+          <div class="case-icon">🏛️</div>
+          <div>
+            <div class="case-industry">Government · State PSU</div>
+            <div class="case-org">State Infrastructure Corp, Delhi</div>
+          </div>
+        </div>
+        <div class="case-body">
+          <p class="case-challenge">"Migrating 200+ legacy on-premise servers to cloud while maintaining government compliance requirements seemed impossible on our timeline."</p>
+          <div class="case-metric">₹2.8Cr</div>
+          <div class="case-result">Annual IT Cost Reduction</div>
+          <p>200-server migration to Azure India in 4 months using Azure Migrate. All data sovereignty requirements met. ₹2.8Cr annual IT capex eliminated, replaced with ₹90L opex.</p>
+        </div>
+      </div>
+      <div class="case-card rv d3">
+        <div class="case-header mfg">
+          <div class="case-icon">🏭</div>
+          <div>
+            <div class="case-industry">Manufacturing · Enterprise</div>
+            <div class="case-org">Auto Components MFG, Pune</div>
+          </div>
+        </div>
+        <div class="case-body">
+          <p class="case-challenge">"Our SAP landscape was on-premise since 2008. The business wanted analytics and AI capabilities that on-premise couldn't support."</p>
+          <div class="case-metric">40%</div>
+          <div class="case-result">Faster Business Reporting</div>
+          <p>SAP on Azure migration with Azure Synapse Analytics integration. Real-time production dashboards replaced nightly batch reports. Azure OpenAI powers predictive maintenance alerts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECT VS TECHBRIDGE -->
+<section class="ps ps-cream">
+  <div class="container">
+    <span class="badge bo sec-eyebrow rv">Thynkwise vs Microsoft Direct</span>
+    <h2 class="sec-title rv">Why 150+ Indian Companies Chose Us Over Going Direct to Microsoft</h2>
+    <p class="sec-sub rv">This isn't about Azure being better or worse — it's about how you access it. Here's the honest comparison.</p>
+    <div class="az-compare">
+      <div class="azc-side rv d1">
+        <div class="azc-title">Azure Direct (Microsoft)</div>
+        <ul class="azc-list">
+          <li><span class="chk">✓</span> Full access to all Azure services</li>
+          <li><span class="chk">✓</span> SLA backed by Microsoft</li>
+          <li class="no"><span class="x">—</span> USD billing (currency risk)</li>
+          <li class="no"><span class="x">—</span> No GST-compliant invoicings</li>
+          <li class="no"><span class="x">—</span> No 24/7 managed support (standard)</li>
+          <li class="no"><span class="x">—</span> Enterprise support: $15K+/year</li>
+          <li class="no"><span class="x">—</span> No DPDP/RBI compliance setup</li>
+          <li class="no"><span class="x">—</span> No FinOps management</li>
+          <li class="no"><span class="x">—</span> No Azure Hybrid Benefit audit</li>
+          <li class="no"><span class="x">—</span> You manage everything yourself</li>
+        </ul>
+      </div>
+      <div class="azc-side tb rv d2">
+        <div class="azc-title"><span class="star">⭐</span> Azure via Thynkwise</div>
+        <ul class="azc-list">
+          <li><span class="chk">✓</span> Full access to all Azure services</li>
+          <li><span class="chk">✓</span> SLA backed by Microsoft + Thynkwise</li>
+          <li><span class="chk">✓</span> 100% local-currency billing, zero USD exposure</li>
+          <li><span class="chk">✓</span> Full GST invoices with HSN/SAC codes</li>
+          <li><span class="chk">✓</span> 24/7 follow-the-sun support (all plans)</li>
+          <li><span class="chk">✓</span> Named account manager (IST timezone)</li>
+          <li><span class="chk">✓</span> DPDP + RBI compliance setup included</li>
+          <li><span class="chk">✓</span> Monthly FinOps reviews (28–40% savings)</li>
+          <li><span class="chk">✓</span> Azure Hybrid Benefit activation</li>
+          <li><span class="chk">✓</span> Your dedicated Azure team</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;" class="rv">
+      
+      <a href="get-assessment.html" class="btn btn-outline">Get Free Azure Health Check</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="ps ps-white">
+  <div class="container">
+    <span class="badge baz sec-eyebrow rv">Azure FAQ</span>
+    <h2 class="sec-title rv">Common Questions About Azure with Thynkwise</h2>
+    <div class="faq-list">
+      <div class="faq-item rv d1">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+          Is Thynkwise a Microsoft-certified Azure partner in India?
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a"><p>Yes. Thynkwise is a Microsoft Certified Solution Provider (CSP) and Azure Advanced Partner in India with 60+ active certifications including Azure Solutions Architect Expert, Azure Security Engineer, and Azure DevOps Engineer Expert. We maintain Microsoft's annual partner competency requirements including minimum customer satisfaction scores.</p></div>
+      </div>
+      <div class="faq-item rv d2">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+          Why use a Microsoft Azure reseller in India instead of going direct?
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a"><p>Azure resellers in India like Thynkwise provide local-currency billing with GST invoices, eliminating USD currency risk. They also offer DPDP Act compliance configuration, RBI data localisation setup, named local-timezone account managers, and FinOps management that saves 28–40% vs direct Azure billing. Enterprise support plans from Microsoft start at $15,000/year — Thynkwise includes equivalent support in all plans.</p></div>
+      </div>
+      <div class="faq-item rv d3">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+          Can I move from Azure direct billing to Thynkwise without downtime?
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a"><p>Completely seamless. We take over your Azure subscriptions via CSP billing — no changes to your resources, configurations, or access policies. Your development team notices nothing except that invoices arrive in local currency. Migration takes 3–5 business days for billing transfer and 1–2 days for access setup.</p></div>
+      </div>
+      <div class="faq-item rv d4">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+          Can Azure meet RBI data localisation requirements for Indian banks?
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a"><p>Yes. Azure's India Central (Pune) and India South (Chennai) regions store data within Indian jurisdiction. Thynkwise configures Azure Policy, geo-restrictions, and PrivateLink to ensure zero data movement outside India. We've completed 45+ bank deployments meeting RBI guidelines, DPDP Act 2023, and PCI-DSS requirements.</p></div>
+      </div>
+      <div class="faq-item rv d1">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
+          What is Azure Hybrid Benefit and can we use it?
+          <span class="faq-arrow">▾</span>
+        </div>
+        <div class="faq-a"><p>Azure Hybrid Benefit lets you use existing on-premise Windows Server and SQL Server licences in Azure at discounted rates — saving up to 40% on Windows VMs and up to 80% on SQL Server. Most Indian enterprises that have been running Microsoft software on-premise qualify. Thynkwise does a free licence audit in the first 30 days and activates Hybrid Benefit savings automatically.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-inner rv">
+      <span class="badge bw" style="display:inline-flex;margin-bottom:16px">⬡ Microsoft Certified Solution Provider</span>
+      <h2>Start Your Azure Journey<br>the Right Way</h2>
+      <p>Free Azure Assessment in 8 minutes. Get your cost health score, compliance gap analysis, and Azure Hybrid Benefit estimate — all in local currency.</p>
+      <div class="final-cta-acts">
+        <a href="get-assessment.html" class="btn btn-primary">Get Free Azure Assessment →</a>
+        <a href="book-demo.html" class="btn btn-ghost-w">Book Azure Consultation</a>
+      </div>
+      <div style="margin-top:22px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap">
+        <span style="font-size:.78rem;color:rgba(255,255,255,.6)">🔒 No commitment · local currency pricing · DPDP compliance included</span>
+        <span style="color:rgba(255,255,255,.25)">|</span>
+        <a href="https://wa.me/919999999999" style="font-size:.78rem;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:5px" target="_blank">💬 WhatsApp: +91 99999 99999</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+  
+  <!-- ── FAQ SECTION (AEO) ─────────────────────────────────────────── -->
+  <section class="faq-section" aria-label="Frequently Asked Questions" itemscope itemtype="https://schema.org/FAQPage">
+    <div class="container">
+      <div class="section-label">KNOWLEDGE BASE</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Everything you need to know — answered clearly.</p>
+      <div class="faq-list">
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" onclick="toggleFaq(this)" itemprop="name">
+        <span>What Azure services does Thynkwise manage?</span>
+        <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2.5" d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Thynkwise manages Azure Virtual Machines, AKS, Azure SQL, Cosmos DB, Azure Active Directory, Microsoft Sentinel, Defender for Cloud, Azure OpenAI, and the full Azure networking stack including VNets, NSGs, and ExpressRoute.</p>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" onclick="toggleFaq(this)" itemprop="name">
+        <span>Does Thynkwise offer Azure Sentinel SIEM management?</span>
+        <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2.5" d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Yes. Thynkwise manages Microsoft Sentinel as part of its cybersecurity portfolio — including rule tuning, alert triage, SOAR playbook automation, and 24/7 SOC analyst coverage.</p>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" onclick="toggleFaq(this)" itemprop="name">
+        <span>Can Thynkwise help with Azure cost management?</span>
+        <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2.5" d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Yes. Thynkwise uses Azure Cost Management, Reserved Instances, Hybrid Benefit licensing, and automated rightsizing to reduce Azure spend — typically achieving 30–40% savings.</p>
+      </div>
+    </div>
+      </div>
+    </div>
+  </section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo" style="margin-bottom:12px;display:inline-flex">
+          <div class="logo-icon">
+            <svg viewBox="0 0 16 16"><path d="M8 1L1 5v6l7 4 7-4V5L8 1zm0 1.5l5.5 3.15v5.7L8 14.5l-5.5-3.15V5.65L8 2.5z" opacity=".7" fill="#fff"/><path d="M8 4L3.5 6.5v3L8 12l4.5-2.5v-3L8 4z" fill="#fff"/></svg>
+          </div>
+          Thynk<span class="or">wise</span>
+        </a>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.4);max-width:210px;line-height:1.65;margin-bottom:18px">Cloud. Security. GPU. Managed. Your single technology partner for the full infrastructure stack.</p>
+        <div style="display:flex;gap:8px">
+          <a href="#" style="width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:none;transition:all .2s">in</a>
+          <a href="#" style="width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:none;transition:all .2s">tw</a>
+          <a href="#" style="width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:none;transition:all .2s">yt</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Cloud Platforms</h4>
+        <ul>
+          <li><a href="aws.html">Amazon Web Services</a></li>
+          <li><a href="azure.html">Microsoft Azure</a></li>
+          <li><a href="gcp.html">Google Cloud</a></li>
+          <li><a href="indian-csps.html">Indian Sovereign Cloud</a></li>
+          <li><a href="compare.html">Compare Clouds</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="managed-services.html">Managed Services</a></li>
+          <li><a href="cloud-migration.html">Cloud Migration</a></li>
+          <li><a href="cybersecurity.html">Cybersecurity</a></li>
+          <li><a href="gpuaas.html">GPU as a Service</a></li>
+          <li><a href="cost-optimization.html">Cost Optimisation</a></li>
+          <li><a href="bfsi-cloud.html">BFSI Cloud</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="end-to-end-solutions.html">End-to-End Solutions</a></li>
+          <li><a href="bfsi-cloud.html">BFSI &amp; Compliance</a></li>
+          <li><a href="cost-optimization.html">FinOps &amp; Cost Control</a></li>
+          <li><a href="cloud-migration.html">Data Centre Exit</a></li>
+          <li><a href="gpuaas.html">AI &amp; ML Infrastructure</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Thynkwise</a></li>
+          <li><a href="get-assessment.html">Free Assessment</a></li>
+          <li><a href="book-demo.html">Book a Demo</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:40px">
+      <p style="font-size:.74rem;color:rgba(255,255,255,.25)">© 2025 Thynkwise Technologies Pvt. Ltd. All rights reserved.</p>
+      <div style="display:flex;gap:7px">
+        <span style="font-size:.62rem;font-family:var(--mono);padding:3px 9px;border-radius:5px;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);background:rgba(255,255,255,.03)">AWS Partner</span>
+        <span style="font-size:.62rem;font-family:var(--mono);padding:3px 9px;border-radius:5px;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);background:rgba(255,255,255,.03)">Azure CSP</span>
+        <span style="font-size:.62rem;font-family:var(--mono);padding:3px 9px;border-radius:5px;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);background:rgba(255,255,255,.03)">GCP Partner</span>
+        <span style="font-size:.62rem;font-family:var(--mono);padding:3px 9px;border-radius:5px;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);background:rgba(255,255,255,.03)">ISO 27001</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <p>⬡ Azure Reseller India · Local Currency Billing · BFSI & DPDP Compliance · 60+ Azure Certifications</p>
+  <a href="get-assessment.html" class="btn btn-primary">Get Free Azure Assessment →</a>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/919999999999" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+
+<!-- Sticky CTA -->
+<div class="sticky-cta" id="stickyCTA">
+  <p>☁️ Multi-Cloud · Managed 24/7 · Cybersecurity · GPUaaS · One Partner</p>
+  <a href="get-assessment.html" class="btn btn-orange" style="padding:8px 18px;font-size:.78rem;flex-shrink:0">Free Assessment →</a>
+</div>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/919999999999" class="wa-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="#fff"/></svg>
+</a>
+
+<script>
+  const _nav=document.getElementById('mainNav');
+  if(_nav) window.addEventListener('scroll',()=>_nav.classList.toggle('sc',window.scrollY>50));
+  const _sticky=document.getElementById('stickyCTA');
+  if(_sticky) window.addEventListener('scroll',()=>_sticky.classList.toggle('show',window.scrollY>600));
+  const _obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('on');_obs.unobserve(en.target);}});},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>_obs.observe(el));
+</script>
+
+  <script>
+  function toggleFaq(el){
+    const item=el.closest('.faq-item');
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  }
+  </script>
+</body>
+</html>

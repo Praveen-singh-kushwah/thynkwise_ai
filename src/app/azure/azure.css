@@ -1,0 +1,411 @@
+﻿.azure-page {
+  --blue: #3a59a8;
+  --blue-dark: #2a4285;
+  --blue-light: #5577cc;
+  --orange: #f6881f;
+  --orange-dark: #d96c00;
+  --azure: #0078d4;
+  --azure-dark: #005a9e;
+  --azure-light: #50a9e2;
+  --azure-pale: #eef7ff;
+  --cream: #ffebc7;
+  --black: #0a0a0a;
+  --dark: #1a1f35;
+  --gray: #6b7280;
+  --gray-light: #e8eaef;
+  --font: 'Poppins', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --sh-orange: 0 8px 28px rgba(246, 136, 31, 0.32);
+  --sh-azure: 0 8px 32px rgba(0, 120, 212, 0.2);
+  background: var(--cream);
+  color: var(--black);
+}
+
+.azure-page .rv {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.azure-page .rv.on {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.azure-page .d1 { transition-delay: 0.08s; }
+.azure-page .d2 { transition-delay: 0.16s; }
+.azure-page .d3 { transition-delay: 0.24s; }
+.azure-page .d4 { transition-delay: 0.32s; }
+
+.azure-page .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 26px;
+  border-radius: 50px;
+  font-family: var(--font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.25s;
+  white-space: nowrap;
+}
+
+.azure-page .btn-primary {
+  background: var(--orange);
+  color: #fff;
+  border-color: var(--orange);
+  box-shadow: var(--sh-orange);
+}
+
+.azure-page .btn-primary:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+}
+
+.azure-page .btn-ghost-w {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.azure-page .btn-ghost-w:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #fff;
+}
+
+.azure-page .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 13px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.azure-page .bo {
+  background: rgba(246, 136, 31, 0.12);
+  color: var(--orange-dark);
+  border: 1px solid rgba(246, 136, 31, 0.28);
+}
+
+.azure-page .bw {
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.azure-page .hero {
+  padding: 115px 0 80px;
+  background: linear-gradient(148deg, #001529 0%, var(--azure-dark) 45%, var(--azure) 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+}
+
+.azure-page .hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.azure-page .hero-glow {
+  position: absolute;
+  bottom: -80px;
+  right: -60px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(80, 169, 226, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.azure-page .hero-glow2 {
+  position: absolute;
+  top: -60px;
+  left: -40px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 90, 158, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.azure-page .hcnt {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.azure-page .hgrid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 64px;
+  align-items: center;
+}
+
+.azure-page .h-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.azure-page .h-eyebrow .az-cert {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 6px 14px;
+}
+
+.azure-page .h-eyebrow .az-cert span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.azure-page h1 {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.azure-page h1 em {
+  font-style: normal;
+  color: var(--azure-light);
+}
+
+.azure-page .hero-lead {
+  font-size: 1.08rem;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 520px;
+  margin: 18px 0 32px;
+  line-height: 1.7;
+}
+
+.azure-page .hero-acts {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.azure-page .hero-trust {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.azure-page .ht-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.azure-page .ht-item span {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.azure-page .ht-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--azure-light);
+}
+
+.azure-page .hero-card {
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+  padding: 28px;
+  backdrop-filter: blur(12px);
+}
+
+.azure-page .hc-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.azure-page .hc-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--azure);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.azure-page .hc-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.azure-page .hc-sub {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--mono);
+}
+
+.azure-page .hc-stat {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.azure-page .hc-stat:last-of-type {
+  border-bottom: none;
+}
+
+.azure-page .hc-stat-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.azure-page .hc-stat-val {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--orange);
+  font-family: var(--mono);
+  text-align: right;
+}
+
+.azure-page .hc-cta {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  padding: 12px;
+  border-radius: 50px;
+  background: var(--azure);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+
+.azure-page .hc-cta:hover {
+  background: var(--azure-dark);
+  transform: translateY(-2px);
+}
+
+.azure-page .ps {
+  padding: 80px 0;
+}
+
+.azure-page .ps-cream {
+  background: var(--cream);
+}
+
+.azure-page .sec-eyebrow {
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.azure-page .sec-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.azure-page .sec-sub {
+  font-size: 0.97rem;
+  color: var(--gray);
+  line-height: 1.75;
+  max-width: 600px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.azure-page .why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.azure-page .why-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px;
+  border: 1.5px solid var(--gray-light);
+  transition: all 0.3s;
+}
+
+.azure-page .why-card:hover {
+  border-color: var(--azure);
+  box-shadow: var(--sh-azure);
+  transform: translateY(-5px);
+}
+
+.azure-page .why-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: var(--azure-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.azure-page .why-icon-img {
+  display: block;
+}
+
+.azure-page .why-card h3 {
+  margin-bottom: 8px;
+  color: var(--dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.azure-page .why-card p {
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+@media (max-width: 1024px) {
+  .azure-page .hgrid,
+  .azure-page .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .azure-page .hero-card {
+    display: none;
+  }
+}
