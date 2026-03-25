@@ -34,6 +34,10 @@ const REVALIDATION_MAP = {
     paths: ['/azure'],
     tags: ['azure-page'],
   },
+  'book-demo-page': {
+    paths: ['/book-demo'],
+    tags: ['book-demo-page'],
+  },
 };
 
 function isAuthorized(request) {

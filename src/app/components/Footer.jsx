@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="foot-grid">
           {/* Brand */}
           <div className="foot-brand">
-            <Link href="/" className="logo" style={{ marginBottom: '12px', display: 'inline-flex' }}>
+            <Link href="/" className="logo" style={{ marginBottom: '12px', display: 'inline-flex', color: '#fff' }}>
               <div className="logo-icon">
                 <svg viewBox="0 0 16 16">
                   <path d="M8 1L1 5v6l7 4 7-4V5L8 1zm0 1.5l5.5 3.15v5.7L8 14.5l-5.5-3.15V5.65L8 2.5z" opacity=".7" fill="#fff" />

@@ -375,6 +375,7 @@ a { text-decoration: none; color: inherit; }
 /* â”€â”€ FOOTER â”€â”€ */
 footer { background: var(--dark); padding: 56px 0 24px; border-top: 1px solid rgba(255,255,255,0.06); }
 .foot-grid { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 36px; margin-bottom: 40px; }
+.foot-brand .logo { color: #fff; }
 .foot-brand p { font-size: 0.8rem; color: rgba(255,255,255,0.4); max-width: 210px; line-height: 1.65; margin-bottom: 18px; }
 .foot-col h4 { font-size: 0.65rem; font-family: var(--mono); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.25); margin-bottom: 14px; }
 .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
