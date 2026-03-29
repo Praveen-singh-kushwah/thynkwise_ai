@@ -46,6 +46,10 @@ const REVALIDATION_MAP = {
     paths: ['/book-demo'],
     tags: ['book-demo-page'],
   },
+  'get-assessment-page': {
+    paths: ['/get-assessment'],
+    tags: ['get-assessment-page'],
+  },
 };
 
 function isAuthorized(request) {
