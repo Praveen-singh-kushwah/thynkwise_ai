@@ -38,6 +38,10 @@ const REVALIDATION_MAP = {
     paths: ['/gcp'],
     tags: ['gcp-page'],
   },
+  'indian-sovereign-cloud-page': {
+    paths: ['/indian-csps'],
+    tags: ['indian-sovereign-cloud-page'],
+  },
   'book-demo-page': {
     paths: ['/book-demo'],
     tags: ['book-demo-page'],
