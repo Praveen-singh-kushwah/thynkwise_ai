@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Google Cloud Managed Services & Reseller Partner | Thynkwise</title>
+  <meta name="description" content="Thynkwise is a Google Cloud authorised reseller and managed services partner. GKE, BigQuery, Vertex AI, Cloud SQL, Anthos — fully managed GCP infrastructure and data platform services."/>
+  <meta name="keywords" content="Google Cloud managed services, GCP reseller, Google Cloud partner, GKE managed, BigQuery managed, Vertex AI services, GCP migration, Cloud SQL managed, Anthos hybrid cloud, GCP cost optimisation"/>
+  <meta name="author" content="Thynkwise Technologies"/>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"/>
+  <link rel="canonical" href="https://www.thynkwise.ai/gcp-managed-services"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Google Cloud Managed Services & Reseller Partner | Thynkwise"/>
+  <meta property="og:description" content="Thynkwise is a Google Cloud authorised reseller and managed services partner. GKE, BigQuery, Vertex AI, Cloud SQL, Anthos — fully managed GCP infrastructure and data platform services."/>
+  <meta property="og:url" content="https://www.thynkwise.ai/gcp-managed-services"/>
+  <meta property="og:site_name" content="Thynkwise"/>
+  <meta property="og:image" content="https://www.thynkwise.ai/assets/og-gcp.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@thynkwise"/>
+  <meta name="twitter:title" content="Google Cloud Managed Services & Reseller Partner | Thynkwise"/>
+  <meta name="twitter:description" content="Thynkwise is a Google Cloud authorised reseller and managed services partner. GKE, BigQuery, Vertex AI, Cloud SQL, Anthos — fully managed GCP infrastructure and data platform services."/>
+  <meta name="twitter:image" content="https://www.thynkwise.ai/assets/og-gcp.jpg"/>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.thynkwise.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cloud Providers",
+      "item": "https://www.thynkwise.ai/cloud"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Google Cloud",
+      "item": "https://www.thynkwise.ai/gcp-managed-services"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What Google Cloud services does Thynkwise manage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Thynkwise manages GKE, Cloud Run, BigQuery, Vertex AI, Cloud SQL, Spanner, Pub/Sub, Dataflow, Cloud Storage, Anthos, and the full GCP networking stack \u2014 plus data engineering, ML platform management, and GCP migrations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Thynkwise support Google Vertex AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Thynkwise manages Vertex AI infrastructure for model training, fine-tuning, and inference at scale \u2014 integrated with BigQuery ML and Google Cloud Storage for enterprise AI workloads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Thynkwise a Google Cloud reseller?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Thynkwise is an authorised Google Cloud reseller offering consolidated billing, technical account management, architecture design, and 24/7 managed GCP operations."
+      }
+    }
+  ]
+}
+  </script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+
+    /* ══ THYNKWISE SHARED SYSTEM ══ */
+    :root{--blue:#3a59a8;--blue2:#4a6fc0;--blue-d:#1e3070;--orange:#f6881f;--orange2:#f89c44;--cream:#ffebc7;--cream2:#fff8ee;--dark:#0a0a0a;--dark2:#111827;--dark3:#1c2333;--gray:#6b7280;--gray2:#9ca3af;--white:#fff;--font:'Poppins',sans-serif;--body:'DM Sans',sans-serif;--mono:'JetBrains Mono',monospace;--r8:8px;--r12:12px;--r16:16px;--r20:20px;--r24:24px;--sh-blue:0 8px 32px rgba(58,89,168,.25);--sh-orange:0 8px 32px rgba(246,136,31,.2)}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--body);background:#fff;color:var(--dark);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:#f1f5f9}::-webkit-scrollbar-thumb{background:var(--blue);border-radius:2px}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px}
+    .btn{display:inline-flex;align-items:center;gap:7px;padding:12px 26px;border-radius:50px;font-family:var(--font);font-size:.86rem;font-weight:600;cursor:pointer;border:2px solid transparent;transition:all .25s;white-space:nowrap}
+    .btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}.btn-primary:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:var(--sh-blue)}
+    .btn-orange{background:var(--orange);color:#fff;border-color:var(--orange)}.btn-orange:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:var(--sh-orange)}
+    .btn-ghost{background:transparent;color:var(--blue);border-color:var(--blue)}.btn-ghost:hover{background:var(--blue);color:#fff}
+    .btn-ghost-w{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}.btn-ghost-w:hover{background:rgba(255,255,255,.1);border-color:#fff}
+    .btn-ghost-dark{background:transparent;color:var(--dark);border-color:#d1d5db}.btn-ghost-dark:hover{border-color:var(--blue);color:var(--blue)}
+    .badge{display:inline-flex;align-items:center;gap:5px;padding:4px 14px;border-radius:50px;font-size:.69rem;font-weight:600;letter-spacing:.06em;font-family:var(--mono);text-transform:uppercase}
+    .badge-blue{background:rgba(58,89,168,.1);color:var(--blue);border:1px solid rgba(58,89,168,.2)}
+    .badge-orange{background:rgba(246,136,31,.1);color:var(--orange);border:1px solid rgba(246,136,31,.2)}
+    .rv{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s cubic-bezier(.22,1,.36,1)}
+    .rv.on{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.06s}.d2{transition-delay:.12s}.d3{transition-delay:.18s}.d4{transition-delay:.24s}.d5{transition-delay:.30s}
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px 0;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid #f1f5f9;transition:all .3s}
+    .nav.sc{box-shadow:0 1px 20px rgba(0,0,0,.06)}
+    .nv{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:9px;font-family:var(--font);font-size:1.2rem;font-weight:800;color:var(--dark)}
+    .logo-icon{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--blue2));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .logo .or{color:var(--orange)}
+    .navlinks{display:flex;align-items:center;gap:2px;list-style:none}
+    .navlinks a{padding:6px 12px;border-radius:8px;font-size:.82rem;font-weight:500;color:var(--gray);transition:all .2s}
+    .navlinks a:hover,.navlinks a.active{color:var(--blue);background:rgba(58,89,168,.07)}
+    .nav-acts{display:flex;align-items:center;gap:8px;flex-shrink:0}
+    .nav-acts .btn{padding:8px 18px;font-size:.79rem}
+    /* FOOTER */
+    footer{background:var(--dark);padding:56px 0 24px;border-top:1px solid rgba(255,255,255,.06)}
+    .foot-grid{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:36px;margin-bottom:40px}
+    .foot-col h4{font-size:.65rem;font-family:var(--mono);font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.25);margin-bottom:14px}
+    .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .foot-col ul a{font-size:.8rem;color:rgba(255,255,255,.45);transition:color .2s}
+    .foot-col ul a:hover{color:rgba(255,255,255,.85)}
+    /* STICKY + WA */
+    .sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:998;background:var(--dark);border-top:1px solid rgba(58,89,168,.3);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;transform:translateY(100%);transition:transform .3s}
+    .sticky-cta.show{transform:translateY(0)}
+    .sticky-cta p{font-size:.8rem;color:rgba(255,255,255,.6);margin:0}
+    .wa-fab{position:fixed;bottom:72px;right:20px;z-index:997;width:48px;height:48px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .25s}
+    .wa-fab:hover{transform:scale(1.1)}
+    .wa-fab svg{width:25px;height:25px}
+    /* RESPONSIVE */
+    @media(max-width:768px){.navlinks{display:none}.nav-acts .btn:first-child{display:none}.foot-grid{grid-template-columns:1fr}}
+
+    :root{
+      --blue:#3a59a8;--blue-dark:#2a4285;--blue-light:#5577cc;
+      --orange:#f6881f;--orange-dark:#d96c00;
+      --g-blue:#4285F4;--g-red:#EA4335;--g-yellow:#FBBC05;--g-green:#34A853;
+      --gcp:#4285F4;--gcp-dark:#2b6ce8;--gcp-pale:#f0f4ff;
+      --cream:#ffebc7;--cream-light:#fff8ee;
+      --black:#0a0a0a;--dark:#1a1f35;--dark2:#252b45;
+      --gray:#6b7280;--gray-light:#e8eaef;--white:#fff;
+      --font:'Poppins',sans-serif;--mono:'JetBrains Mono',monospace;
+      --sh-orange:0 8px 28px rgba(246,136,31,.32);
+      --sh-gcp:0 8px 32px rgba(66,133,244,.22);
+    }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--font);background:var(--cream);color:var(--black);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--cream)}::-webkit-scrollbar-thumb{background:var(--gcp);border-radius:3px}
+    h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.1;letter-spacing:-.025em}
+    h2{font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:700;line-height:1.2;letter-spacing:-.015em}
+    h3{font-size:1.1rem;font-weight:600;line-height:1.35}
+    p{font-size:.94rem;color:var(--gray)}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1160px;margin:0 auto;padding:0 28px}
+    .btn{display:inline-flex;align-items:center;gap:7px;padding:13px 26px;border-radius:50px;font-family:var(--font);font-size:.88rem;font-weight:600;cursor:pointer;border:2px solid transparent;transition:all .25s;white-space:nowrap}
+    .btn-gcp{background:var(--gcp);color:#fff;box-shadow:var(--sh-gcp)}
+    .btn-gcp:hover{background:var(--gcp-dark);transform:translateY(-2px)}
+    .btn-primary{background:var(--orange);color:#fff;border-color:var(--orange);box-shadow:var(--sh-orange)}
+    .btn-primary:hover{background:var(--orange-dark);transform:translateY(-2px)}
+    .btn-ghost-w{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+    .btn-ghost-w:hover{background:rgba(255,255,255,.12);border-color:#fff}
+    .badge{display:inline-flex;align-items:center;gap:5px;padding:4px 13px;border-radius:50px;font-size:.72rem;font-weight:600;letter-spacing:.03em}
+    .bo{background:rgba(246,136,31,.12);color:var(--orange-dark);border:1px solid rgba(246,136,31,.28)}
+    .bgcp{background:rgba(66,133,244,.1);color:var(--gcp-dark);border:1px solid rgba(66,133,244,.22)}
+    .bw{background:rgba(255,255,255,.13);color:#fff;border:1px solid rgba(255,255,255,.25)}
+    .bg{background:rgba(52,168,83,.1);color:#1a6e34;border:1px solid rgba(52,168,83,.22)}
+    .rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,1,.36,1)}
+    .rv.on{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:12px 0;background:rgba(255,235,199,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(58,89,168,.08);transition:all .3s}
+    .nav.sc{background:rgba(255,235,199,.98);box-shadow:0 4px 20px rgba(58,89,168,.1);padding:9px 0}
+    .nv{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{display:flex;align-items:center;gap:9px;font-size:1.22rem;font-weight:800;color:var(--blue);text-decoration:none}
+    .logo-box{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--blue-light));display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem}
+    .logo .or{color:var(--orange)}
+    .navlinks{display:flex;align-items:center;gap:2px;list-style:none}
+    .navlinks a{padding:7px 12px;border-radius:7px;font-size:.85rem;font-weight:500;color:var(--dark);transition:all .2s}
+    .navlinks a:hover,.navlinks a.active{color:var(--blue);background:rgba(58,89,168,.07)}
+    .nav-acts{display:flex;align-items:center;gap:9px}
+    .nav-acts .btn{padding:8px 16px;font-size:.78rem}
+    /* HERO */
+    .hero{padding:115px 0 80px;background:linear-gradient(148deg,#0d1b2a 0%,#1a2744 35%,#1e3470 65%,#2b5eb0 100%);position:relative;overflow:hidden;min-height:82vh;display:flex;align-items:center}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:28px 28px}
+    .orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(60px)}
+    .orb-b{width:300px;height:300px;background:rgba(66,133,244,.2);top:-60px;right:8%}
+    .orb-r{width:180px;height:180px;background:rgba(234,67,53,.12);bottom:10%;right:22%}
+    .orb-y{width:160px;height:160px;background:rgba(251,188,5,.1);top:40%;left:-40px}
+    .orb-g{width:200px;height:200px;background:rgba(52,168,83,.1);bottom:-60px;left:32%}
+    .hcnt{position:relative;z-index:2;width:100%}
+    .hgrid{display:grid;grid-template-columns:1fr 400px;gap:64px;align-items:center}
+    .h-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+    .g-cert{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50px;padding:6px 14px}
+    .g-dots{display:flex;gap:3px}
+    .g-dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+    .g-cert span{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.85)}
+    h1{color:#fff}
+    h1 em{font-style:normal;background:linear-gradient(90deg,var(--g-blue),var(--g-green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-lead{font-size:1.05rem;color:rgba(255,255,255,.72);max-width:520px;margin:18px 0 32px;line-height:1.75}
+    .hero-acts{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+    .hero-trust{display:flex;gap:22px;flex-wrap:wrap}
+    .ht-item{display:flex;align-items:center;gap:7px}
+    .ht-item span{font-size:.78rem;color:rgba(255,255,255,.52)}
+    .ht-dot{width:6px;height:6px;border-radius:50%}
+    /* HERO CARD */
+    .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(66,133,244,.2);border-radius:22px;padding:28px;backdrop-filter:blur(12px)}
+    .hc-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.1)}
+    .hc-icon{width:44px;height:44px;border-radius:12px;background:rgba(66,133,244,.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+    .hc-title{font-size:.95rem;font-weight:700;color:#fff}
+    .hc-sub{font-size:.7rem;color:rgba(255,255,255,.45);font-family:var(--mono)}
+    .hc-stat{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between}
+    .hc-stat:last-of-type{border-bottom:none}
+    .hc-stat-label{font-size:.8rem;color:rgba(255,255,255,.52)}
+    .hc-stat-val{font-size:1rem;font-weight:700;color:var(--g-blue);font-family:var(--mono)}
+    .hc-stat-val.gr{color:var(--g-green)}.hc-stat-val.wh{color:#fff}.hc-stat-val.ye{color:var(--g-yellow)}
+    .hc-cta{display:block;margin-top:20px;text-align:center;padding:12px;border-radius:50px;background:var(--gcp);color:#fff;font-family:var(--font);font-size:.85rem;font-weight:600;width:100%;transition:all .25s;text-decoration:none;border:none;cursor:pointer}
+    .hc-cta:hover{background:var(--gcp-dark);transform:translateY(-2px)}
+    /* SECTIONS */
+    .ps{padding:80px 0}
+    .ps-cream{background:var(--cream-light)}
+    .ps-white{background:#fff}
+    .ps-pale{background:var(--gcp-pale)}
+    .ps-dark{background:var(--dark)}
+    .ps-gcp{background:linear-gradient(160deg,#0d1b2a 0%,#1e3470 50%,#2b5eb0 100%)}
+    .sec-eyebrow{text-align:center;margin-bottom:10px;display:block}
+    .sec-title{font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:700;color:var(--dark);line-height:1.2;letter-spacing:-.015em;margin-bottom:10px;text-align:center}
+    .sec-sub{font-size:.97rem;color:var(--gray);line-height:1.75;max-width:600px;margin:0 auto 52px;text-align:center}
+    .sec-label{display:block;font-family:var(--mono);font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gcp);margin-bottom:10px;text-align:center}
+    /* GCP COMPARE */
+    .gcp-compare{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+    .gcpc-side{background:#fff;border-radius:18px;padding:30px;border:1.5px solid var(--gray-light)}
+    .gcpc-side.tb{border-color:var(--gcp);box-shadow:var(--sh-gcp)}
+    .gcpc-title{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+    .gcpc-title .star{color:var(--gcp)}
+    .gcpc-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+    .gcpc-list li{display:flex;gap:10px;font-size:.85rem;color:var(--dark)}
+    .gcpc-list li .chk{color:var(--gcp);font-weight:700;flex-shrink:0}
+    .gcpc-list li .x{color:#d1d5db;flex-shrink:0}
+    .gcpc-list li.no{color:var(--gray)}
+    /* WHY GRID */
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+    .why-card{background:#fff;border-radius:18px;padding:28px;border:1.5px solid var(--gray-light);transition:all .3s}
+    .why-card:hover{border-color:var(--gcp);box-shadow:var(--sh-gcp);transform:translateY(-5px)}
+    .why-icon{width:50px;height:50px;border-radius:14px;background:var(--gcp-pale);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px}
+    .why-card h3{margin-bottom:8px;color:var(--dark)}
+    .why-card p{font-size:.85rem}
+    /* SERVICES */
+    .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .svc-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:24px;display:flex;gap:16px;transition:all .3s}
+    .svc-item:hover{background:rgba(255,255,255,.1);border-color:rgba(66,133,244,.35);transform:translateY(-3px)}
+    .svc-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+    .svc-name{font-size:.92rem;font-weight:700;color:#fff;margin-bottom:5px}
+    .svc-desc{font-size:.8rem;color:rgba(255,255,255,.52);line-height:1.6}
+    .svc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+    .svc-tag{font-size:.67rem;font-family:var(--mono);padding:2px 8px;border-radius:4px;background:rgba(66,133,244,.2);color:rgba(140,180,255,.9);border:1px solid rgba(66,133,244,.3)}
+    /* USE CASES */
+    .uc-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .uc-card{background:#fff;border:1.5px solid var(--gray-light);border-radius:18px;padding:28px;display:flex;gap:18px;transition:all .3s}
+    .uc-card:hover{border-color:var(--gcp);box-shadow:0 8px 28px rgba(66,133,244,.1)}
+    .uc-icon{font-size:2rem;flex-shrink:0;margin-top:2px}
+    .uc-body h3{font-size:.98rem;font-weight:700;color:var(--dark);margin-bottom:8px}
+    .uc-body p{font-size:.82rem;color:var(--gray);line-height:1.7;margin-bottom:12px}
+    .uc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+    .uc-tag{font-size:.65rem;padding:2px 8px;border-radius:4px;background:var(--gcp-pale);color:#1a4eb5;border:1px solid rgba(66,133,244,.18);font-family:var(--mono)}
+    .uc-result{font-size:.78rem;font-family:var(--mono);color:var(--gcp-dark);font-weight:600;background:var(--gcp-pale);border:1px solid rgba(66,133,244,.2);border-radius:6px;padding:5px 10px;display:inline-block}
+    /* CERT GRID */
+    .cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .cert-card{background:#fff;border-radius:14px;padding:20px;border:1.5px solid var(--gray-light);text-align:center;transition:all .25s}
+    .cert-card:hover{border-color:var(--gcp);box-shadow:0 4px 18px rgba(66,133,244,.12)}
+    .cert-icon{font-size:2rem;margin-bottom:10px}
+    .cert-name{font-size:.82rem;font-weight:700;color:var(--dark);margin-bottom:4px}
+    .cert-count{font-size:1.4rem;font-weight:800;color:var(--gcp);font-family:var(--mono);display:block}
+    .cert-type{font-size:.72rem;color:var(--gray)}
+    /* CASE STUDIES */
+    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .case-card{background:#fff;border-radius:18px;overflow:hidden;border:1.5px solid var(--gray-light);transition:all .3s}
+    .case-card:hover{border-color:var(--gcp);box-shadow:var(--sh-gcp);transform:translateY(-5px)}
+    .case-header{padding:22px 24px;display:flex;align-items:center;gap:12px}
+    .case-header.ai{background:var(--gcp-pale)}
+    .case-header.data{background:#f0fdf4}
+    .case-header.start{background:#fef9c3}
+    .case-icon{font-size:1.6rem}
+    .case-industry{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray)}
+    .case-org{font-size:.92rem;font-weight:700;color:var(--dark)}
+    .case-body{padding:20px 24px}
+    .case-challenge{font-size:.82rem;color:var(--gray);font-style:italic;margin-bottom:14px;padding-left:12px;border-left:2px solid rgba(66,133,244,.4)}
+    .case-metric{font-size:2.2rem;font-weight:800;color:var(--gcp);font-family:var(--mono);line-height:1;margin-bottom:4px}
+    .case-result{font-size:.78rem;font-weight:600;color:var(--dark);margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
+    .case-body p{font-size:.83rem;color:var(--gray)}
+    /* STAT BAND */
+    .stat-band{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.06);border-radius:20px;overflow:hidden;margin-top:44px}
+    .stat-item{padding:36px 24px;border-right:1px solid rgba(255,255,255,.06);text-align:center}
+    .stat-item:last-child{border-right:none}
+    .stat-num{font-size:2.4rem;font-weight:800;font-family:var(--mono);color:var(--g-blue);line-height:1;margin-bottom:8px}
+    .stat-lbl{font-size:.8rem;color:rgba(255,255,255,.42);line-height:1.5}
+    /* FAQ */
+    .faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+    .faq-item{background:#fff;border:1.5px solid var(--gray-light);border-radius:14px;overflow:hidden;transition:border-color .2s}
+    .faq-item.open{border-color:var(--gcp)}
+    .faq-q{padding:18px 22px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:14px;font-size:.9rem;font-weight:600;color:var(--dark);user-select:none}
+    .faq-arrow{color:var(--gcp);font-size:.8rem;transition:transform .25s;flex-shrink:0}
+    .faq-item.open .faq-arrow{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s}
+    .faq-item.open .faq-a{max-height:300px;padding:0 22px 18px}
+    .faq-a p{font-size:.86rem;color:var(--gray);line-height:1.75}
+    /* FINAL CTA */
+    .final-cta{padding:100px 0;text-align:center;position:relative;overflow:hidden}
+    .final-cta::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(66,133,244,.05) 1px,transparent 1px);background-size:28px 28px}
+    .final-cta-inner{position:relative;z-index:2}
+    .final-cta h2{color:#fff;margin-bottom:14px}
+    .final-cta p{color:rgba(255,255,255,.6);font-size:1.02rem;max-width:500px;margin:0 auto 36px}
+    .final-cta-acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    /* FOOTER */
+    footer{background:var(--dark);padding:56px 0 28px}
+    .foot-inner{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:40px;margin-bottom:44px}
+    .foot-brand p{font-size:.82rem;color:rgba(255,255,255,.38);max-width:220px;margin:12px 0 18px;line-height:1.7}
+    .foot-badges{display:flex;flex-wrap:wrap;gap:7px}
+    .foot-badge{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:7px;padding:4px 10px;font-size:.66rem;font-weight:600;color:rgba(255,255,255,.45)}
+    .foot-col h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.32);margin-bottom:16px}
+    .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .foot-col ul a{font-size:.82rem;color:rgba(255,255,255,.45);transition:color .2s}
+    .foot-col ul a:hover{color:var(--gcp)}
+    .foot-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    .foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.28)}
+    .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--dark);border-top:1px solid rgba(66,133,244,.15);padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;transform:translateY(100%);transition:transform .35s}
+    .sticky-bar.show{transform:translateY(0)}
+    .sticky-bar p{font-size:.82rem;color:rgba(255,255,255,.58)}
+    .wa-float{position:fixed;bottom:80px;right:24px;z-index:998;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.42);transition:transform .25s}
+    .wa-float:hover{transform:scale(1.1)}
+    .wa-float svg{width:26px;height:26px;fill:#fff}
+    @media(max-width:1024px){.hgrid{grid-template-columns:1fr}.hero-card{display:none}.why-grid,.uc-grid{grid-template-columns:1fr 1fr}.stat-band{grid-template-columns:1fr 1fr}.foot-inner{grid-template-columns:1fr 1fr}.cert-grid{grid-template-columns:1fr 1fr}.case-grid{grid-template-columns:1fr}.gcp-compare{grid-template-columns:1fr}}
+    @media(max-width:768px){.navlinks,.nav-acts .btn:first-child{display:none}.svc-grid,.why-grid,.uc-grid{grid-template-columns:1fr}}
+  
+  /* ── FAQ / AEO Section ── */
+  .faq-section{padding:80px 0;background:#f8fafc}
+  .faq-section .section-label{text-align:center;font-family:var(--mono,'JetBrains Mono',monospace);font-size:.72rem;letter-spacing:.18em;color:var(--blue,#3a59a8);text-transform:uppercase;margin-bottom:12px}
+  .faq-section .section-title{text-align:center;font-family:var(--font,'Poppins',sans-serif);font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#0a0a0a;margin-bottom:12px}
+  .faq-section .section-sub{text-align:center;color:#6b7280;font-size:1rem;margin-bottom:48px}
+  .faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+  .faq-item{background:#fff;border-radius:12px;border:1.5px solid #e5e7eb;overflow:hidden;transition:border-color .25s}
+  .faq-item:hover,.faq-item.open{border-color:var(--blue,#3a59a8)}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;font-family:var(--font,'Poppins',sans-serif);font-weight:600;font-size:.97rem;color:#1e293b;gap:12px;user-select:none}
+  .faq-arrow{flex-shrink:0;color:var(--blue,#3a59a8);transition:transform .3s}
+  .faq-item.open .faq-arrow{transform:rotate(180deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
+  .faq-item.open .faq-a{max-height:500px;padding:0 24px 20px}
+  .faq-a p{color:#475569;line-height:1.75;font-size:.95rem}
+  </style>
+</head>
+<body>
+<!-- ═══ NAV ═══ -->
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <div class="nv">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 16 16"><path d="M8 1L1 5v6l7 4 7-4V5L8 1zm0 1.5l5.5 3.15v5.7L8 14.5l-5.5-3.15V5.65L8 2.5z" opacity=".7" fill="#fff"/><path d="M8 4L3.5 6.5v3L8 12l4.5-2.5v-3L8 4z" fill="#fff"/></svg>
+        </div>
+        Thynk<span class="or">wise</span>
+      </a>
+      <ul class="navlinks">
+        <li><a href="managed-services.html">Managed Services</a></li>
+        <li><a href="cloud-migration.html">Cloud Migration</a></li>
+        <li><a href="cybersecurity.html">Cybersecurity</a></li>
+        <li><a href="gpuaas.html">GPUaaS</a></li>
+        <li><a href="bfsi-cloud.html">BFSI</a></li>
+        <li><a href="cost-optimization.html">Cost Optimisation</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <div class="nav-acts">
+        <a href="book-demo.html" class="btn btn-ghost-dark">Book Demo</a>
+        <a href="get-assessment.html" class="btn btn-orange">Free Assessment</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="orb orb-b"></div><div class="orb orb-r"></div><div class="orb orb-y"></div><div class="orb orb-g"></div>
+  <div class="container"><div class="hcnt"><div class="hgrid">
+    <div>
+      <div class="h-eyebrow rv">
+        <div class="g-cert">
+          <div class="g-dots"><span class="g-dot" style="background:var(--g-blue)"></span><span class="g-dot" style="background:var(--g-red)"></span><span class="g-dot" style="background:var(--g-yellow)"></span><span class="g-dot" style="background:var(--g-green)"></span></div>
+          <span>Authorised Google Cloud Partner</span>
+        </div>
+        <span class="badge bw">🇮🇳 40+ GCP Certifications</span>
+      </div>
+      <h1 class="rv d1">Google Cloud.<br>Managed by <em>Thynkwise.</em></h1>
+      <p class="hero-lead rv d2">Authorised Google Cloud partner for Vertex AI, BigQuery, GKE, and Google Workspace — fully managed with startup credits activation, certified FinOps, and 24/7 support across all regions.</p>
+      <div class="hero-acts rv d3">
+        <a href="get-assessment.html" class="btn btn-primary">Get Free GCP Assessment →</a>
+        <a href="book-demo.html" class="btn btn-ghost-w">Talk to AI/ML Expert</a>
+      </div>
+      <div class="hero-trust rv d4">
+        <div class="ht-item"><div class="ht-dot" style="background:var(--g-blue)"></div><span>Flexible billing options</span></div>
+        <div class="ht-item"><div class="ht-dot" style="background:var(--g-green)"></div><span>Startup credits up to $200K</span></div>
+        <div class="ht-item"><div class="ht-dot" style="background:var(--g-yellow)"></div><span>24/7 Support</span></div>
+      </div>
+    </div>
+    <div class="rv d2">
+      <div class="hero-card">
+        <div class="hc-header">
+          <div class="hc-icon">◉</div>
+          <div><div class="hc-title">GCP Partner Dashboard</div><div class="hc-sub">THYNKWISE · AUTHORISED PARTNER</div></div>
+        </div>
+        <div class="hc-stat"><span class="hc-stat-label">Partner Status</span><span class="hc-stat-val">Authorised Reseller</span></div>
+        <div class="hc-stat"><span class="hc-stat-label">Active Certifications</span><span class="hc-stat-val wh">40+</span></div>
+        <div class="hc-stat"><span class="hc-stat-label">Startup Credits Available</span><span class="hc-stat-val ye">$200K</span></div>
+        <div class="hc-stat"><span class="hc-stat-label">Avg. Cost Reduction</span><span class="hc-stat-val gr">25–35%</span></div>
+        <div class="hc-stat"><span class="hc-stat-label">Billing Currency</span><span class="hc-stat-val">Multi-currency</span></div>
+        <a href="book-demo.html" class="hc-cta">Talk to GCP Expert →</a>
+      </div>
+    </div>
+  </div></div></div>
+</section>
+
+<!-- GCP DIRECT vs THYNKWISE -->
+<section class="ps ps-cream">
+  <div class="container">
+    <span class="badge bo sec-eyebrow rv">The Honest Comparison</span>
+    <h2 class="sec-title rv d1">Google Cloud Direct vs GCP via Thynkwise</h2>
+    <p class="sec-sub rv d2">GCP is technically powerful but harder to self-manage than AWS. Startup credit applications, Vertex AI cost governance, and Workspace admin — Thynkwise handles the complexity so your team stays focused on building.</p>
+    <div class="gcp-compare rv d3">
+      <div class="gcpc-side">
+        <div class="gcpc-title">GCP Direct</div>
+        <ul class="gcpc-list">
+          <li class="no"><span class="x">—</span> USD billing only — local currency conversion risk every month</li>
+          <li class="no"><span class="x">—</span> No GST invoices for Indian finance and accounting teams</li>
+          <li class="no"><span class="x">—</span> Startup credits require direct application — often rejected or delayed</li>
+          <li class="no"><span class="x">—</span> GCP Sustained Use Discounts unmanaged — missed savings</li>
+          <li class="no"><span class="x">—</span> No data residency configuration included</li>
+          <li class="no"><span class="x">—</span> Vertex AI cost governance is your responsibility</li>
+          <li class="no"><span class="x">—</span> Workspace admin, DLP, and Vault setup requires specialised expertise</li>
+        </ul>
+      </div>
+      <div class="gcpc-side tb">
+        <div class="gcpc-title"><span class="star">★</span> GCP via Thynkwise</div>
+        <ul class="gcpc-list">
+          <li><span class="chk">✓</span> 100% local-currency billing — GST-compliant invoices every month</li>
+          <li><span class="chk">✓</span> Full GST breakdown with HSN/SAC codes — Tally, SAP, Zoho Books ready</li>
+          <li><span class="chk">✓</span> Startup credit applications managed and activated within 10–14 days</li>
+          <li><span class="chk">✓</span> Committed Use Discounts, right-sizing, and SUDs managed proactively</li>
+          <li><span class="chk">✓</span> Data residency configured via Org Policies and VPC Service Controls</li>
+          <li><span class="chk">✓</span> Vertex AI budget alerts and model serving cost controls implemented</li>
+          <li><span class="chk">✓</span> Full Workspace deployment — Gmail, Drive, Meet, DLP, Vault, AppSheet</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY GCP VIA THYNKWISE -->
+<section class="ps ps-white">
+  <div class="container">
+    <span class="badge bgcp sec-eyebrow rv">Why Thynkwise for GCP</span>
+    <h2 class="sec-title rv d1">Google's Intelligence. India's Simplicity.</h2>
+    <p class="sec-sub rv d2">GCP leads for AI/ML, data analytics, and Kubernetes-native workloads. Thynkwise makes these capabilities accessible to Indian enterprises — in local currency, with startup credits, and without the learning curve.</p>
+    <div class="why-grid">
+      <div class="why-card rv d1">
+        <div class="why-icon">🤖</div>
+        <h3>Vertex AI & Gemini Access</h3>
+        <p>Thynkwise certified ML Engineers deploy Vertex AI model training, Gemini Pro API integration, and Vector Search for semantic applications — in production, not just POC, within 4–6 weeks.</p>
+      </div>
+      <div class="why-card rv d2">
+        <div class="why-icon">📊</div>
+        <h3>BigQuery Data Platform</h3>
+        <p>Managed BigQuery deployment — schema design, Dataflow streaming pipelines, Pub/Sub event ingestion, and Looker Studio dashboards. Analytics pipelines handling billions of events per month, no ETL servers to manage.</p>
+      </div>
+      <div class="why-card rv d3">
+        <div class="why-icon">🎓</div>
+        <h3>Startup Credits Up to $200K</h3>
+        <p>Thynkwise manages the Google for Startups application, eligibility assessment, and credit activation. Qualifying Indian startups receive up to $200,000 in GCP credits — typically activated within 10–14 business days.</p>
+      </div>
+      <div class="why-card rv d1">
+        <div class="why-icon">₹</div>
+        <h3>100% Local Currency Billing</h3>
+        <p>All GCP and Google Workspace billing through Thynkwise is Local-currency with full GST breakdown, HSN/SAC codes, and PAN details. No USD conversion, no currency risk, no surprises.</p>
+      </div>
+      <div class="why-card rv d2">
+        <div class="why-icon">⎈</div>
+        <h3>GKE — Google's Native Kubernetes</h3>
+        <p>GKE Autopilot managed clusters — Google handles node provisioning, security patching, and cluster upgrades. Thynkwise handles Istio service mesh, GitOps with ArgoCD, and multi-tenant isolation patterns.</p>
+      </div>
+      <div class="why-card rv d3">
+        <div class="why-icon">📧</div>
+        <h3>Google Workspace India</h3>
+        <p>Complete Workspace deployment — Gmail, Drive, Meet, Docs, Vault for legal hold, AppSheet no-code apps, and DLP policies. Migration from Microsoft 365 or legacy email handled end-to-end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GCP SERVICES — dark section -->
+<section class="ps ps-gcp">
+  <div class="container">
+    <span class="badge bw sec-eyebrow rv">GCP Services Portfolio</span>
+    <h2 class="sec-title rv d1" style="color:#fff">What We Deliver on Google Cloud</h2>
+    <p class="sec-sub rv d2" style="color:rgba(255,255,255,.55)">From Vertex AI pipelines to GKE clusters and BigQuery analytics — certified GCP engineers manage your complete Google Cloud stack.</p>
+    <div class="svc-grid">
+      <div class="svc-item rv d1">
+        <div class="svc-icon">🤖</div>
+        <div><div class="svc-name">AI / ML — Vertex AI & Gemini</div>
+        <div class="svc-desc">Vertex AI model training, deployment and pipelines. Gemini Pro and Ultra API integration. Vector Search for semantic retrieval. Model Garden access for foundation model fine-tuning.</div>
+        <div class="svc-tags"><span class="svc-tag">Vertex AI</span><span class="svc-tag">Gemini API</span><span class="svc-tag">Vector Search</span><span class="svc-tag">AutoML</span></div></div>
+      </div>
+      <div class="svc-item rv d2">
+        <div class="svc-icon">📊</div>
+        <div><div class="svc-name">Data & Analytics</div>
+        <div class="svc-desc">BigQuery data warehousing, Dataflow streaming pipelines, Pub/Sub event ingestion, Dataproc managed Spark, Looker Studio dashboards, and Analytics Hub for enterprise data sharing.</div>
+        <div class="svc-tags"><span class="svc-tag">BigQuery</span><span class="svc-tag">Dataflow</span><span class="svc-tag">Pub/Sub</span><span class="svc-tag">Looker</span></div></div>
+      </div>
+      <div class="svc-item rv d3">
+        <div class="svc-icon">⎈</div>
+        <div><div class="svc-name">Containers & Serverless</div>
+        <div class="svc-desc">GKE Autopilot and Standard clusters, Cloud Run for serverless containers, Cloud Functions for event-driven compute, Artifact Registry for container image management and security scanning.</div>
+        <div class="svc-tags"><span class="svc-tag">GKE</span><span class="svc-tag">Cloud Run</span><span class="svc-tag">Cloud Functions</span><span class="svc-tag">Artifact Registry</span></div></div>
+      </div>
+      <div class="svc-item rv d4">
+        <div class="svc-icon">🛡️</div>
+        <div><div class="svc-name">Security & Identity</div>
+        <div class="svc-desc">Cloud IAM, VPC Service Controls for data perimeter enforcement, Security Command Center, Chronicle SIEM, Binary Authorization for supply chain security, and Cloud Armor WAF.</div>
+        <div class="svc-tags"><span class="svc-tag">IAM / SCC</span><span class="svc-tag">VPC SC</span><span class="svc-tag">Cloud Armor</span><span class="svc-tag">Chronicle</span></div></div>
+      </div>
+      <div class="svc-item rv d1">
+        <div class="svc-icon">🌐</div>
+        <div><div class="svc-name">Networking</div>
+        <div class="svc-desc">VPC with Shared VPC for multi-project architectures, Cloud Load Balancing (global and regional), Cloud CDN, Cloud DNS, and Cloud Interconnect for private dedicated GCP connectivity.</div>
+        <div class="svc-tags"><span class="svc-tag">VPC / Shared VPC</span><span class="svc-tag">Cloud LB</span><span class="svc-tag">Cloud CDN</span><span class="svc-tag">Interconnect</span></div></div>
+      </div>
+      <div class="svc-item rv d2">
+        <div class="svc-icon">📧</div>
+        <div><div class="svc-name">Google Workspace</div>
+        <div class="svc-desc">Business Gmail, Drive, Meet, Docs, Sheets, and Vault for legal hold. AppSheet no-code apps, Google Chat integrations, and enterprise DLP policies across the full Workspace estate.</div>
+        <div class="svc-tags"><span class="svc-tag">Gmail / Drive</span><span class="svc-tag">Meet / Chat</span><span class="svc-tag">Vault</span><span class="svc-tag">AppSheet</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="ps ps-pale">
+  <div class="container">
+    <span class="sec-label rv">GCP Expertise</span>
+    <h2 class="sec-title rv d1">40+ active GCP certifications.<br>From data engineering to ML.</h2>
+    <p class="sec-sub rv d2">Google Cloud certifications require annual recertification — our team maintains active credentials across every GCP discipline, renewed every year.</p>
+    <div class="cert-grid rv d3">
+      <div class="cert-card">
+        <div class="cert-icon">🏗️</div>
+        <div class="cert-name">Cloud Architect</div>
+        <span class="cert-count">12+</span>
+        <div class="cert-type">Professional Level</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">📊</div>
+        <div class="cert-name">Data Engineer</div>
+        <span class="cert-count">10+</span>
+        <div class="cert-type">Professional Specialty</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🤖</div>
+        <div class="cert-name">ML Engineer</div>
+        <span class="cert-count">8+</span>
+        <div class="cert-type">Professional Specialty</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">⎈</div>
+        <div class="cert-name">DevOps Engineer</div>
+        <span class="cert-count">10+</span>
+        <div class="cert-type">Professional Specialty</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="ps ps-white">
+  <div class="container">
+    <span class="sec-label rv">Real-World GCP in India</span>
+    <h2 class="sec-title rv d1">Where Google Cloud genuinely<br>outperforms every alternative</h2>
+    <p class="sec-sub rv d2">GCP has a specific profile of workloads where it is technically the best choice — here's where Indian enterprises and startups deploy it.</p>
+    <div class="uc-grid">
+      <div class="uc-card rv d1">
+        <div class="uc-icon">🤖</div>
+        <div class="uc-body">
+          <h3>AI Product Features — Gemini API Integration</h3>
+          <div class="uc-tags"><span class="uc-tag">Vertex AI</span><span class="uc-tag">Gemini Pro</span><span class="uc-tag">Vector Search</span><span class="uc-tag">Cloud Run</span></div>
+          <p>Product teams embed Gemini Pro via Vertex AI endpoints for in-app AI features — document summarisation, semantic search, and recommendation engines. Vector embeddings stored in Vertex AI Vector Search with sub-50ms retrieval at scale. Serving layer on Cloud Run auto-scales to zero between requests, eliminating idle compute costs entirely.</p>
+          <div class="uc-result">→ AI features in production in 4–6 weeks, not 6 months</div>
+        </div>
+      </div>
+      <div class="uc-card rv d2">
+        <div class="uc-icon">📊</div>
+        <div class="uc-body">
+          <h3>Enterprise Analytics — BigQuery Data Platform</h3>
+          <div class="uc-tags"><span class="uc-tag">BigQuery</span><span class="uc-tag">Dataflow</span><span class="uc-tag">Pub/Sub</span><span class="uc-tag">Looker Studio</span></div>
+          <p>Transactional data streamed from operational databases into BigQuery via Dataflow — no ETL servers to manage, just streaming SQL transforms. Pub/Sub decouples producers from consumers with guaranteed delivery. Looker Studio dashboards serve business users directly from BigQuery. Total cost of ownership 40–60% below equivalent on-premise Hadoop or SQL Server estates.</p>
+          <div class="uc-result">→ Analytics pipelines handling 10B+ events/month in production</div>
+        </div>
+      </div>
+      <div class="uc-card rv d1">
+        <div class="uc-icon">⎈</div>
+        <div class="uc-body">
+          <h3>SaaS Platforms — Multi-Tenant GKE Architecture</h3>
+          <div class="uc-tags"><span class="uc-tag">GKE Autopilot</span><span class="uc-tag">Istio Service Mesh</span><span class="uc-tag">Cloud SQL</span><span class="uc-tag">ArgoCD</span></div>
+          <p>Multi-tenant SaaS applications on GKE Autopilot — Google manages node provisioning, security patching, and cluster upgrades. Istio service mesh enforces tenant isolation and mTLS between microservices. GitOps deployments via ArgoCD mean zero-touch production releases. Autopilot's bin packing reduces wasted compute by 30–40% versus self-managed Standard clusters.</p>
+          <div class="uc-result">→ 99.9%+ SLA met without a dedicated platform engineering team</div>
+        </div>
+      </div>
+      <div class="uc-card rv d2">
+        <div class="uc-icon">🚀</div>
+        <div class="uc-body">
+          <h3>Startups — Google for Startups Credits Programme</h3>
+          <div class="uc-tags"><span class="uc-tag">GFS Credits</span><span class="uc-tag">Firebase</span><span class="uc-tag">Cloud Run</span><span class="uc-tag">Vertex AI</span></div>
+          <p>Indian startups at seed and Series A can access up to $200,000 in GCP credits through Google for Startups. Thynkwise manages the application, activation, and credit governance — ensuring credits fund high-value production workloads, not idle resources. Firebase for mobile backends, Cloud Run for API serving, Vertex AI for early AI experimentation.</p>
+          <div class="uc-result">→ Startup credits activated within 10–14 business days</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="ps ps-cream">
+  <div class="container">
+    <span class="sec-label rv">Client Outcomes</span>
+    <h2 class="sec-title rv d1">GCP results that Indian<br>organisations actually achieved</h2>
+    <p class="sec-sub rv d2">Real production outcomes from Thynkwise GCP deployments — not benchmarks, not projections.</p>
+    <div class="case-grid rv d2">
+      <div class="case-card">
+        <div class="case-header ai">
+          <div class="case-icon">🤖</div>
+          <div><div class="case-industry">Fintech SaaS · Bengaluru</div><div class="case-org">Lending Analytics Platform</div></div>
+        </div>
+        <div class="case-body">
+          <p class="case-challenge">"Our ML models took 8 hours to retrain. By the time predictions updated, the market data they were trained on was stale."</p>
+          <div class="case-metric">94%</div>
+          <div class="case-result">Model Retraining Time Reduction</div>
+          <p>Migrated ML pipeline from on-premise Python scripts to Vertex AI Pipelines. Training time dropped from 8 hours to 28 minutes. Model serving via Vertex AI Endpoints — automatic scaling to zero between inference bursts. Credit scoring latency reduced from 4 seconds to 340ms.</p>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-header data">
+          <div class="case-icon">📊</div>
+          <div><div class="case-industry">Retail Enterprise · Delhi NCR</div><div class="case-org">Omnichannel Retailer</div></div>
+        </div>
+        <div class="case-body">
+          <p class="case-challenge">"Our BI reports ran overnight on SQL Server. By morning, decisions were made on yesterday's data and last night's reports."</p>
+          <div class="case-metric">Real-time</div>
+          <div class="case-result">Analytics from 12-hour Batch Delay</div>
+          <p>Built a streaming analytics platform on BigQuery with Dataflow ingestion from 340 POS terminals and 3 e-commerce channels. Business dashboards on Looker Studio refresh every 90 seconds. Total infrastructure cost 52% lower than the SQL Server estate it replaced.</p>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-header start">
+          <div class="case-icon">🚀</div>
+          <div><div class="case-industry">B2B SaaS Startup · Pune</div><div class="case-org">HR Automation Platform</div></div>
+        </div>
+        <div class="case-body">
+          <p class="case-challenge">"We couldn't afford AWS at our burn rate. We needed enterprise-grade infrastructure on a seed-stage budget."</p>
+          <div class="case-metric">$150K</div>
+          <div class="case-result">Google for Startups Credits Activated</div>
+          <p>Thynkwise activated $150K in GFS credits for the platform's first 18 months. GKE Autopilot for the SaaS backend, Firebase for mobile, and Vertex AI for document processing. Zero infrastructure spend in Year 1 — entire engineering budget directed at product development.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT BAND -->
+<section class="ps ps-dark">
+  <div class="container">
+    <span class="badge bw sec-eyebrow rv">By the Numbers</span>
+    <h2 class="sec-title rv d1" style="color:#fff">The Thynkwise GCP advantage</h2>
+    <div class="stat-band rv d2">
+      <div class="stat-item"><div class="stat-num">40+</div><div class="stat-lbl">Active GCP certifications across the team</div></div>
+      <div class="stat-item"><div class="stat-num">$200K</div><div class="stat-lbl">Max Google for Startups credits available</div></div>
+      <div class="stat-item"><div class="stat-num">25–35%</div><div class="stat-lbl">Average GCP cost reduction in Year 1</div></div>
+      <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-lbl">local-timezone NOC and engineering support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="ps ps-cream">
+  <div class="container">
+    <span class="sec-label rv">Common Questions</span>
+    <h2 class="sec-title rv d1">Google Cloud with Thynkwise — answered</h2>
+    <div class="faq-list rv d2">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is Thynkwise an authorised Google Cloud partner in India? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><p>Yes. Thynkwise is an authorised Google Cloud reseller and managed service partner in India with 40+ active GCP certifications including Professional Cloud Architect, Professional Data Engineer, and Professional ML Engineer. Google validates our partnership status annually.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Can Indian startups access Google Cloud credits through Thynkwise? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><p>Yes. Through Thynkwise and Google for Startups, qualifying Indian startups can access up to $200,000 in Google Cloud credits. Thynkwise manages the application, eligibility check, and activation — typically completed within 10–14 business days. We also govern credit usage to ensure they fund high-value production workloads.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">When is Google Cloud the right choice vs AWS or Azure? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><p>GCP leads when your workloads centre on AI/ML (Vertex AI, Gemini), large-scale data analytics (BigQuery), Kubernetes-native applications (GKE), or Google Workspace integration. AWS leads in service breadth and Indian enterprise case studies. Azure leads for Microsoft-stack and BFSI compliance. Thynkwise recommends the right cloud objectively — we're not incentivised to push any single platform.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Is data stored in India on Google Cloud? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><p>Google Cloud's Mumbai region (asia-south1) stores data within Indian jurisdiction. Thynkwise configures Organisation Policies, VPC Service Controls, and data residency constraints to enforce this at the infrastructure level — preventing data from leaving India even during DR or replication operations.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Do I get invoicings for Google Cloud? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a"><p>Yes — all GCP and Google Workspace billing through Thynkwise is Local-currency with full GST breakdown, HSN/SAC codes, and PAN details. No USD conversion, no currency risk. Invoices integrate with Tally, Zoho Books, and SAP.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta ps-gcp">
+  <div class="final-cta-inner rv">
+    <div class="g-dots" style="justify-content:center;margin-bottom:18px;gap:6px">
+      <span class="g-dot" style="background:var(--g-blue);width:10px;height:10px"></span>
+      <span class="g-dot" style="background:var(--g-red);width:10px;height:10px"></span>
+      <span class="g-dot" style="background:var(--g-yellow);width:10px;height:10px"></span>
+      <span class="g-dot" style="background:var(--g-green);width:10px;height:10px"></span>
+    </div>
+    <h2>Start Your Google Cloud Journey.<br>In your chosen currency. With Startup Credits.</h2>
+    <p>Free GCP Assessment — 8 minutes. Startup credit eligibility, AI/ML readiness score, and cost estimate. No commitment required.</p>
+    <div class="final-cta-acts">
+      <a href="get-assessment.html" class="btn btn-primary">Get Free GCP Assessment →</a>
+      <a href="book-demo.html" class="btn btn-ghost-w">Talk to AI/ML Expert</a>
+    </div>
+    <div style="margin-top:22px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap">
+      <span style="font-size:.78rem;color:rgba(255,255,255,.5)">🔒 No commitment · local currency pricing · Startup credits checked free</span>
+      <span style="color:rgba(255,255,255,.2)">|</span>
+      <a href="https://wa.me/919999999999" style="font-size:.78rem;color:rgba(255,255,255,.5)" target="_blank">💬 WhatsApp: +91 99999 99999</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+  
+  <!-- ── FAQ SECTION (AEO) ─────────────────────────────────────────── -->
+  <section class="faq-section" aria-label="Frequently Asked Questions" itemscope itemtype="https://schema.org/FAQPage">
+    <div class="container">
+      <div class="section-label">KNOWLEDGE BASE</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Everything you need to know — answered clearly.</p>
+      <div class="faq-list">
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" onclick="toggleFaq(this)" itemprop="name">
+        <span>What Google Cloud services does Thynkwise manage?</span>
+        <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2.5" d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Thynkwise manages GKE, Cloud Run, BigQuery, Vertex AI, Cloud SQL, Spanner, Pub/Sub, Dataflow, Cloud Storage, Anthos, and the full GCP networking stack — plus data engineering, ML platform management, and GCP migrations.</p>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" onclick="toggleFaq(this)" itemprop="name">
+        <span>Does Thynkwise support Google Vertex AI?</span>
+        <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2.5" d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Yes. Thynkwise manages Vertex AI infrastructure for model training, fine-tuning, and inference at scale — integrated with BigQuery ML and Google Cloud Storage for enterprise AI workloads.</p>
+      </div>
+    </div>
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <div class="faq-q" onclick="toggleFaq(this)" itemprop="name">
+        <span>Is Thynkwise a Google Cloud reseller?</span>
+        <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2.5" d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+        <p itemprop="text">Yes. Thynkwise is an authorised Google Cloud reseller offering consolidated billing, technical account management, architecture design, and 24/7 managed GCP operations.</p>
+      </div>
+    </div>
+      </div>
+    </div>
+  </section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo" style="margin-bottom:12px;display:inline-flex">
+          <div class="logo-icon">
+            <svg viewBox="0 0 16 16"><path d="M8 1L1 5v6l7 4 7-4V5L8 1zm0 1.5l5.5 3.15v5.7L8 14.5l-5.5-3.15V5.65L8 2.5z" opacity=".7" fill="#fff"/><path d="M8 4L3.5 6.5v3L8 12l4.5-2.5v-3L8 4z" fill="#fff"/></svg>
+          </div>
+          Thynk<span class="or">wise</span>
+        </a>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.4);max-width:210px;line-height:1.65;margin-bottom:18px">Cloud. Security. GPU. Managed. Your single technology partner for the full infrastructure stack.</p>
+        <div style="display:flex;gap:8px">
+          <a href="#" style="width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:none;transition:all .2s">in</a>
+          <a href="#" style="width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:none;transition:all .2s">tw</a>
+          <a href="#" style="width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:none;transition:all .2s">yt</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Cloud Platforms</h4>
+        <ul>
+          <li><a href="aws.html">Amazon Web Services</a></li>
+          <li><a href="azure.html">Microsoft Azure</a></li>
+          <li><a href="gcp.html">Google Cloud</a></li>
+          <li><a href="indian-csps.html">Indian Sovereign Cloud</a></li>
+          <li><a href="compare.html">Compare Clouds</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="managed-services.html">Managed Services</a></li>
+          <li><a href="cloud-migration.html">Cloud Migration</a></li>
+          <li><a href="cybersecurity.html">Cybersecurity</a></li>
+          <li><a href="gpuaas.html">GPU as a Service</a></li>
+          <li><a href="cost-optimization.html">Cost Optimisation</a></li>
+          <li><a href="bfsi-cloud.html">BFSI Cloud</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="end-to-end-solutions.html">End-to-End Solutions</a></li>
+          <li><a href="bfsi-cloud.html">BFSI &amp; Compliance</a></li>
+          <li><a href="cost-optimization.html">FinOps &amp; Cost Control</a></li>
+          <li><a href="cloud-migration.html">Data Centre Exit</a></li>
+          <li><a href="gpuaas.html">AI &amp; ML Infrastructure</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Thynkwise</a></li>
+          <li><a href="get-assessment.html">Free Assessment</a></li>
+          <li><a href="book-demo.html">Book a Demo</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:40px">
+      <p style="font-size:.74rem;color:rgba(255,255,255,.25)">© 2025 Thynkwise Technologies Pvt. Ltd. All rights reserved.</p>
+      <div style="display:flex;gap:7px">
+        <span style="font-size:.62rem;font-family:var(--mono);padding:3px 9px;border-radius:5px;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);background:rgba(255,255,255,.03)">AWS Partner</span>
+        <span style="font-size:.62rem;font-family:var(--mono);padding:3px 9px;border-radius:5px;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);background:rgba(255,255,255,.03)">Azure CSP</span>
+        <span style="font-size:.62rem;font-family:var(--mono);padding:3px 9px;border-radius:5px;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);background:rgba(255,255,255,.03)">GCP Partner</span>
+        <span style="font-size:.62rem;font-family:var(--mono);padding:3px 9px;border-radius:5px;border:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.3);background:rgba(255,255,255,.03)">ISO 27001</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="sticky-bar" id="stickyBar">
+  <p>◉ Google Cloud Partner India · Vertex AI · BigQuery · Startup Credits up to $200K</p>
+  <a href="get-assessment.html" class="btn btn-primary">Get Free GCP Assessment →</a>
+</div>
+<a href="https://wa.me/919999999999" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Sticky CTA -->
+<div class="sticky-cta" id="stickyCTA">
+  <p>☁️ Multi-Cloud · Managed 24/7 · Cybersecurity · GPUaaS · One Partner</p>
+  <a href="get-assessment.html" class="btn btn-orange" style="padding:8px 18px;font-size:.78rem;flex-shrink:0">Free Assessment →</a>
+</div>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/919999999999" class="wa-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="#fff"/></svg>
+</a>
+
+<script>
+  const _nav=document.getElementById('mainNav');
+  if(_nav) window.addEventListener('scroll',()=>_nav.classList.toggle('sc',window.scrollY>50));
+  const _sticky=document.getElementById('stickyCTA');
+  if(_sticky) window.addEventListener('scroll',()=>_sticky.classList.toggle('show',window.scrollY>600));
+  const _obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('on');_obs.unobserve(en.target);}});},{threshold:.08,rootMargin:'0px 0px -20px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>_obs.observe(el));
+</script>
+
+  <script>
+  function toggleFaq(el){
+    const item=el.closest('.faq-item');
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+  }
+  </script>
+</body>
+</html>

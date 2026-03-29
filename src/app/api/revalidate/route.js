@@ -34,6 +34,10 @@ const REVALIDATION_MAP = {
     paths: ['/azure'],
     tags: ['azure-page'],
   },
+  'gcp-page': {
+    paths: ['/gcp'],
+    tags: ['gcp-page'],
+  },
   'book-demo-page': {
     paths: ['/book-demo'],
     tags: ['book-demo-page'],
