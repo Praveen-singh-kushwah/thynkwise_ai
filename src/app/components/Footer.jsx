@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -7,14 +8,14 @@ export default function Footer() {
         <div className="foot-grid">
           {/* Brand */}
           <div className="foot-brand">
-            <Link href="/" className="logo" style={{ marginBottom: '12px', display: 'inline-flex', color: '#fff' }}>
-              <div className="logo-icon">
-                <svg viewBox="0 0 16 16">
-                  <path d="M8 1L1 5v6l7 4 7-4V5L8 1zm0 1.5l5.5 3.15v5.7L8 14.5l-5.5-3.15V5.65L8 2.5z" opacity=".7" fill="#fff" />
-                  <path d="M8 4L3.5 6.5v3L8 12l4.5-2.5v-3L8 4z" fill="#fff" />
-                </svg>
-              </div>
-              Thynk<span className="or">wise</span>
+            <Link href="/" className="logo logo-brand" style={{ marginBottom: '12px', display: 'inline-flex' }} aria-label="Thynkwise home">
+              <Image
+                src="/logo.png"
+                alt="Thynkwise"
+                width={188}
+                height={47}
+                className="logo-image"
+              />
             </Link>
             <p>Cloud. Security. GPU. Managed. Your single technology partner for the full infrastructure stack.</p>
             <div style={{ display: 'flex', gap: '8px' }}>

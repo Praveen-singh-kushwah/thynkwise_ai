@@ -136,6 +136,8 @@ a { text-decoration: none; color: inherit; }
 .nav.sc { box-shadow: 0 1px 20px rgba(0,0,0,0.06); }
 .nv { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .logo { display: flex; align-items: center; gap: 9px; font-family: var(--font); font-size: 1.2rem; font-weight: 800; color: var(--dark); }
+.logo-brand { gap: 0; line-height: 0; }
+.logo-image { display: block; width: auto; height: 46px; object-fit: contain; }
 .logo-icon {
   width: 32px; height: 32px;
   border-radius: 9px;
@@ -376,6 +378,7 @@ a { text-decoration: none; color: inherit; }
 footer { background: var(--dark); padding: 56px 0 24px; border-top: 1px solid rgba(255,255,255,0.06); }
 .foot-grid { display: grid; grid-template-columns: 1.6fr repeat(4, 1fr); gap: 36px; margin-bottom: 40px; }
 .foot-brand .logo { color: #fff; }
+.foot-brand .logo-image { height: 52px; }
 .foot-brand p { font-size: 0.8rem; color: rgba(255,255,255,0.4); max-width: 210px; line-height: 1.65; margin-bottom: 18px; }
 .foot-col h4 { font-size: 0.65rem; font-family: var(--mono); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.25); margin-bottom: 14px; }
 .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
@@ -438,6 +441,8 @@ footer { background: var(--dark); padding: 56px 0 24px; border-top: 1px solid rg
   .stat-band { grid-template-columns: 1fr 1fr; }
   .navlinks { display: none; }
   .nav-acts .btn:first-child { display: none; }
+  .logo-image { height: 38px; }
+  .foot-brand .logo-image { height: 44px; }
   .foot-grid { grid-template-columns: 1fr; }
   .val-grid { grid-template-columns: 1fr 1fr; }
 }

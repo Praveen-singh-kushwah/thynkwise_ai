@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,14 +28,15 @@ export default function Navbar() {
     <nav className={`nav${scrolled ? ' sc' : ''}`} id="mainNav">
       <div className="container">
         <div className="nv">
-          <Link href="/" className="logo">
-            <div className="logo-icon">
-              <svg viewBox="0 0 16 16">
-                <path d="M8 1L1 5v6l7 4 7-4V5L8 1zm0 1.5l5.5 3.15v5.7L8 14.5l-5.5-3.15V5.65L8 2.5z" opacity=".7" fill="#fff" />
-                <path d="M8 4L3.5 6.5v3L8 12l4.5-2.5v-3L8 4z" fill="#fff" />
-              </svg>
-            </div>
-            Thynk<span className="or">wise</span>
+          <Link href="/" className="logo logo-brand" aria-label="Thynkwise home">
+            <Image
+              src="/logo.png"
+              alt="Thynkwise"
+              width={176}
+              height={44}
+              className="logo-image"
+              priority
+            />
           </Link>
 
           <ul className="navlinks">
