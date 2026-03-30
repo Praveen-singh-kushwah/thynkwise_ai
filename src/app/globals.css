@@ -351,9 +351,17 @@ a { text-decoration: none; color: inherit; }
 .svc-tag { font-size: 0.62rem; font-family: var(--mono); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; display: block; }
 .svc-card h3 { color: var(--dark); font-size: 1rem; margin-bottom: 9px; }
 .svc-card p { font-size: 0.83rem; color: var(--gray); line-height: 1.65; flex: 1; margin-bottom: 18px; }
-.svc-list { list-style: none; display: flex; flex-direction: column; gap: 5px; margin-bottom: 18px; }
+.svc-list { list-style: none !important; padding-left: 0; margin: 0 0 18px; display: flex; flex-direction: column; gap: 5px; }
+.svc-list li::marker { content: ''; }
 .svc-list li { font-size: 0.78rem; color: var(--gray); display: flex; align-items: center; gap: 7px; }
-.svc-list li::before { content: 'â€º'; color: var(--blue); font-weight: 700; font-size: 0.9rem; }
+.svc-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+}
 .svc-link { display: inline-flex; align-items: center; gap: 5px; font-size: 0.8rem; font-weight: 600; color: var(--blue); margin-top: auto; transition: gap 0.2s; }
 .svc-link:hover { gap: 9px; }
 
@@ -374,9 +382,17 @@ a { text-decoration: none; color: inherit; }
 .cc-name { font-size: 0.84rem; font-weight: 700; color: var(--dark); font-family: var(--font); margin-bottom: 5px; }
 .cc-tier { font-size: 0.63rem; font-family: var(--mono); margin-bottom: 12px; }
 .cc-divider { height: 1px; background: #f1f5f9; margin: 12px 0; }
-.cc-services { list-style: none; display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+.cc-services { list-style: none !important; padding-left: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 5px; }
+.cc-services li::marker { content: ''; }
 .cc-services li { font-size: 0.73rem; color: var(--gray); display: flex; align-items: center; gap: 6px; }
-.cc-services li::before { content: 'Â·'; color: var(--cc-accent, var(--blue)); font-size: 1rem; line-height: 1; }
+.cc-services li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cc-accent, var(--blue));
+  flex-shrink: 0;
+}
 .cc-link { font-size: 0.76rem; font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
 .cc-link:hover { gap: 7px; }
 
