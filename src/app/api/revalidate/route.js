@@ -50,6 +50,10 @@ const REVALIDATION_MAP = {
     paths: ['/get-assessment'],
     tags: ['get-assessment-page'],
   },
+  'contact-page': {
+    paths: ['/contact'],
+    tags: ['contact-page'],
+  },
 };
 
 function isAuthorized(request) {
