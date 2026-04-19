@@ -1,16 +1,13 @@
 'use client';
 
+import CapabilitiesSection from './CapabilitiesSection';
+import ClientPortfolioSection from './ClientPortfolioSection';
+import FaqSectionNew from './FaqSectionNew';
+import FinalCtaSection from './FinalCtaSection';
 import HeroSection from './HeroSection';
-import ValueStrip from './ValueStrip';
-import ServicesSection from './ServicesSection';
-import CloudProvidersSection from './CloudProvidersSection';
-import StatsSection from './StatsSection';
-import WhyThynkwiseSection from './WhyThynkwiseSection';
-import IndustriesSection from './IndustriesSection';
-import CaseStudiesSection from './CaseStudiesSection';
+import PartnerNetworkSection from './PartnerNetworkSection';
+import StatsBandSection from './StatsBandSection';
 import TestimonialsSection from './TestimonialsSection';
-import CtaBannerSection from './CtaBannerSection';
-import FaqSection from './FaqSection';
 import useScrollReveal from '../useScrollReveal';
 
 export default function HomePage({ data }) {
@@ -19,16 +16,13 @@ export default function HomePage({ data }) {
   return (
     <>
       <HeroSection hero={data?.hero} />
-      <ValueStrip items={data?.valueItem} />
-      <ServicesSection section={data?.service} />
-      <CloudProvidersSection section={data?.cloudProvider} />
-      <StatsSection stats={data?.stat} />
-      <WhyThynkwiseSection section={data?.WhyThynkwise} />
-      <IndustriesSection section={data?.industry} />
-      <CaseStudiesSection section={data?.ClientOutcomes} />
-      <TestimonialsSection testimonials={data?.testimonial} />
-      <CtaBannerSection cta={data?.cta} />
-      <FaqSection faqs={data?.faq} />
+      <StatsBandSection section={data?.stats_band} />
+      <CapabilitiesSection section={data?.capabilities_section} />
+      <PartnerNetworkSection section={data?.partner_network_section} />
+      <ClientPortfolioSection section={data?.client_portfolio_section} />
+      <TestimonialsSection section={data?.testimonials_section} />
+      <FaqSectionNew section={data?.faq_section} />
+      <FinalCtaSection section={data?.final_cta_section} />
     </>
   );
 }

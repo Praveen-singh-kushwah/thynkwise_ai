@@ -1,0 +1,550 @@
+.stats {
+  padding: 26px 0;
+  background: var(--blue-d);
+}
+
+.statsRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statValue {
+  color: #fff;
+  font-family: var(--font);
+  font-size: 1.9rem;
+  font-weight: 900;
+}
+
+.statLabel {
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.42);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.capabilities {
+  padding: 88px 0;
+  background: #fff;
+}
+
+.sectionLabel {
+  margin-bottom: 12px;
+  color: var(--orange);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  margin-bottom: 14px;
+  color: var(--dark);
+  font-family: var(--font);
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.sectionDescription {
+  max-width: 600px;
+  margin-bottom: 40px;
+  color: var(--gray);
+  font-size: 0.97rem;
+  line-height: 1.75;
+}
+
+.capabilityGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  overflow: hidden;
+  margin-top: 52px;
+  border-radius: 20px;
+  background: #e2e8f0;
+}
+
+.capabilityCard {
+  position: relative;
+  padding: 44px 40px;
+  background: #fff;
+}
+
+.capabilityAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.toneBlue {
+  color: var(--blue);
+}
+
+.toneOrange {
+  color: var(--orange);
+}
+
+.tonePurple {
+  color: #7c3aed;
+}
+
+.toneGreen {
+  color: #10b981;
+}
+
+.accentBlue {
+  background: var(--blue);
+}
+
+.accentOrange {
+  background: var(--orange);
+}
+
+.accentPurple {
+  background: #7c3aed;
+}
+
+.accentGreen {
+  background: #10b981;
+}
+
+.capabilityOrder {
+  margin-bottom: 18px;
+  color: #9ca3af;
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.capabilityMedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+}
+
+.mediaBlue {
+  background: rgba(58, 89, 168, 0.08);
+}
+
+.mediaOrange {
+  background: rgba(246, 136, 31, 0.08);
+}
+
+.mediaPurple {
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.mediaGreen {
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.capabilityMediaImage {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.capabilityMediaFallback {
+  color: var(--dark);
+  font-family: var(--font);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.capabilityTitle {
+  margin-bottom: 10px;
+  color: var(--dark);
+  font-family: var(--font);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.capabilityDescription {
+  margin: 0 0 18px;
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.capabilityTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.capabilityTag {
+  padding: 3px 11px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.71rem;
+  font-weight: 600;
+}
+
+.capabilityResult {
+  margin-bottom: 18px;
+  padding: 12px 16px;
+  border-left: 3px solid var(--orange);
+  border-radius: 0 8px 8px 0;
+  background: #fafafa;
+}
+
+.capabilityResultLabel {
+  margin-bottom: 4px;
+  color: var(--orange);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.capabilityResultValue {
+  color: var(--dark);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.capabilityLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.partnerNetwork {
+  padding: 88px 0;
+  background: #fff8f0;
+}
+
+.centeredIntro {
+  text-align: center;
+}
+
+.centeredTitle {
+  text-align: center;
+}
+
+.centeredDescription {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.partnerPills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 44px;
+}
+
+.partnerPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--dark);
+  font-size: 0.81rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.partnerPill:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.clientPortfolio {
+  padding: 88px 0;
+  background: #fff;
+}
+
+.clientGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 44px;
+}
+
+.clientCard {
+  padding: 28px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 18px;
+  background: #fff;
+  transition: all 0.28s ease;
+}
+
+.clientCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--blue);
+  box-shadow: 0 8px 28px rgba(58, 89, 168, 0.12);
+}
+
+.clientCategory {
+  margin-bottom: 10px;
+  color: var(--orange);
+  font-family: var(--mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.clientName {
+  margin-bottom: 4px;
+  color: var(--dark);
+  font-family: var(--font);
+  font-size: 0.97rem;
+  font-weight: 700;
+}
+
+.clientGeography {
+  margin-bottom: 10px;
+  color: #9ca3af;
+  font-size: 0.77rem;
+}
+
+.clientDescription {
+  margin: 0 0 14px;
+  color: var(--gray);
+  font-size: 0.87rem;
+  line-height: 1.7;
+}
+
+.clientMetric {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 13px;
+  border-radius: 999px;
+  background: #eff6ff;
+}
+
+.clientMetricValue {
+  color: var(--blue);
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+.clientMetricLabel {
+  color: var(--gray);
+  font-size: 0.71rem;
+}
+
+.testimonials {
+  padding: 88px 0;
+  background: var(--dark2);
+}
+
+.testimonialsTitle {
+  color: #fff;
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin-top: 44px;
+}
+
+.testimonialCard {
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.testimonialQuote {
+  margin: 0 0 22px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.92rem;
+  line-height: 1.82;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonialAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 0.82rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.testimonialName {
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.testimonialRole {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.76rem;
+}
+
+.faqSection {
+  padding: 88px 0;
+  background: #fff8f0;
+}
+
+.faqWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 760px;
+  margin: 44px auto 0;
+}
+
+.faqItem {
+  overflow: hidden;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  transition: border-color 0.25s ease;
+}
+
+.faqItem:hover,
+.faqItemOpen {
+  border-color: var(--blue);
+}
+
+.faqQuestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 18px 22px;
+  border: 0;
+  background: transparent;
+  color: #1e293b;
+  font-family: var(--font);
+  font-size: 0.93rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.faqArrow {
+  color: var(--blue);
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faqArrowOpen {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.38s ease, padding 0.25s ease;
+}
+
+.faqAnswerOpen {
+  max-height: 280px;
+  padding: 0 22px 18px;
+}
+
+.faqAnswer p {
+  color: #475569;
+  font-size: 0.91rem;
+  line-height: 1.75;
+}
+
+.finalCta {
+  padding: 88px 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--blue-d) 0%, var(--blue) 65%, #5a82d0 100%);
+}
+
+.finalCtaInner h2 {
+  margin-bottom: 14px;
+  color: #fff;
+  font-family: var(--font);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 900;
+}
+
+.finalCtaInner p {
+  max-width: 520px;
+  margin: 0 auto 32px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.finalCtaActions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 960px) {
+  .capabilityGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .clientGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .statsRow {
+    justify-content: center;
+  }
+
+  .capabilityCard {
+    padding: 30px 24px;
+  }
+
+  .clientGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .finalCtaActions :global(.btn) {
+    width: 100%;
+    justify-content: center;
+  }
+}

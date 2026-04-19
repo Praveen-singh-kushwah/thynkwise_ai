@@ -1,101 +1,57 @@
-import SectionHeader from './SectionHeader';
-import CmsImage from '../CmsImage';
-import { getStrapiMediaUrl } from '@/lib/strapi/media';
+import styles from './HomeSections.module.css';
 
-const testimonials = [
-  {
-    text: 'Thynkwise did not just migrate our workloads - they rebuilt our cloud architecture from scratch before touching anything. That 6-week discovery phase saved us from carrying years of technical debt into the cloud.',
-    initials: 'VK',
-    name: 'V. Kumar',
-    role: 'CTO / Fintech Company',
-    avatarBg: 'rgba(58,89,168,0.3)',
-    avatarColor: '#7b9ff5',
-    delay: 'd1',
-  },
-  {
-    text: 'We had a managed services contract with a large SI before. The difference is: with Thynkwise we have a named architect who knows our AWS environment cold. Not a shared helpdesk that reads from tickets.',
-    initials: 'AR',
-    name: 'A. Rathi',
-    role: 'Head of IT / Auto Parts Manufacturer',
-    avatarBg: 'rgba(246,136,31,0.2)',
-    avatarColor: 'var(--orange)',
-    delay: 'd2',
-  },
-  {
-    text: 'The cybersecurity team caught a credential stuffing attempt against our API gateway before it became a breach. Having a SOC that understands both cloud architecture and security posture together is genuinely rare.',
-    initials: 'PS',
-    name: 'P. Shah',
-    role: 'CISO / Insurance Technology',
-    avatarBg: 'rgba(22,163,74,0.2)',
-    avatarColor: '#4ade80',
-    delay: 'd3',
-  },
-];
+const fallbackSection = {
+  eyebrow_text: 'Client voice',
+  title: 'What our clients say.',
+  description: '',
+  testimonial_cards: [
+    {
+      quote:
+        'Working with the ThynkWISE team on our Apollo.io implementation has been a truly positive experience. Their deep understanding of the platform helped us unlock the full potential of Apollo for our inside sales and demand generation functions - from data structuring and workflow automation to sequence optimisation and reporting setup.',
+      avatar_initials: 'SS',
+      author_name: 'Sabarinathan Sampath',
+      author_role: 'Deputy Vice President · Celebal Technologies',
+    },
+    {
+      quote:
+        'Partnering with ThynkWISE was a seamless experience. They did not just implement a tool - they helped us build a stronger foundation for scalable outreach and data-driven growth. ThynkWISE truly operates as an extension of our team, focused on long-term enablement and measurable impact.',
+      avatar_initials: 'DS',
+      author_name: 'Divyang Sonchhatra',
+      author_role: 'Principal · BizTech Consulting & Solutions',
+    },
+  ],
+};
 
-function getInitials(name) {
-  return name
-    ?.split(' ')
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase())
-    .join('');
-}
-
-export default function TestimonialsSection({ testimonials: cmsTestimonials }) {
-  const contentTestimonials = cmsTestimonials?.length
-    ? cmsTestimonials.map((item, index) => ({
-        ...testimonials[index % testimonials.length],
-        text: item.text || testimonials[index % testimonials.length].text,
-        name: item.name || testimonials[index % testimonials.length].name,
-        role: item.role || testimonials[index % testimonials.length].role,
-        initials: getInitials(item.name) || testimonials[index % testimonials.length].initials,
-        imageUrl: getStrapiMediaUrl(item.image),
-      }))
-    : testimonials;
+export default function TestimonialsSection({ section }) {
+  const data = section?.testimonial_cards?.length ? section : fallbackSection;
 
   return (
-    <section className="sec sec-dk">
+    <section className={styles.testimonials}>
       <div className="container">
-        <SectionHeader
-          badge="Client Feedback"
-          badgeClassName="badge badge-orange"
-          title="What Our Clients Say"
-          titleStyle={{ color: '#fff' }}
-        />
+        <div>
+          <div className={`${styles.sectionLabel} rv`} style={{ color: 'var(--orange)' }}>
+            {data?.eyebrow_text}
+          </div>
+          <h2 className={`${styles.sectionTitle} ${styles.testimonialsTitle} rv d1`}>
+            {data?.title}
+          </h2>
+        </div>
 
-        <div className="test-grid">
-          {contentTestimonials.map((testimonial) => (
-            <div key={testimonial.name} className={`test-card rv ${testimonial.delay}`}>
-              <p className="test-text">{testimonial.text}</p>
-              <div className="test-author">
-                <div
-                  className="test-av"
-                  style={{
-                    background: testimonial.avatarBg,
-                    color: testimonial.avatarColor,
-                  }}
-                >
-                  {testimonial.imageUrl ? (
-                    <CmsImage
-                      src={testimonial.imageUrl}
-                      alt={testimonial.name}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        borderRadius: '999px',
-                      }}
-                    />
-                  ) : (
-                    testimonial.initials
-                  )}
-                </div>
+        <div className={styles.testimonialGrid}>
+          {(data?.testimonial_cards || []).map((item, index) => (
+            <article
+              key={`${item?.author_name}-${index}`}
+              className={`${styles.testimonialCard} rv ${index % 2 === 1 ? 'd1' : ''}`}
+            >
+              <p className={styles.testimonialQuote}>"{item?.quote}"</p>
+              <div className={styles.testimonialAuthor}>
+                <div className={styles.testimonialAvatar}>{item?.avatar_initials}</div>
                 <div>
-                  <div className="test-name">{testimonial.name}</div>
-                  <div className="test-role">{testimonial.role}</div>
+                  <div className={styles.testimonialName}>{item?.author_name}</div>
+                  <div className={styles.testimonialRole}>{item?.author_role}</div>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
