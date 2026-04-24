@@ -54,6 +54,10 @@ const REVALIDATION_MAP = {
     paths: ['/contact'],
     tags: ['contact-page'],
   },
+  'sales-consulting-page': {
+    paths: ['/sales-consulting'],
+    tags: ['sales-consulting-page'],
+  },
 };
 
 function isAuthorized(request) {

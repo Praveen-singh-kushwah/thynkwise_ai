@@ -78,7 +78,6 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <StickyElements />
-        <script src="https://vibot.thynkwise.co.in/embed.js" data-bot-id="778340c8-d4c8-40ba-93c4-d3381dedfc31"></script>
       </body>
     </html>
   );

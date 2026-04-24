@@ -41,6 +41,7 @@ export default function Footer() {
           <div className="foot-col">
             <h4>Services</h4>
             <ul>
+              <li><Link href="/sales-consulting">Sales Consulting</Link></li>
               <li><Link href="/managed-services">Managed Services</Link></li>
               <li><Link href="/cloud-migration">Cloud Migration</Link></li>
               <li><Link href="/cybersecurity">Cybersecurity</Link></li>

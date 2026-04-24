@@ -35,6 +35,7 @@ export default function Navbar() {
     { href: '/bfsi-cloud', label: 'BFSI' },
     { href: '/cost-optimization', label: 'Cost Optimisation' },
     { href: '/about', label: 'About' },
+    { href: '/sales-consulting', label: 'Sales Consulting' },
   ];
 
   return (

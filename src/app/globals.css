@@ -134,9 +134,9 @@ a { text-decoration: none; color: inherit; }
   transition: all 0.3s;
 }
 .nav.sc { box-shadow: 0 1px 20px rgba(0,0,0,0.06); }
-.nv { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.nv { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .logo { display: flex; align-items: center; gap: 9px; font-family: var(--font); font-size: 1.2rem; font-weight: 800; color: var(--dark); }
-.logo-brand { gap: 0; line-height: 0; }
+.logo-brand { gap: 0; line-height: 0; flex: 0 0 auto; }
 .logo-image { display: block; width: auto; height: 46px; object-fit: contain; }
 .logo-icon {
   width: 32px; height: 32px;
@@ -146,11 +146,11 @@ a { text-decoration: none; color: inherit; }
 }
 .logo-icon svg { width: 16px; height: 16px; fill: #fff; }
 .logo .or { color: var(--orange); }
-.navlinks { display: flex; align-items: center; gap: 2px; list-style: none; }
-.navlinks a { display: inline-flex; align-items: center; padding: 6px 12px; border-radius: 8px; font-size: 0.82rem; font-weight: 500; color: var(--gray); transition: all 0.2s; white-space: nowrap; }
+.navlinks { display: flex; align-items: center; justify-content: center; gap: 1px; list-style: none; min-width: 0; flex: 1 1 auto; }
+.navlinks a { display: inline-flex; align-items: center; padding: 6px 8px; border-radius: 8px; font-size: 0.78rem; font-weight: 500; color: var(--gray); transition: all 0.2s; white-space: nowrap; }
 .navlinks a:hover, .navlinks a.active { color: var(--blue); background: rgba(58,89,168,0.07); }
 .nav-acts { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-.nav-acts .btn { padding: 8px 18px; font-size: 0.79rem; }
+.nav-acts .btn { padding: 8px 14px; font-size: 0.76rem; }
 .nav-toggle {
   display: none;
   width: 44px;
