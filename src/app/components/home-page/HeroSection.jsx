@@ -55,11 +55,18 @@ function unwrapRichText(html, tags) {
   const trimmedHtml = html.trim();
 
   for (const tag of tags) {
-    const pattern = new RegExp(`^<${tag}\\b[^>]*>([\\s\\S]*)</${tag}>$`, 'i');
-    const match = trimmedHtml.match(pattern);
+    const fullWrapperPattern = new RegExp(`^<${tag}\\b[^>]*>([\\s\\S]*)</${tag}>$`, 'i');
+    const fullWrapperMatch = trimmedHtml.match(fullWrapperPattern);
 
-    if (match) {
-      return match[1];
+    if (fullWrapperMatch) {
+      return fullWrapperMatch[1];
+    }
+
+    const firstBlockPattern = new RegExp(`^<${tag}\\b[^>]*>([\\s\\S]*?)</${tag}>`, 'i');
+    const firstBlockMatch = trimmedHtml.match(firstBlockPattern);
+
+    if (firstBlockMatch) {
+      return firstBlockMatch[1];
     }
   }
 
