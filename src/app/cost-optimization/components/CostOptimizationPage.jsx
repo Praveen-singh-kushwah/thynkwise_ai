@@ -6,6 +6,8 @@ import CalculatorSection from './CalculatorSection';
 import CostLeaksSection from './CostLeaksSection';
 import FinopsProcessSection from './FinopsProcessSection';
 import HeroSection from './HeroSection';
+import OptimizationLayersSection from './OptimizationLayersSection';
+import RoiTimelineSection from './RoiTimelineSection';
 import SavingsProofSection from './SavingsProofSection';
 
 export default function CostOptimizationPage({ data }) {
@@ -19,6 +21,8 @@ export default function CostOptimizationPage({ data }) {
       <FinopsProcessSection section={data?.finops_process_section} />
       <SavingsProofSection section={data?.savings_proof_section} />
       <CalculatorSection section={data?.calculator_section} />
+      <OptimizationLayersSection section={data?.optimization_layers_section} />
+      <RoiTimelineSection section={data?.roi_timeline_section} />
     </div>
   );
 }
