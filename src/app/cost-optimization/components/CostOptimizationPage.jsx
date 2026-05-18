@@ -4,13 +4,16 @@ import useScrollReveal from '../../components/useScrollReveal';
 import AnswerBoxSection from './AnswerBoxSection';
 import CalculatorSection from './CalculatorSection';
 import CostLeaksSection from './CostLeaksSection';
+import FaqSection from './FaqSection';
 import FinopsProcessSection from './FinopsProcessSection';
+import FinalCtaSection from './FinalCtaSection';
 import GuaranteeSection from './GuaranteeSection';
 import HeroSection from './HeroSection';
 import OptimizationLayersSection from './OptimizationLayersSection';
 import RoiTimelineSection from './RoiTimelineSection';
 import SavingsProofSection from './SavingsProofSection';
 import TestimonialsSection from './TestimonialsSection';
+import TrustBandSection from './TrustBandSection';
 
 export default function CostOptimizationPage({ data }) {
   useScrollReveal();
@@ -27,6 +30,9 @@ export default function CostOptimizationPage({ data }) {
       <RoiTimelineSection section={data?.roi_timeline_section} />
       <GuaranteeSection section={data?.guarantee_section} />
       <TestimonialsSection section={data?.testimonials_section} />
+      <TrustBandSection section={data?.trust_band} />
+      <FaqSection section={data?.faq_section} />
+      <FinalCtaSection section={data?.final_cta_section} />
     </div>
   );
 }
