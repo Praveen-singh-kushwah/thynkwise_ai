@@ -58,6 +58,10 @@ const REVALIDATION_MAP = {
     paths: ['/sales-consulting'],
     tags: ['sales-consulting-page'],
   },
+  'cost-optimization-page': {
+    paths: ['/cost-optimization'],
+    tags: ['cost-optimization-page'],
+  },
 };
 
 function isAuthorized(request) {
