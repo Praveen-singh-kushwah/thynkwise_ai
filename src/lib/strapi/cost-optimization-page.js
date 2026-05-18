@@ -13,6 +13,8 @@ const COST_OPTIMIZATION_PAGE_QUERY = `
     &populate[calculator_section][populate][result_items][populate]=*
     &populate[optimization_layers_section][populate][cards][populate]=*
     &populate[roi_timeline_section][populate][phases][populate][items][populate]=*
+    &populate[guarantee_section][populate]=*
+    &populate[testimonials_section][populate][testimonials][populate]=*
 `.replace(/\s/g, '');
 
 export async function getCostOptimizationPage() {

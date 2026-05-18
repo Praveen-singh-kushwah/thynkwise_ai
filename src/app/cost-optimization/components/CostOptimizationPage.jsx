@@ -5,10 +5,12 @@ import AnswerBoxSection from './AnswerBoxSection';
 import CalculatorSection from './CalculatorSection';
 import CostLeaksSection from './CostLeaksSection';
 import FinopsProcessSection from './FinopsProcessSection';
+import GuaranteeSection from './GuaranteeSection';
 import HeroSection from './HeroSection';
 import OptimizationLayersSection from './OptimizationLayersSection';
 import RoiTimelineSection from './RoiTimelineSection';
 import SavingsProofSection from './SavingsProofSection';
+import TestimonialsSection from './TestimonialsSection';
 
 export default function CostOptimizationPage({ data }) {
   useScrollReveal();
@@ -23,6 +25,8 @@ export default function CostOptimizationPage({ data }) {
       <CalculatorSection section={data?.calculator_section} />
       <OptimizationLayersSection section={data?.optimization_layers_section} />
       <RoiTimelineSection section={data?.roi_timeline_section} />
+      <GuaranteeSection section={data?.guarantee_section} />
+      <TestimonialsSection section={data?.testimonials_section} />
     </div>
   );
 }
