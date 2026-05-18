@@ -8,6 +8,9 @@ const COST_OPTIMIZATION_PAGE_QUERY = `
     &populate[answer_box][populate]=*
     &populate[cost_leaks_section][populate][cards][populate]=*
     &populate[finops_process_section][populate][steps][populate]=*
+    &populate[savings_proof_section][populate][rows][populate]=*
+    &populate[calculator_section][populate][provider_options][populate]=*
+    &populate[calculator_section][populate][result_items][populate]=*
 `.replace(/\s/g, '');
 
 export async function getCostOptimizationPage() {
