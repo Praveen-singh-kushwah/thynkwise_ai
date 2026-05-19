@@ -54,7 +54,7 @@ export function normalizeStrapiValue(value) {
   return normalizedValue;
 }
 
-export async function fetchStrapiDocument(path, { tags = [] } = {}) {
+export async function fetchStrapiDocument(path, { tags = [], silentStatuses = [] } = {}) {
   const baseUrl = getStrapiBaseUrl();
 
   if (!baseUrl) {
@@ -75,6 +75,10 @@ export async function fetchStrapiDocument(path, { tags = [] } = {}) {
     });
 
     if (response.status === 404) {
+      return null;
+    }
+
+    if (silentStatuses.includes(response.status)) {
       return null;
     }
 
